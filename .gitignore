@@ -1,0 +1,31 @@
+# 비밀정보 (API 키, DB 접속정보)
+.env
+
+# Python 가상환경 / 캐시
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# 테스트 / 커버리지
+.pytest_cache/
+.coverage
+htmlcov/
+
+# PyInstaller 빌드 산출물
+build/
+dist/
+*.spec
+
+# 로컬 DB (CSV 초기 데이터는 커밋 대상)
+data/*.db
+data/*.sqlite3
+
+# 로그 / 백업
+logs/
+backups/
+*.log
+
+# IDE 설정
+.idea/
+.vscode/
