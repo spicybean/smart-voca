@@ -89,9 +89,10 @@ smart-voca/
 - **주의사항**: 처음 실행 시 SQLite DB 자동 생성됨
 
 ### 배포 (빌드)
-- **Windows**: `pyinstaller --onefile --windowed --add-data "data:data" --name "SmartVoca" src/main.py`
+- **Windows**: `pyinstaller --onefile --windowed --add-data "data/words_common.csv;data" --add-data "data/words_business.csv;data" --name "SmartVoca" src/main.py`
   - 결과: `dist/SmartVoca.exe`
-- **Mac**: `pyinstaller --onefile --windowed --add-data "data:data" --osx-bundle-identifier=com.smartvoca --name "SmartVoca" src/main.py`
+  - `--add-data`는 CSV만 지정한다. `data/` 전체를 넣으면 개발용 `smart_voca.db`가 exe에 묶인다 (설계서 ADR-03)
+- **Mac**: `pyinstaller --onefile --windowed --add-data "data/words_common.csv:data" --add-data "data/words_business.csv:data" --osx-bundle-identifier=com.smartvoca --name "SmartVoca" src/main.py`
   - 결과: `dist/SmartVoca.app`
 - **최종 사용자**: exe/app 파일 실행 (Python 설치 불필요)
 
