@@ -64,6 +64,7 @@ class QuizAvailability:
 class QuizItemView:
     index: int
     word_id: int
+    english: str
     quiz_type: str
     question: str
     options: list[str]
@@ -178,6 +179,7 @@ def _build_items(
         rng.shuffle(order)
         items.append({
             "word_id": word_id,
+            "english": answer.english,
             "quiz_type": quiz_type,
             "question": question,
             "options": [options[i] for i in order],
@@ -200,6 +202,7 @@ def _to_view(row: QuizSession, items: list[dict], requested_count: int) -> QuizS
             QuizItemView(
                 index=index,
                 word_id=item["word_id"],
+                english=item.get("english", ""),
                 quiz_type=item["quiz_type"],
                 question=item["question"],
                 options=list(item["options"]),

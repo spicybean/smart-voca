@@ -22,6 +22,8 @@ from PyQt6.QtWidgets import (
 from domain.quiz_builder import plan_bucket_sizes
 from services import progress_service, quiz_service
 from services.quiz_service import (
+    PHASE_BASIC,
+    PHASE_BONUS,
     NoWordsError,
     QuizSessionExistsError,
     QuizSessionView,
@@ -31,7 +33,7 @@ from ui import message_boxes
 from ui.styles import DANGER, PRIMARY
 from utils import today_local
 
-PAGE_PREP, PAGE_RESUME, PAGE_PLAY, PAGE_RESULT = range(4)
+PAGE_PREP, PAGE_RESUME, PAGE_PLAY, PAGE_RESULT, PAGE_BONUS = range(5)
 ALL_CATEGORY_VALUES = ("선택안함", "전체")
 
 
@@ -43,6 +45,7 @@ class QuizWidget(QWidget):
         super().__init__(parent)
         self.stack = QStackedWidget()
         self._view: QuizSessionView | None = None
+        self._bonus_view: QuizSessionView | None = None
         self._last_finished = False
 
         self.prep_info = QLabel()
@@ -81,6 +84,15 @@ class QuizWidget(QWidget):
         self.result_bar = QProgressBar()
         self.result_bar.setRange(0, 100)
         self.stack.addWidget(self._build_result_page())
+
+        self.bonus_message = QLabel()
+        self.bonus_targets = QLabel()
+        self.bonus_accept = QPushButton("보너스 도전하기")
+        self.bonus_accept.setObjectName("primary")
+        self.bonus_accept.clicked.connect(self._accept_bonus)
+        bonus_skip = QPushButton("건너뛰기")
+        bonus_skip.clicked.connect(self._show_result)
+        self.stack.addWidget(self._build_bonus_page(bonus_skip))
 
         layout = QVBoxLayout(self)
         layout.addWidget(self.stack)
@@ -130,6 +142,19 @@ class QuizWidget(QWidget):
         buttons = QHBoxLayout()
         buttons.addWidget(self.play_next)
         buttons.addWidget(stop_button)
+        layout.addLayout(buttons)
+        return page
+
+    def _build_bonus_page(self, skip_button: QPushButton) -> QWidget:
+        page = QWidget()
+        layout = QVBoxLayout(page)
+        layout.addWidget(QLabel("🎁 보너스 문제"))
+        layout.addWidget(self.bonus_message)
+        layout.addWidget(self.bonus_targets)
+        layout.addWidget(QLabel("※ 보너스 결과는 진도율에 반영되지 않습니다"))
+        buttons = QHBoxLayout()
+        buttons.addWidget(self.bonus_accept)
+        buttons.addWidget(skip_button)
         layout.addLayout(buttons)
         return page
 
@@ -198,10 +223,14 @@ class QuizWidget(QWidget):
             self._show_prep()
             return
         if view.current_index >= view.total_count:
-            self._show_result()
+            self._finish_phase(view)
             return
         self._view = view
-        self.play_retry_badge.setVisible(view.is_retry)
+        if view.phase == PHASE_BONUS:
+            self.play_retry_badge.setText("보너스 · 진도에 반영되지 않습니다")
+        else:
+            self.play_retry_badge.setText("다시 풀기 중 · 진도에 반영되지 않습니다")
+        self.play_retry_badge.setVisible(view.is_retry or view.phase == PHASE_BONUS)
         self.play_progress.setRange(0, view.total_count)
         self.play_progress.setValue(view.current_index)
         item = view.items[view.current_index]
@@ -217,6 +246,26 @@ class QuizWidget(QWidget):
         self.play_next.setEnabled(False)
         self._last_finished = False
         self.stack.setCurrentIndex(PAGE_PLAY)
+
+    def _finish_phase(self, view: QuizSessionView) -> None:
+        """기본 퀴즈가 끝나면 보너스 대상을 확인하고, 없으면 결과 화면으로 간다 (FR-3.4)."""
+        if view.phase == PHASE_BASIC:
+            bonus_view = quiz_service.start_bonus()
+            if bonus_view is not None:
+                self._bonus_view = bonus_view
+                self.bonus_message.setText(
+                    f"기본 퀴즈 {view.total_count}개를 모두 풀었습니다!\n"
+                    f"약한 단어 {bonus_view.total_count}개를 집중 공략할까요?"
+                )
+                names = "\n".join(f"• {item.english}" for item in bonus_view.items)
+                self.bonus_targets.setText(f"대상:\n{names}")
+                self.stack.setCurrentIndex(PAGE_BONUS)
+                return
+        self._show_result()
+
+    def _accept_bonus(self) -> None:
+        self._view = self._bonus_view
+        self._show_question()
 
     def _show_result(self) -> None:
         summary = quiz_service.finish_session()
@@ -276,7 +325,7 @@ class QuizWidget(QWidget):
 
     def _next_question(self) -> None:
         if self._last_finished:
-            self._show_result()
+            self._finish_phase(self._view)
         else:
             self._show_question()
 
