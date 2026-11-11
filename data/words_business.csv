@@ -1,0 +1,501 @@
+english,korean_meaning,category,level,example_1,example_2,example_3
+meeting,회의,비즈니스,2,We have a meeting at ten o'clock.,The meeting ended early today.,Please bring your notes to the meeting.
+report,보고서,비즈니스,2,She wrote a report about sales.,Send me the report by Friday.,The report shows a clear trend.
+budget,예산,비즈니스,2,We need to plan the budget for next year.,The project is over budget.,The department asked for a bigger budget.
+schedule,일정,비즈니스,2,My schedule is full this week.,Please check the schedule for the meeting.,The project is on schedule.
+contract,계약서,비즈니스,2,Please sign the contract before Monday.,The contract lasts for two years.,We broke the contract.
+deadline,마감일,비즈니스,2,The deadline is next Friday.,We must meet the deadline.,Did you finish before the deadline?
+project,프로젝트,비즈니스,2,Our team is working on a new project.,The project will take six months.,She leads the marketing project.
+client,고객,비즈니스,2,Our client wants a new design.,The client called this morning.,We meet with clients every week.
+supplier,공급업체,비즈니스,3,The supplier delivered the parts on time.,We need a new supplier for paper.,The supplier raised its prices.
+employee,직원,비즈니스,2,Every employee must wear a badge.,The company hired ten new employees.,She is a loyal employee.
+employer,고용주,비즈니스,3,My employer gives free lunch.,The employer pays the workers every month.,A good employer treats staff fairly.
+manager,관리자,비즈니스,2,The manager approved my request.,Talk to your manager about the plan.,He is a sales manager.
+director,이사,비즈니스,3,The director called a meeting.,She became the director of the company.,The film director spoke at the event.
+executive,임원,비즈니스,3,The chief executive gave a speech.,Several executives attended the talk.,He is an executive at a big bank.
+staff,직원들,비즈니스,2,The staff are very helpful.,All staff must attend the training.,The hotel staff greeted us warmly.
+department,부서,비즈니스,2,She works in the sales department.,Which department handles payments?,The department meets every Tuesday.
+company,회사,비즈니스,1,He works for a large company.,The company is hiring new staff.,This company makes phones.
+business,사업,비즈니스,1,She runs a small business.,Business is good this year.,We have business in Japan.
+career,경력,비즈니스,2,She began her career as a nurse.,He changed careers after ten years.,Choose a career you enjoy.
+position,직책,비즈니스,3,He was offered a new position.,The position requires five years of experience.,She applied for the marketing position.
+salary,급여,비즈니스,2,My salary is paid on the last day of the month.,The new job offers a higher salary.,She asked for a raise in salary.
+bonus,보너스,비즈니스,3,Employees received a bonus this year.,The bonus was paid in December.,He earned a large bonus for his work.
+promotion,승진,비즈니스,3,She got a promotion after two years.,The promotion came with a raise.,He hopes for a promotion next year.
+resign,사직하다,비즈니스,3,He decided to resign from his job.,She resigned last week.,Employees who resign must give notice.
+retire,은퇴하다,비즈니스,3,My father will retire next year.,He retired at the age of sixty.,She plans to retire early.
+recruit,채용하다,비즈니스,4,The company will recruit new workers.,We recruit students from local schools.,They recruited a new team leader.
+candidate,후보자,비즈니스,3,Each candidate gave a short speech.,The best candidate got the job.,Five candidates applied for the post.
+applicant,지원자,비즈니스,4,The applicant has strong skills.,Many applicants came to the interview.,Each applicant must submit a resume.
+qualification,자격,비즈니스,4,You need a teaching qualification.,Her qualifications are very strong.,He has the right qualification for the job.
+training,교육,비즈니스,2,All new staff join the training next week.,The training helps workers learn new tools.,She completed a short training course.
+skill,기술,비즈니스,2,Good communication is an important skill.,He has many skills in computers.,Practice builds skill over time.
+responsibility,책임,비즈니스,3,It is her responsibility to check the data.,Taking responsibility is important.,He has a lot of responsibility at work.
+task,업무,비즈니스,2,Complete the task before lunch.,This task needs two people.,She finished every task on the list.
+duty,의무,비즈니스,3,It is our duty to keep the data safe.,He was on duty all night.,Each member has a duty to help.
+workload,업무량,비즈니스,3,My workload has increased this month.,The team shares the workload fairly.,A heavy workload makes me tired.
+productivity,생산성,비즈니스,4,New tools can improve productivity.,Productivity fell during the holiday.,Better planning raises productivity.
+efficiency,효율,비즈니스,4,The new system improves efficiency.,We need more efficiency in our work.,The machine works with high efficiency.
+performance,성과,비즈니스,3,Her performance this year was excellent.,The team praised the performance of the staff.,Check the performance report every month.
+evaluation,평가,비즈니스,3,The evaluation takes place every six months.,She received a good evaluation.,Our evaluation of the plan is positive.
+feedback,피드백,비즈니스,3,Please give me your feedback on the plan.,The feedback from clients was very helpful.,I received positive feedback from my manager.
+target,목표치,비즈니스,3,Our target is to sell one thousand units.,We missed the sales target this month.,The team reached its target early.
+achieve,달성하다,비즈니스,3,We achieved our goal this quarter.,She achieved a high score on the test.,The company hopes to achieve growth.
+revenue,매출,비즈니스,3,Revenue rose by ten percent last year.,The company reports its revenue every quarter.,Total revenue was higher than expected.
+loss,손실,비즈니스,3,The company reported a loss this year.,The loss was caused by a bad deal.,We cannot afford any more losses.
+income,수입,비즈니스,2,Her monthly income is stable.,Our income comes from sales.,Tax is based on your income.
+expense,지출,비즈니스,3,Travel is a major expense for the team.,Keep a record of every expense.,Reduce unnecessary expenses this year.
+invoice,송장,비즈니스,3,Please send me the invoice by email.,The invoice shows the total amount due.,We paid the invoice on time.
+receipt,영수증,비즈니스,2,Keep the receipt for your records.,The receipt lists all the items.,Can I get a receipt please?
+payment,지불,비즈니스,2,The payment is due next week.,Please make a payment by card.,We received your payment today.
+refund,환불,비즈니스,3,You can get a refund within seven days.,The store gave me a full refund.,We will refund the money today.
+tax,세금,비즈니스,2,Companies must pay tax on profits.,The tax rate changed this year.,Check your tax before the deadline.
+fee,수수료,비즈니스,3,The bank charges a small fee.,There is no fee for the first month.,The service fee is included in the price.
+discount,할인,비즈니스,2,We offer a discount for students.,The shop has a ten percent discount.,Ask for a discount on bulk orders.
+value,가치,비즈니스,3,The company adds value to its products.,This brand has a high value.,Time is a valuable thing.
+standard,기준,비즈니스,3,The product meets international standards.,Set a high standard for your work.,Our standard procedure is simple.
+policy,정책,비즈니스,3,The company changed its policy on leave.,Read the privacy policy carefully.,Our policy is to pay on time.
+procedure,절차,비즈니스,3,Follow the correct procedure for refunds.,The procedure takes about one week.,Read the instructions before starting the procedure.
+regulation,규정,비즈니스,4,The new regulation applies to all shops.,Follow the safety regulations at work.,The regulation was changed last year.
+compliance,준수,비즈니스,4,Compliance with the law is required.,The team checks compliance every month.,Companies must ensure compliance with rules.
+approval,승인,비즈니스,3,The plan needs approval from the director.,We received approval for the budget.,Get approval before you spend money.
+reject,거절하다,비즈니스,3,The bank rejected my loan request.,The manager rejected the proposal.,They rejected the offer.
+proposal,제안서,비즈니스,3,She sent a proposal to the client.,The proposal includes three options.,Please review the proposal this afternoon.
+agenda,안건,비즈니스,4,Check the agenda before the meeting.,The first item on the agenda is the budget.,We added a new topic to the agenda.
+minutes,회의록,비즈니스,4,Please send the minutes after the meeting.,The minutes record every decision.,Read the minutes from last week.
+memo,메모,비즈니스,2,The manager sent a memo to all staff.,Write a short memo about the change.,I left a memo on your desk.
+draft,초안,비즈니스,3,This is only a draft of the report.,Send me your first draft by Monday.,The draft needs more details.
+version,버전,비즈니스,2,This is the latest version of the file.,Which version of the app do you use?,Save each version with a new name.
+revision,수정본,비즈니스,4,The document needs a revision.,Please send the revision by noon.,The revision adds two new sections.
+update,업데이트,비즈니스,2,Please send me an update on the project.,The app needs an update today.,We will give you an update tomorrow.
+summary,요약,비즈니스,3,Write a short summary of the report.,The summary is on the first page.,Give me a summary of the meeting.
+presentation,발표,비즈니스,2,She gave a presentation about sales.,The presentation starts at two.,Prepare a presentation for the team.
+slide,슬라이드,비즈니스,3,The first slide shows the goal.,Add a chart to the next slide.,Please keep each slide short.
+chart,차트,비즈니스,2,The chart shows sales by month.,Put the data in a bar chart.,The chart is easy to read.
+graph,그래프,비즈니스,2,The graph shows a steady rise.,Draw a graph of the results.,The line graph is on page two.
+data,데이터,비즈니스,2,We collected data from ten stores.,The data shows a clear pattern.,Save the data in a safe place.
+analysis,분석,비즈니스,3,The analysis shows strong demand.,Our analysis took three weeks.,The report includes a market analysis.
+trend,추세,비즈니스,3,There is a trend toward online shopping.,The trend shows growth over time.,Follow the latest trend in fashion.
+opportunity,기회,비즈니스,3,This is a good opportunity for growth.,We missed the opportunity to sell more.,Take every opportunity to learn.
+threat,위협,비즈니스,4,New rivals are a threat to our business.,The threat of rain worried the farmers.,Cyber attacks are a serious threat.
+competitor,경쟁자,비즈니스,3,Our main competitor opened a store nearby.,We study our competitors every year.,The competitor offers a lower price.
+competition,경쟁,비즈니스,3,Competition in this market is strong.,The company faces fierce competition.,Healthy competition improves quality.
+partnership,제휴,비즈니스,4,The two companies formed a partnership.,We signed a partnership agreement.,Our partnership began in 2020.
+alliance,동맹,비즈니스,4,The companies made an alliance to share costs.,The alliance helps both countries.,They formed a strong alliance.
+merger,합병,비즈니스,4,The merger created a large company.,The merger was approved by the board.,They announced a merger last week.
+acquisition,인수,비즈니스,4,The acquisition of the firm was completed.,The company plans an acquisition next year.,The acquisition added new customers.
+investment,투자,비즈니스,3,The investment will pay off in five years.,We need more investment for growth.,She made a wise investment in stocks.
+shareholder,주주,비즈니스,4,Shareholders voted for the new plan.,Each shareholder receives a report.,The shareholder owns ten percent of the company.
+stock,주식,비즈니스,3,He bought stock in a tech company.,The stock price rose today.,The store has a lot of stock.
+dividend,배당금,비즈니스,4,The company paid a dividend this year.,Shareholders receive a dividend each quarter.,The dividend is taxed at a low rate.
+asset,자산,비즈니스,3,The house is one of his main assets.,The company sold some assets.,Good staff are the most valuable asset.
+debt,부채,비즈니스,4,The company paid off its debt.,He has a large debt to the bank.,Credit card debt can grow quickly.
+capital,자본,비즈니스,4,The company needs more capital to grow.,She raised capital from investors.,Working capital is important for daily costs.
+cash,현금,비즈니스,2,Do you pay in cash or by card?,The shop accepts cash only.,We need more cash for the trip.
+transaction,거래,비즈니스,4,Each transaction is recorded in the system.,The transaction was completed in minutes.,Check the details of the transaction.
+currency,통화,비즈니스,4,The currency of Japan is the yen.,The value of the currency went down.,Exchange your money into local currency.
+inflation,인플레이션,비즈니스,4,Inflation has increased the price of food.,High inflation hurts savings.,Prices rise when inflation grows.
+economy,경제,비즈니스,3,The economy is growing this year.,A strong economy creates jobs.,The economy slowed down last quarter.
+recession,경기 침체,비즈니스,4,The country entered a recession last year.,A recession can cause job losses.,Many shops closed during the recession.
+growth,성장,비즈니스,3,The company shows strong growth.,Economic growth was slow this year.,Plants need sun for healthy growth.
+demand,수요,비즈니스,3,Demand for electric cars is rising.,There is a high demand for housing.,The factory cannot meet the demand.
+supply,공급,비즈니스,2,The supply of fresh water is limited.,We need to supply more parts.,Demand and supply control prices.
+sales,판매,비즈니스,2,Sales increased after the campaign.,The sales team met its target.,Online sales have grown fast.
+advertising,광고,비즈니스,2,Advertising helps sell new products.,The company spent a lot on advertising.,Their advertising was on TV all week.
+brand,브랜드,비즈니스,2,This brand is famous around the world.,We need a strong brand identity.,She trusts this brand.
+product,제품,비즈니스,2,This product is very popular.,The new product launches next month.,Check the product before you buy.
+service,서비스,비즈니스,2,The hotel service was excellent.,The company offers online services.,Call customer service for help.
+delivery,배송,비즈니스,2,The delivery arrives tomorrow.,Free delivery is available for orders over fifty dollars.,The delivery was late again.
+logistics,물류,비즈니스,4,Logistics costs are rising this year.,Our logistics team handles all shipments.,Good logistics keeps stores stocked.
+warehouse,창고,비즈니스,3,The goods are stored in a warehouse.,The warehouse is full of boxes.,We moved the stock to a new warehouse.
+inventory,재고,비즈니스,4,We need to check the inventory every week.,The inventory of shoes is low.,Keep the inventory list up to date.
+shipment,배송품,비즈니스,4,The shipment will arrive on Monday.,A large shipment of rice came in today.,Track your shipment online.
+order,주문,비즈니스,2,I placed an order for twenty boxes.,Your order has been shipped.,Cancel the order before it ships.
+quote,견적,비즈니스,3,Please send me a quote for the job.,The quote is valid for thirty days.,We received three quotes this week.
+estimate,견적,비즈니스,3,The estimate for the repair is five hundred dollars.,Ask the builder for an estimate.,The estimate is only approximate.
+purchase,구매,비즈니스,3,The purchase was made online.,We made a large purchase last month.,Keep the receipt after your purchase.
+procurement,조달,비즈니스,5,The procurement team buys office supplies.,Procurement rules are strict.,Procurement takes several weeks.
+vendor,판매업체,비즈니스,4,The vendor sells fresh fruit.,We work with a reliable vendor.,The vendor sent the wrong order.
+wholesale,도매,비즈니스,4,They buy goods at wholesale prices.,The wholesale market opens early.,We sell wholesale to small shops.
+retail,소매,비즈니스,4,The retail price is higher than the wholesale price.,She works in retail.,The retail store is open until ten.
+distributor,유통업체,비즈니스,5,The distributor sends products to shops.,We appointed a new distributor.,The distributor handles all orders in the region.
+manufacturer,제조사,비즈니스,4,The manufacturer makes car parts.,Choose a manufacturer with good quality.,The manufacturer offers a two year warranty.
+factory,공장,비즈니스,2,The factory makes shoes.,Workers in the factory start at seven.,The factory is closed for repairs.
+production,생산,비즈니스,3,Production increased this month.,The production line stopped for an hour.,Costs depend on the production method.
+assembly,조립,비즈니스,4,The assembly of the desk takes one hour.,Workers on the assembly line are busy.,The product needs final assembly.
+quality,품질,비즈니스,2,The quality of this paper is high.,We check the quality of every item.,Good quality takes time.
+defect,결함,비즈니스,4,The machine has a small defect.,Defects are found during inspection.,Return any product with a defect.
+warranty,보증,비즈니스,4,The phone has a one year warranty.,The warranty covers repair costs.,Keep the warranty card safe.
+complaint,불만,비즈니스,3,We received a complaint about the service.,The customer made a complaint to the manager.,Please write your complaint in the box.
+satisfaction,만족,비즈니스,3,Customer satisfaction is our top goal.,The survey shows high satisfaction.,She expressed her satisfaction with the result.
+loyalty,충성도,비즈니스,4,Our loyalty program rewards frequent buyers.,Customer loyalty grows when service is good.,He showed loyalty to the company.
+survey,설문조사,비즈니스,3,We sent a survey to all customers.,The survey took five minutes.,Results of the survey will be shared next week.
+research,연구,비즈니스,3,The team did research on new markets.,Research shows that sleep helps memory.,Our research is still in progress.
+marketing,마케팅,비즈니스,3,She works in marketing.,The marketing plan starts in June.,Good marketing helps people find our products.
+campaign,캠페인,비즈니스,3,The campaign raised money for charity.,Our advertising campaign was a success.,The election campaign is very busy.
+launch,출시하다,비즈니스,3,The company will launch a new phone.,We launched the website last week.,The product launch is next Monday.
+prototype,시제품,비즈니스,4,The team built a prototype of the device.,The prototype needs more testing.,We showed the prototype to investors.
+innovation,혁신,비즈니스,4,Innovation keeps the company ahead.,This design is a real innovation.,Innovation requires creative thinking.
+technology,기술,비즈니스,3,Technology has changed how we work.,The company invests in new technology.,This technology saves energy.
+software,소프트웨어,비즈니스,3,The software is easy to install.,We need new software for accounting.,The software has many useful features.
+hardware,하드웨어,비즈니스,4,The hardware of the computer is old.,We bought new hardware for the office.,Hardware problems stopped the system.
+online platform,온라인 플랫폼,비즈니스,4,The online platform runs on many devices.,The online platform connects buyers and sellers.,We chose a new online platform for learning.
+database,데이터베이스,비즈니스,4,The customer database is updated daily.,Store the records in a secure database.,The database crashed last night.
+network,네트워크,비즈니스,3,Our network is down today.,The company has a large network of stores.,Connect to the office network.
+server,서버,비즈니스,3,The server is in another building.,The website runs on a fast server.,The server stopped working during the sale.
+security,보안,비즈니스,3,Data security is very important.,The security guard checked our badges.,Change your password for better security.
+system,시스템,비즈니스,2,The new system saves time.,The computer system is down.,Our payment system is secure.
+tool,도구,비즈니스,2,This tool helps us measure the parts.,The right tool makes work easier.,Use the software tools to track sales.
+equipment,장비,비즈니스,3,The office needs new equipment.,The lab equipment is very expensive.,Check the equipment before the test.
+machine,기계,비즈니스,2,The machine makes ten cups per minute.,This machine needs regular cleaning.,The factory uses many machines.
+maintenance,유지보수,비즈니스,4,Regular maintenance keeps machines running.,The building is closed for maintenance.,The maintenance team fixed the lights.
+repair,수리,비즈니스,2,The repair took two days.,We need to repair the printer.,The car is under repair.
+upgrade,업그레이드,비즈니스,3,The upgrade adds new features to the app.,Upgrade your plan to get more space.,The computer needs a memory upgrade.
+access,접근,비즈니스,3,Only staff have access to this room.,You need a code to access the system.,Our website has easy access for everyone.
+permission,허가,비즈니스,3,You need permission to use the room.,Ask your manager for permission to leave.,The company gave us permission to hold the event.
+profile,프로필,비즈니스,3,Update your profile with a new photo.,Her profile lists her experience.,Check the customer profile before the call.
+user,사용자,비즈니스,2,Each user has a personal account.,The app has over a million users.,New users can try the service for free.
+subscription,구독,비즈니스,4,My subscription renews every month.,Cancel your subscription anytime.,The magazine subscription costs twenty dollars.
+membership,회원권,비즈니스,3,The gym membership costs fifty dollars.,Membership is free for students.,Renew your membership before it expires.
+license,면허,비즈니스,3,You need a license to drive a truck.,The software license covers five computers.,The business license is on the wall.
+certificate,증명서,비즈니스,3,She received a certificate after the course.,Show your certificate at the desk.,The certificate is valid for two years.
+diploma,졸업장,비즈니스,4,He received his diploma in June.,A diploma is required for this job.,She framed her diploma on the wall.
+degree,학위,비즈니스,3,He has a degree in engineering.,A master's degree takes two years.,She is working toward her degree.
+lecture,강의,비즈니스,3,The lecture starts at nine.,He gave a lecture on marketing.,The lecture was very informative.
+seminar,세미나,비즈니스,4,We attended a seminar on finance.,The seminar was held in a hotel.,She gave a talk at the seminar.
+workshop,워크숍,비즈니스,3,The workshop teaches basic design.,We held a workshop for new staff.,Sign up for the workshop today.
+conference,회의,비즈니스,3,The conference will be held in Seoul.,Over a thousand people attended the conference.,She spoke at the international conference.
+event,행사,비즈니스,2,The company event starts at six.,Thank you for attending the event.,The event was a great success.
+venue,장소,비즈니스,4,The venue can hold five hundred people.,We chose a new venue for the party.,The concert venue is downtown.
+appointment,약속,비즈니스,3,I have an appointment with the doctor.,Make an appointment before you visit.,The appointment was changed to Friday.
+reservation,예약,비즈니스,3,I made a reservation for two people.,The reservation is under my name.,Cancel your reservation online.
+cancel,취소하다,비즈니스,2,We had to cancel the meeting.,Please cancel my order.,The flight was canceled because of the storm.
+postpone,연기하다,비즈니스,4,We decided to postpone the launch.,The game was postponed due to rain.,Please postpone the call until tomorrow.
+reschedule,일정을 바꾸다,비즈니스,4,Can we reschedule the meeting for Friday?,She had to reschedule her trip.,The class was rescheduled to next week.
+attendance,출석,비즈니스,3,Attendance is checked every morning.,Her attendance at the meeting was high.,The class has good attendance.
+absence,결석,비즈니스,3,Her absence was noted in the report.,He apologized for his absence.,Long absences can affect your grades.
+colleague,동료,비즈니스,2,My colleague helped me with the report.,She is a friendly colleague.,I had lunch with my colleagues today.
+partner,파트너,비즈니스,2,Our partner company is in Japan.,She is a business partner of mine.,They became partners last year.
+supervisor,감독자,비즈니스,3,My supervisor checks my work every week.,Tell your supervisor about the delay.,The supervisor approved the plan.
+mentor,멘토,비즈니스,3,My mentor gives me good advice.,She became a mentor to new staff.,Find a mentor in your field.
+intern,인턴,비즈니스,3,He works as an intern this summer.,The interns joined the team on Monday.,She got an internship at a bank.
+assistant,비서,비즈니스,3,The assistant sent the files to the client.,He is the manager's assistant.,Ask the assistant to book a room.
+receptionist,접수원,비즈니스,4,The receptionist answered the phone.,Please check in with the receptionist.,The receptionist greeted every guest.
+accountant,회계사,비즈니스,4,The accountant checked the books.,She works as an accountant for a small firm.,Our accountant prepares the tax return.
+auditor,감사관,비즈니스,5,The auditor found some errors in the records.,An external auditor reviewed the accounts.,The auditor visits the company every year.
+lawyer,변호사,비즈니스,3,The lawyer read the contract carefully.,I need to talk to a lawyer.,My cousin is a lawyer in Seoul.
+consultant,컨설턴트,비즈니스,4,The consultant gave advice on sales.,We hired a consultant for the project.,She works as a marketing consultant.
+engineer,엔지니어,비즈니스,3,The engineer fixed the machine.,He studied to become an engineer.,The engineers tested the new design.
+designer,디자이너,비즈니스,3,The designer created a new logo.,She is a fashion designer.,Ask the designer for a sample.
+programmer,프로그래머,비즈니스,4,The programmer wrote the code in one week.,He works as a programmer at a startup.,A good programmer tests the code carefully.
+analyst,분석가,비즈니스,4,The analyst studied the sales data.,She is a financial analyst.,The analyst wrote a report on the market.
+researcher,연구원,비즈니스,4,The researcher published a new paper.,Our researchers work in the lab.,A young researcher joined the team.
+workplace,직장,비즈니스,3,Our workplace is clean and bright.,Respect is important in the workplace.,Many workplaces offer flexible hours.
+headquarters,본사,비즈니스,4,The company headquarters is in Seoul.,The meeting will be held at headquarters.,Our headquarters moved to a new building.
+branch,지점,비즈니스,3,The bank has a branch near my house.,This branch opens at nine.,The company opened a new branch in Busan.
+cooperation,협력,비즈니스,4,Thank you for your cooperation.,Cooperation between teams is important.,The two companies worked in cooperation.
+collaboration,협업,비즈니스,4,The collaboration produced a new product.,Our team values collaboration.,Collaboration makes projects faster.
+communication,소통,비즈니스,3,Good communication builds trust.,Email is a common form of communication.,Poor communication caused the error.
+negotiation,협상,비즈니스,4,The negotiation lasted three hours.,Successful negotiation needs patience.,The negotiation ended with a deal.
+negotiate,협상하다,비즈니스,4,We need to negotiate the price.,They negotiated a better contract.,Can we negotiate the terms?
+agreement,합의,비즈니스,3,We reached an agreement on the price.,The agreement must be signed by both sides.,The two parties made an agreement.
+terms,조건,비즈니스,3,Please read the terms of the contract.,The payment terms are thirty days.,We agreed to the new terms.
+condition,조건,비즈니스,3,The offer has one condition.,The condition of the machine is good.,The deal depends on one condition.
+obligation,의무,비즈니스,4,We have an obligation to protect data.,He felt no obligation to stay.,The contract creates a legal obligation.
+liability,책임,비즈니스,5,The company accepts no liability for loss.,Insurance reduces your liability.,The law sets a limit on liability.
+guarantee,보증,비즈니스,4,The product comes with a guarantee.,We guarantee the quality of our work.,There is no guarantee of success.
+penalty,벌금,비즈니스,3,The late fee is a penalty for delay.,He paid a penalty for breaking the rules.,The contract includes a penalty clause.
+sanction,제재,비즈니스,5,The country faced economic sanctions.,The company received a sanction for the error.,The rules carry strict sanctions.
+violation,위반,비즈니스,4,Each violation will be reported.,This action is a violation of the policy.,The company was fined for a violation.
+dispute,분쟁,비즈니스,4,The two companies had a dispute over payment.,We settled the dispute quickly.,The dispute went to court.
+settlement,합의,비즈니스,5,They reached a settlement out of court.,The settlement covers all costs.,The lawyers agreed on a settlement.
+arbitration,중재,비즈니스,5,The dispute was solved by arbitration.,The contract requires arbitration first.,Arbitration is faster than a trial.
+legal,법률의,비즈니스,3,We need legal advice before we sign.,The legal team reviewed the document.,This product meets all legal standards.
+court,법원,비즈니스,3,The case goes to court next month.,The judge is in the court.,The court ruled in their favor.
+lawsuit,소송,비즈니스,4,The company faces a lawsuit.,He filed a lawsuit against the store.,The lawsuit was dropped last week.
+patent,특허,비즈니스,4,The company holds a patent for the design.,She applied for a patent last year.,The patent protects the invention.
+trademark,상표,비즈니스,4,The logo is a registered trademark.,They protected their name with a trademark.,The trademark cannot be used without permission.
+copyright,저작권,비즈니스,4,This photo is protected by copyright.,You need permission to use copyrighted music.,The copyright lasts for many years.
+ownership,소유권,비즈니스,4,The ownership of the company changed.,She claimed ownership of the design.,Check the ownership before you buy.
+property,재산,비즈니스,3,He owns a lot of property in the city.,The office is company property.,Keep your valuable property safe.
+rent,임대료,비즈니스,2,The rent is due on the first day.,We pay rent every month.,The office rent went up this year.
+lease,임대계약,비즈니스,4,We signed a two year lease for the office.,The lease ends in December.,Read the lease before you move in.
+mortgage,주택담보대출,비즈니스,5,They took a mortgage to buy the house.,The monthly mortgage payment is high.,He paid off his mortgage early.
+profit,이익,비즈니스,3,The company made a large profit.,Profit rose by twenty percent.,They sold the house at a profit.
+margin,마진,비즈니스,4,The profit margin is very small.,This product has a high margin.,The company lowered its margin to win customers.
+projection,전망,비즈니스,4,The sales projection for next year is high.,The projection shows slow growth.,Our financial projection is ready.
+milestone,중간 목표,비즈니스,4,Reaching the first milestone was a big step.,The project has three milestones.,We celebrated the milestone with a dinner.
+deliverable,산출물,비즈니스,5,The main deliverable is the final report.,Each deliverable is due next week.,The deliverables are listed in the plan.
+timeline,일정표,비즈니스,4,The timeline shows each step of the project.,Our timeline is very tight.,Update the timeline every Friday.
+phase,단계,비즈니스,4,The project is in its first phase.,Each phase has a clear goal.,The second phase starts in June.
+tracking,추적,비즈니스,4,Package tracking is available online.,We use software for tracking expenses.,Tracking the data helps us improve.
+monitor,모니터링하다,비즈니스,4,We monitor the sales every day.,The system monitors the network.,A manager monitors the progress of the team.
+review,검토하다,비즈니스,3,Please review the draft before Friday.,The team will review the results today.,Each quarter we review our goals.
+audit,감사,비즈니스,4,The company passed its annual audit.,The audit found no major problems.,An audit checks the financial records.
+governance,지배구조,비즈니스,5,Good governance protects shareholders.,The board is responsible for corporate governance.,The governance of the club is clear.
+ethics,윤리,비즈니스,4,Business ethics guide our decisions.,She is a teacher of medical ethics.,The company follows strong ethics.
+integrity,청렴,비즈니스,4,He is known for his integrity.,Integrity is important for a leader.,The bank values honesty and integrity.
+transparency,투명성,비즈니스,5,The company promised more transparency.,Transparency builds trust with customers.,The report improved transparency.
+accountability,책임성,비즈니스,5,Managers must take accountability for results.,Clear accountability helps teams work well.,The project lacked accountability.
+leadership,리더십,비즈니스,3,Strong leadership helps the team succeed.,She showed great leadership during the crisis.,Leadership training is offered every year.
+teamwork,팀워크,비즈니스,3,Teamwork makes the project successful.,Good teamwork requires trust.,We won the contest through teamwork.
+motivation,동기,비즈니스,4,Motivation helps workers stay focused.,Money is not always the best motivation.,Her motivation to learn is strong.
+engagement,참여,비즈니스,4,Employee engagement increased this year.,Customer engagement is growing online.,The event encourages active engagement.
+retention,유지,비즈니스,5,Customer retention is key for growth.,Staff retention improved after the change.,Retention rates are high this year.
+turnover,이직률,비즈니스,5,Staff turnover is high in this industry.,The company works to reduce turnover.,Turnover caused problems for the team.
+onboarding,신입 교육,비즈니스,5,Onboarding takes two days for new staff.,The onboarding process is simple.,A good onboarding program helps new hires.
+orientation,오리엔테이션,비즈니스,4,The orientation starts at nine.,New employees attend an orientation.,The orientation explains company policies.
+relocation,이전,비즈니스,5,The company announced a relocation to Busan.,The relocation cost was high.,Our office relocation takes one month.
+commute,출퇴근,비즈니스,3,My commute takes forty minutes.,I commute to work by subway.,A long commute can be tiring.
+overtime,초과근무,비즈니스,3,She worked overtime to finish the report.,Overtime pay is higher on weekends.,Too much overtime is bad for health.
+shift,교대근무,비즈니스,3,He works the night shift this week.,My shift starts at six.,The next shift begins after lunch.
+pension,연금,비즈니스,4,He receives a pension every month.,The company offers a good pension plan.,She saves money for her pension.
+insurance,보험,비즈니스,3,Health insurance covers hospital costs.,I bought car insurance last year.,The insurance pays for the damage.
+allowance,수당,비즈니스,4,Employees receive a travel allowance.,The meal allowance is paid monthly.,The child allowance helps families.
+wage,임금,비즈니스,3,The minimum wage went up this year.,Her wage is paid every two weeks.,Workers asked for a higher wage.
+hourly,시간당의,비즈니스,3,The hourly rate is ten dollars.,He works on an hourly basis.,The hourly fee includes all supplies.
+commission,수수료,비즈니스,4,Agents earn a commission on each sale.,The commission is paid at the end of the month.,She works for a commission.
+tip,팁,비즈니스,2,The waiter received a good tip.,Leave a tip for the driver.,She gave me a useful tip for the test.
+payroll,급여대장,비즈니스,5,The payroll is processed on Friday.,Check the payroll before sending it.,The payroll team handles all salaries.
+deposit,보증금,비즈니스,3,I paid a deposit for the apartment.,The bank accepted my deposit.,Make a deposit before the due date.
+withdrawal,인출,비즈니스,4,The withdrawal limit is one thousand dollars.,You can make a withdrawal at the machine.,The withdrawal took two days to process.
+credit,신용,비즈니스,3,Her credit score is very high.,You can pay by credit card.,The bank gave her a line of credit.
+expenditure,지출,비즈니스,5,The total expenditure rose last year.,Government expenditure increased this quarter.,Reduce the household expenditure.
+accounting,회계,비즈니스,3,Accounting is important for every company.,She studies accounting at university.,The accounting team closes the books each month.
+bookkeeping,장부 기록,비즈니스,4,Bookkeeping keeps track of all payments.,He handles the bookkeeping for the shop.,Good bookkeeping saves time at tax season.
+ledger,원장,비즈니스,5,Record each sale in the ledger.,The ledger shows all income and costs.,The accountant checked the general ledger.
+budgeting,예산 편성,비즈니스,4,Budgeting helps us control costs.,Budgeting for the event started early.,Careful budgeting avoids debt.
+forecasting,예측,비즈니스,4,Forecasting sales is difficult in this market.,The team is working on demand forecasting.,Weather forecasting has improved a lot.
+valuation,평가액,비즈니스,5,The valuation of the company was high.,An expert made the valuation of the house.,The valuation changes every year.
+appraisal,평가,비즈니스,4,Her performance appraisal was positive.,The appraisal takes place in March.,The house needs an appraisal before sale.
+benchmark,기준점,비즈니스,4,We use last year's results as a benchmark.,The benchmark helps us measure progress.,Our benchmark is the top competitor.
+metric,지표,비즈니스,4,Customer satisfaction is a key metric.,The team tracks several metrics each week.,This metric shows how fast we respond.
+indicator,지표,비즈니스,4,Sales is a good indicator of growth.,The indicator shows a sharp drop.,Unemployment is an economic indicator.
+index,지수,비즈니스,4,The stock index rose today.,The price index went up this month.,The index shows changes in costs.
+ratio,비율,비즈니스,3,The ratio of boys to girls is equal.,Our profit ratio improved this year.,Mix the flour and water in a ratio of two to one.
+percentage,백분율,비즈니스,3,What percentage of students passed?,The percentage of sales rose by ten.,Show the result as a percentage.
+average,평균,비즈니스,2,The average price is ten dollars.,Our average sales were high last month.,The average age of staff is thirty.
+maximum,최대,비즈니스,4,The maximum number of guests is fifty.,Set the maximum price for the item.,Use the maximum speed only in emergencies.
+minimum,최소,비즈니스,4,The minimum order is ten boxes.,The minimum wage was raised this year.,Keep a minimum balance in the account.
+quota,할당량,비즈니스,4,Each team has a monthly sales quota.,We met our quota this quarter.,The quota for imports was reduced.
+allocation,배정,비즈니스,5,The allocation of funds was approved.,The team reviewed the budget allocation.,Check the allocation of seats.
+distribution,유통,비즈니스,4,The distribution of goods takes three days.,Distribution costs are rising.,The company improved its distribution network.
+allocate,배정하다,비즈니스,4,We will allocate more money to marketing.,The manager allocated tasks to each team.,Allocate your time wisely.
+assign,배정하다,비즈니스,3,The manager assigned a new project to me.,Please assign each task to a team member.,The teacher assigned homework for Monday.
+delegate,위임하다,비즈니스,4,A good leader knows when to delegate.,She delegated the report to her assistant.,He delegated the job to the new staff.
+supervise,감독하다,비즈니스,4,He supervises the sales team.,Two managers supervise the factory.,The nurse supervised the children.
+coordinate,조율하다,비즈니스,4,She coordinates the schedule for all teams.,We need to coordinate our work.,The event was coordinated by volunteers.
+facilitate,촉진하다,비즈니스,5,The meeting was facilitated by an expert.,The new law will facilitate trade.,Online tools facilitate learning.
+implement,실행하다,비즈니스,4,We will implement the new plan next month.,The company implemented a new system.,The rules were implemented last year.
+execute,실행하다,비즈니스,5,The team executed the plan perfectly.,The order was executed quickly.,He is responsible for executing the strategy.
+initiate,시작하다,비즈니스,5,The company will initiate a new program.,She initiated the talks with the supplier.,Who initiated the project?
+establish,설립하다,비즈니스,4,The company was established in 1990.,They established a new branch in Seoul.,We need to establish trust with clients.
+expand,확장하다,비즈니스,3,The company plans to expand overseas.,We expanded our shop last year.,The city will expand the park.
+extend,연장하다,비즈니스,3,We will extend the deadline by one week.,The contract can be extended for a year.,The hotel extended its checkout time.
+diversify,다각화하다,비즈니스,5,The company wants to diversify its products.,Diversifying reduces business risk.,The firm diversified into new markets.
+outsource,외주를 주다,비즈니스,5,We outsource our payroll to another firm.,The company decided to outsource design work.,Outsourcing can reduce costs.
+streamline,간소화하다,비즈니스,5,We need to streamline the approval process.,The new software streamlines the workflow.,The team streamlined the report format.
+optimize,최적화하다,비즈니스,5,Our goal is to optimize the production line.,The website was optimized for mobile phones.,Optimize your schedule for better results.
+automate,자동화하다,비즈니스,5,The factory automated the packing process.,We can automate the billing system.,Automating tasks saves time.
+transform,변화시키다,비즈니스,4,The new app will transform our business.,Technology transformed the way we shop.,The city was transformed after the project.
+adapt,적응하다,비즈니스,4,Companies must adapt to new trends.,She adapted quickly to her new job.,The product was adapted for local markets.
+adjust,조정하다,비즈니스,3,We need to adjust the budget.,Adjust the settings on your phone.,She adjusted her schedule for the trip.
+modify,수정하다,비즈니스,4,We may modify the plan after the review.,Please modify the report before sending it.,The design was modified to save costs.
+revise,개정하다,비즈니스,4,The team will revise the policy next year.,Please revise your answer.,The document was revised twice.
+evaluate,평가하다,비즈니스,4,The committee will evaluate each proposal.,We evaluate our results every quarter.,Evaluate the risks before you invest.
+assess,평가하다,비즈니스,4,The doctor assessed the patient's condition.,We assess our performance twice a year.,The expert assessed the value of the painting.
+measure,측정하다,비즈니스,2,We measure the results every month.,Measure the room before you buy the desk.,The tool measures the temperature.
+verify,검증하다,비즈니스,4,Please verify your identity before login.,We need to verify the data.,The bank verified the payment.
+confirm,확인하다,비즈니스,3,Please confirm your booking by email.,I want to confirm the time of the meeting.,The results confirmed our idea.
+pitch,발표,비즈니스,4,She gave a short pitch to investors.,The team prepared a sales pitch.,The pitch lasted only five minutes.
+rapport,친밀한 관계,비즈니스,5,The manager built good rapport with the team.,They have a strong rapport with clients.,Rapport makes meetings easier.
+relationship,관계,비즈니스,3,Good relationships help business grow.,The company has a long relationship with suppliers.,Their relationship improved after the talk.
+reputation,평판,비즈니스,4,The company has a good reputation.,A bad review can damage your reputation.,The brand built its reputation over decades.
+image,이미지,비즈니스,2,The company wants a clean image.,The image on the screen is blurry.,Her public image is very positive.
+perception,인식,비즈니스,5,Customer perception of the brand is changing.,Our perception of the problem differs.,The price affects how people perceive quality.
+identity,정체성,비즈니스,4,The brand has a strong identity.,Each team member has a clear identity.,Protect your identity online.
+mission,사명,비즈니스,4,Our mission is to help small businesses.,The company's mission is clear.,The mission statement is on the wall.
+vision,비전,비즈니스,4,The leader shared a bold vision for the future.,Our vision is to lead the industry.,The vision of the project is simple.
+values,가치관,비즈니스,4,The company values honesty and respect.,Our core values guide every decision.,Shared values unite the team.
+strategy,전략,비즈니스,4,The company needs a new strategy.,Our strategy focuses on online sales.,The strategy worked well last year.
+tactic,전술,비즈니스,5,The team used a clever tactic to win.,Different tactics are needed in this market.,The tactic was not very effective.
+objective,목표,비즈니스,4,The main objective is to cut costs.,Each objective must be measurable.,The objective of the study is clear.
+initiative,주도권,비즈니스,5,She took the initiative to fix the problem.,The government launched a new initiative.,Show initiative at work.
+competitive,경쟁력 있는,비즈니스,4,Our prices are very competitive.,The market is highly competitive.,She is a competitive player.
+advantage,장점,비즈니스,3,Speed is our biggest advantage.,The new design gives us an advantage.,Take advantage of the free offer.
+disadvantage,단점,비즈니스,4,The disadvantage is the high cost.,Every choice has a disadvantage.,His lack of experience is a disadvantage.
+weakness,약점,비즈니스,3,Our weakness is the lack of staff.,Everyone has some weaknesses.,Find the weakness in the plan.
+strength,강점,비즈니스,3,Our strength is our customer service.,Her strength is her attention to detail.,The bridge has great strength.
+potential,잠재력,비즈니스,3,This market has great potential.,She has a lot of potential as a leader.,The potential risks must be studied.
+prospect,전망,비즈니스,4,The prospects for growth are good.,New prospects appeared after the deal.,The job offers good prospects.
+uncertainty,불확실성,비즈니스,5,Uncertainty in the market is high.,The team faced many uncertainties.,Uncertainty makes planning difficult.
+volatility,변동성,비즈니스,5,The price shows high volatility.,Market volatility increased this week.,Investors fear volatility.
+stability,안정성,비즈니스,4,Stability is important for the economy.,The company values financial stability.,The bridge has good stability.
+crisis,위기,비즈니스,4,The company faced a financial crisis.,The team solved the crisis quickly.,A crisis can test a leader.
+emergency,비상,비즈니스,3,Call the office in an emergency.,The fire exit is for emergencies only.,The company has an emergency plan.
+recovery,회복,비즈니스,4,The economy shows signs of recovery.,Her recovery after the illness was fast.,Recovery from the crisis took two years.
+restructuring,구조조정,비즈니스,5,The company announced a restructuring plan.,Restructuring changed the whole team.,Restructuring may reduce costs.
+downsizing,인원 감축,비즈니스,5,Downsizing affected many workers.,The firm is considering downsizing.,Downsizing was painful for everyone.
+layoff,해고,비즈니스,4,The layoff affected two hundred workers.,He was worried about a layoff.,The company announced layoffs this week.
+dismissal,해고,비즈니스,5,Her dismissal was unfair.,The dismissal came after the investigation.,The worker appealed his dismissal.
+termination,종료,비즈니스,5,The termination of the contract was sudden.,Termination notice must be given in writing.,The contract allows early termination.
+severance,퇴직금,비즈니스,5,He received severance pay after leaving.,The severance package was generous.,She negotiated a better severance.
+redundancy,정리해고,비즈니스,5,Several staff were made redundant.,Redundancy affects many families.,The redundancy plan was announced today.
+warning,경고,비즈니스,2,The manager gave him a warning.,A warning sign is on the door.,Read the warning before using the machine.
+reminder,알림,비즈니스,3,Send a reminder before the deadline.,I got a reminder about the meeting.,This note is a reminder for the team.
+announcement,발표,비즈니스,3,The announcement will be made tomorrow.,The company made an important announcement.,Listen for the announcement at the station.
+press,언론,비즈니스,3,The press covered the new product.,The company held a press conference.,Reporters from the press asked questions.
+media,미디어,비즈니스,3,Social media is changing how we shop.,The media reported the news quickly.,The company uses many media channels.
+publicity,홍보,비즈니스,4,The event got a lot of publicity.,Good publicity increases sales.,The brand needs more publicity.
+endorsement,보증,비즈니스,5,The product has an endorsement from experts.,The celebrity gave an endorsement.,Their endorsement helped sales grow.
+sponsor,후원자,비즈니스,4,Our main sponsor is a local bank.,The sponsor paid for the event.,The team needs a new sponsor.
+donation,기부,비즈니스,3,The donation helped build the school.,She made a donation to the charity.,Every donation is appreciated.
+charity,자선 단체,비즈니스,3,She works for a charity that helps children.,The company gives money to charity.,The charity sells used books.
+nonprofit,비영리의,비즈니스,5,They run a nonprofit organization.,A nonprofit group helps the poor.,The nonprofit sector is growing.
+foundation,재단,비즈니스,4,The foundation supports young artists.,He set up a family foundation.,The foundation gives scholarships every year.
+association,협회,비즈니스,4,He joined the trade association.,The association meets every month.,The student association organized a trip.
+organization,조직,비즈니스,3,The organization helps poor families.,She works for a large organization.,Each organization has its own rules.
+institution,기관,비즈니스,4,The bank is a financial institution.,The school is a respected institution.,Several institutions supported the plan.
+agency,기관,비즈니스,4,The travel agency booked our flights.,The government agency issues licenses.,She works at an advertising agency.
+authority,당국,비즈니스,4,The local authority approved the plan.,Only the authority can issue permits.,He has the authority to sign.
+official,공무원,비즈니스,3,The official checked our documents.,An official announcement will come soon.,She is an official of the company.
+minister,장관,비즈니스,4,The minister announced the new policy.,He was appointed as minister of finance.,The minister visited the factory.
+parliament,국회,비즈니스,5,The parliament passed the new law.,Members of parliament debated the bill.,The parliament meets every Tuesday.
+election,선거,비즈니스,3,The election will be held in June.,She won the election for president.,Voters chose a new leader in the election.
+vote,투표,비즈니스,3,Each member gets one vote.,We will vote on the plan today.,Please cast your vote before noon.
+brochure,안내 책자,비즈니스,3,Take a brochure about our services.,The brochure lists all the hotel rooms.,Print the brochure in color.
+flyer,전단지,비즈니스,3,The shop handed out a flyer on the street.,Put a flyer on the notice board.,The flyer shows our new menu.
+poster,포스터,비즈니스,2,The event poster is on the wall.,She designed a poster for the contest.,Read the poster on the door.
+banner,현수막,비즈니스,3,A banner hangs over the main gate.,The banner says welcome to the new store.,We made a banner for the event.
+catalog,카탈로그,비즈니스,4,Check the catalog for new products.,The online catalog has many items.,The catalog lists all our prices.
+label,라벨,비즈니스,3,Read the label before you eat.,Stick the label on the box.,The label shows the price clearly.
+packaging,포장,비즈니스,4,The packaging of the product is nice.,Better packaging protects the goods.,Recycle the packaging after you open it.
+package,소포,비즈니스,3,A package arrived at the office today.,The package was damaged in shipping.,Sign for the package at the door.
+container,용기,비즈니스,4,Store the food in a clean container.,The container holds ten liters.,The ship carried many containers.
+pallet,파렛트,비즈니스,5,The boxes are stacked on a pallet.,Move the pallet to the loading dock.,Each pallet holds twenty cartons.
+carton,상자,비즈니스,4,We ordered ten cartons of paper.,The carton of milk is in the fridge.,Pack the goods in a strong carton.
+cargo,화물,비즈니스,4,The cargo arrived at the port this morning.,The ship carries heavy cargo.,The cargo must be checked before it leaves.
+freight,화물 운송,비즈니스,5,Freight charges are high this month.,The freight company delivers goods by truck.,Send the parts by air freight.
+transport,운송,비즈니스,3,We use trucks to transport the goods.,Public transport is cheap in this city.,The transport cost is included in the price.
+courier,택배 기사,비즈니스,4,The courier delivered the package to my door.,A courier will pick up the parcel today.,The courier company is very fast.
+shipping,배송,비즈니스,3,Shipping takes three to five days.,The shipping cost is free for big orders.,We offer fast shipping in Seoul.
+export,수출하다,비즈니스,4,Korea exports many cars.,The company exports rice to Japan.,We plan to export our products next year.
+import,수입하다,비즈니스,4,The country imports oil from the Middle East.,We import wine from France.,Import costs have risen this year.
+customs,세관,비즈니스,4,The goods were held at customs for a day.,Show your passport at customs.,The customs office checks every bag.
+tariff,관세,비즈니스,5,The new tariff makes imported goods more expensive.,A high tariff reduced imports.,The tariff on steel was raised.
+trade,무역,비즈니스,3,Trade between the two countries is growing.,The company works in international trade.,Fair trade helps small farmers.
+commerce,상업,비즈니스,4,E commerce is growing very fast.,Commerce is important for the economy.,The city is a center of commerce.
+merchant,상인,비즈니스,4,The merchant sells silk in the market.,A local merchant opened a new shop.,The merchant accepts cards and cash.
+dealer,판매상,비즈니스,4,The car dealer offered a good price.,He is a dealer in used furniture.,The dealer will deliver the car on Friday.
+outlet,매장,비즈니스,4,This outlet sells shoes at a low price.,The store is an outlet for local farms.,The factory outlet is open on weekends.
+mall,쇼핑몰,비즈니스,2,The new mall opens next month.,We went shopping at the mall.,The mall is full on Saturdays.
+franchise,프랜차이즈,비즈니스,5,She bought a franchise of a coffee shop.,The franchise has stores in ten cities.,A franchise can reduce the risk of starting a business.
+storefront,가게 앞,비즈니스,5,The storefront has big windows.,Put a sign on the storefront.,The storefront was painted red.
+booth,부스,비즈니스,3,Visit our booth at the trade fair.,The booth sells handmade soap.,Each booth has a small table.
+exhibition,전시회,비즈니스,3,The exhibition opens on Monday.,We visited an art exhibition last week.,The exhibition shows new products.
+fair,박람회,비즈니스,3,The job fair is held in the gym.,We visited the book fair downtown.,The trade fair attracts many buyers.
+showroom,전시장,비즈니스,4,The car showroom has ten new cars.,Visit our showroom to see the furniture.,The showroom is open until nine.
+inquiry,문의,비즈니스,4,Thank you for your inquiry.,We received an inquiry about the price.,Please direct all inquiries to the desk.
+testimonial,추천사,비즈니스,5,The website has many customer testimonials.,She wrote a testimonial for the course.,The testimonial praised the service.
+reference,추천서,비즈니스,4,Can you give me a reference for the job?,The reference letter was very positive.,Please list two references on your form.
+portfolio,포트폴리오,비즈니스,4,She showed her portfolio to the client.,Build a portfolio of your best work.,The fund manages a large portfolio.
+resume,이력서,비즈니스,3,Send your resume with your application.,Update your resume before the interview.,His resume lists five years of work.
+interview,면접,비즈니스,2,I have a job interview tomorrow.,The interview lasted thirty minutes.,She passed the interview easily.
+recruiter,채용 담당자,비즈니스,5,The recruiter called me this morning.,A recruiter found the job for me.,Meet the recruiter at the fair.
+headhunter,헤드헌터,비즈니스,5,A headhunter contacted me about a new job.,The headhunter found a great candidate.,Many executives use a headhunter.
+vacancy,공석,비즈니스,5,There is a vacancy for a sales manager.,The job vacancy closes on Friday.,The hotel has no vacancy tonight.
+employment,고용,비즈니스,4,Employment rose by ten percent this year.,She found employment in a bank.,The company provides full time employment.
+unemployment,실업,비즈니스,4,Unemployment is high among young people.,The rate of unemployment fell last year.,He was out of work during unemployment.
+workforce,노동력,비즈니스,5,The company has a large workforce.,Our workforce is young and energetic.,The workforce needs more training.
+labor,노동,비즈니스,4,Labor costs have gone up this year.,The factory needs more skilled labor.,Hard labor can be very tiring.
+union,노조,비즈니스,4,The workers joined the union.,The union talked with the company.,Members of the union voted for the deal.
+strike,파업,비즈니스,4,The workers went on strike for a week.,A strike stopped the trains yesterday.,The strike ended after a new agreement.
+protest,항의,비즈니스,3,The customers made a protest about the price.,Hundreds of people joined the protest.,He protested the decision in writing.
+petition,청원,비즈니스,5,Residents signed a petition against the plan.,She started a petition for better roads.,The petition has thousands of names.
+grievance,불만 사항,비즈니스,5,Employees can file a grievance with the office.,The grievance was solved within a week.,Please write your grievance clearly.
+mediation,조정,비즈니스,5,The mediation helped both sides agree.,They chose mediation instead of court.,A neutral person led the mediation.
+consensus,합의,비즈니스,5,The team reached a consensus after a long talk.,There is no consensus on the new rule.,Consensus takes time to build.
+decision,결정,비즈니스,2,The decision was made after a long talk.,We need to make a decision today.,Her decision surprised the team.
+verdict,판결,비즈니스,5,The jury reached a verdict after three days.,The verdict was not what we expected.,The judge announced the verdict.
+ruling,판결,비즈니스,5,The court issued a ruling on the case.,The ruling supports the company.,They will appeal the ruling.
+judgment,판단,비즈니스,4,Use your best judgment in this case.,His judgment was sound.,The judgment of the court was final.
+resolution,결의안,비즈니스,4,The board passed the resolution.,The resolution calls for lower costs.,Each member voted on the resolution.
+amendment,수정안,비즈니스,5,The amendment changes the first clause.,The committee approved the amendment.,The law was changed by an amendment.
+bill,법안,비즈니스,4,The bill was passed by parliament.,The new bill will protect workers.,The bill is still under review.
+statute,법규,비즈니스,5,The statute sets the rules for trade.,Under the statute the fee is limited.,The statute was updated last year.
+clause,조항,비즈니스,4,Read the clause about payment carefully.,The contract has ten clauses.,Add a clause for early exit.
+respond,응답하다,비즈니스,3,Please respond to the email by Friday.,The team responded quickly to the complaint.,He did not respond to my message.
+acknowledge,확인하다,비즈니스,5,Please acknowledge receipt of the order.,She acknowledged her mistake at once.,The company acknowledged the problem.
+notify,알리다,비즈니스,4,We will notify you when the order ships.,Please notify the office of any changes.,The bank notified me by text.
+remind,상기시키다,비즈니스,3,Please remind me about the meeting tomorrow.,The calendar reminds me of the deadline.,Remind your staff about the rules.
+forward,전달하다,비즈니스,3,Please forward the report to the client.,I forwarded your email to the manager.,Forward the file to my assistant.
+attach,첨부하다,비즈니스,3,Please attach the file to the email.,I attached the photos to the message.,The form must be attached to the contract.
+attachment,첨부 파일,비즈니스,3,Please open the attachment in the email.,The attachment is too large to send.,There is an attachment with the invoice.
+scan,스캔하다,비즈니스,3,Please scan the document and send it.,Scan your ticket at the gate.,The printer can scan and copy papers.
+print,인쇄하다,비즈니스,2,Please print two copies of the report.,The printer will print the slides.,I need to print my boarding pass.
+archive,보관하다,비즈니스,5,We archive old files every year.,The old records are stored in the archive.,Archive the emails after the project ends.
+delete,삭제하다,비즈니스,3,Please delete the old files from the folder.,I accidentally deleted the photo.,The message was deleted by mistake.
+edit,편집하다,비즈니스,3,Please edit the text before sending it.,The editor will edit the article tonight.,I need to edit the video.
+format,형식,비즈니스,3,Use the same format for all reports.,The file format is not supported.,Choose the format you prefer.
+template,양식,비즈니스,4,Download the template for the report.,Fill in the template with your data.,The template saves time on new contracts.
+layout,배치,비즈니스,4,The layout of the office is simple.,Check the layout of the page before printing.,Change the layout of the slides.
+footer,바닥글,비즈니스,5,The page number is in the footer.,Add the company name to the footer.,The footer shows the date.
+header,머리글,비즈니스,5,The header shows the title of the report.,Add a header to the first page.,The table header is in bold.
+section,부분,비즈니스,3,Read the section about costs.,The report has five sections.,The new section opens next week.
+chapter,장,비즈니스,2,Read the first chapter before class.,Each chapter ends with a quiz.,The book has twelve chapters.
+appendix,부록,비즈니스,5,See the appendix for more data.,The appendix lists all the codes.,Add the survey results to the appendix.
+column,열,비즈니스,3,Put the numbers in the first column.,The column shows the total price.,Write your name in the left column.
+row,행,비즈니스,3,Each row shows one customer.,Add a new row at the bottom.,The third row has the highest score.
+formula,공식,비즈니스,3,Use this formula to calculate the total.,The formula is written in the cell.,Check the formula before you copy it.
+variable,변수,비즈니스,4,Each variable stores one number.,The cost is a variable in this model.,Change the variable to see the result.
+code,코드,비즈니스,2,Enter the code to unlock the door.,The code has a small error.,Write clean code for the project.
+script,스크립트,비즈니스,4,The script runs every night.,Read the script before the video.,Write a simple script for the test.
+bug,버그,비즈니스,3,We found a bug in the app.,The bug was fixed this morning.,The program has a serious bug.
+error,오류,비즈니스,2,The system shows an error message.,There is an error in the report.,Fix the error before you send the file.
+glitch,오류,비즈니스,4,A small glitch stopped the payment.,The website had a glitch last night.,The video has a strange glitch.
+backup,백업,비즈니스,3,Make a backup of your files every week.,The backup file was saved on a drive.,The backup system restored the data.
+storage,저장 공간,비즈니스,3,The phone has little storage left.,The office needs more storage space.,The data is kept in cloud storage.
+capacity,용량,비즈니스,4,The capacity of the hall is three hundred.,This drive has a large capacity.,The factory is working at full capacity.
+bandwidth,대역폭,비즈니스,5,Low bandwidth made the video slow.,Increase your bandwidth for better speed.,The network has limited bandwidth.
+browser,브라우저,비즈니스,3,Open the browser and search the site.,This browser is fast and safe.,Update your browser for better security.
+homepage,홈페이지,비즈니스,3,Visit our homepage for more information.,The homepage shows the latest news.,Add a link to your homepage.
+domain,도메인,비즈니스,4,The company registered a new domain.,The domain name is easy to remember.,Our domain expires next year.
+link,링크,비즈니스,2,Click the link to read the article.,Send me the link to the video.,The link is broken.
+tag,태그,비즈니스,3,Add a tag to each photo.,The product has a price tag.,Search by tag to find the post.
+hashtag,해시태그,비즈니스,4,Use a hashtag to reach more people.,The hashtag is trending today.,Add a hashtag to your post.
+follower,팔로워,비즈니스,3,The account has over ten thousand followers.,Thank you to all my followers.,Her followers liked the new video.
+subscriber,구독자,비즈니스,4,The channel has five thousand subscribers.,Subscribers receive the newsletter each week.,Become a subscriber to get updates.
+reader,독자,비즈니스,2,The magazine has many readers.,The article is interesting for readers.,Thank you for your time dear reader.
+writer,작가,비즈니스,2,She is a writer for a magazine.,The writer finished the book last year.,He wants to become a writer.
+editor,편집자,비즈니스,3,The editor checked the article.,She is the editor of the newspaper.,Send the draft to the editor.
+publisher,출판사,비즈니스,4,The publisher released the new novel.,She works for a small publisher.,The publisher sent the book to shops.
+author,저자,비즈니스,3,The author wrote three books.,Who is the author of this report?,The author will sign books today.
+translator,번역가,비즈니스,4,The translator worked on the contract.,A good translator keeps the meaning.,She is a Korean translator.
+journalist,기자,비즈니스,4,The journalist interviewed the manager.,He became a journalist after college.,The journalist wrote about the new law.
+reporter,기자,비즈니스,3,The reporter asked about the price.,A reporter called the office today.,The local reporter covered the event.
+producer,제작자,비즈니스,4,The producer approved the new film.,She works as a music producer.,The factory is a major producer of toys.
+actor,배우,비즈니스,2,The actor won an award last night.,He is a famous actor.,The actor practiced his lines all day.
+newsletter,소식지,비즈니스,4,Subscribe to our newsletter for updates.,The company sends a newsletter each month.,The newsletter includes new offers.
+webinar,웨비나,비즈니스,5,Join our free webinar on Friday.,The webinar covered online marketing.,She hosted a webinar about sales.
+podcast,팟캐스트,비즈니스,4,I listen to a business podcast every day.,The podcast is about history.,Record a podcast for your fans.
+blog,블로그,비즈니스,3,She writes a blog about travel.,The company updates its blog weekly.,Read the blog for useful tips.
+fax,팩스,비즈니스,3,Please send the form by fax.,The fax machine is in the office.,I received a fax this morning.
+headline,제목,비즈니스,4,The headline caught my attention.,Read the headline before the article.,The headline was about the economy.
+reply,답장,비즈니스,2,I am waiting for your reply.,Please reply to this email today.,The reply came within an hour.
+correspondence,서신,비즈니스,5,All correspondence must be in writing.,She kept all the correspondence in a file.,The company handles correspondence by email.
+record,기록,비즈니스,2,Keep a record of all sales.,The record shows the total for the year.,The company broke its sales record.
+log,기록,비즈니스,4,Check the log for errors.,The system keeps a log of each visit.,Write the time in the log book.
+timestamp,시간 기록,비즈니스,5,Each message has a timestamp.,The timestamp shows when the file was saved.,Check the timestamp on the photo.
+liquidity,유동성,비즈니스,5,The company has enough liquidity to pay its bills.,Low liquidity can cause serious problems.,Liquidity is key for short term needs.
+solvency,지급 능력,비즈니스,5,The bank checked the solvency of the firm.,Solvency means being able to pay all debts.,Their solvency improved this year.
+equity,지분,비즈니스,5,She owns a large equity in the company.,The equity of the firm grew this year.,Investors bought equity in the start up.
+receivable,미수금,비즈니스,5,The accounts receivable are due next month.,Check the receivables before the audit.,The company collected its receivables late.
+payable,미지급금,비즈니스,5,The accounts payable list is long this month.,We must pay all payables on time.,The payable was recorded in the books.
+overhead,간접비,비즈니스,5,Overhead costs include rent and electricity.,Reducing overhead can raise profit.,The overhead of the office is high.
+surplus,흑자,비즈니스,5,The company had a surplus last year.,The budget shows a small surplus.,Share the surplus with the staff.
+deficit,적자,비즈니스,5,The city faces a large budget deficit.,The company reported a deficit this quarter.,Reduce the deficit by cutting costs.
+bankruptcy,파산,비즈니스,5,The shop filed for bankruptcy last month.,Bankruptcy forced the firm to close.,Avoid bankruptcy by managing debt.
+liquidation,청산,비즈니스,5,The company went into liquidation.,The assets were sold during liquidation.,Liquidation ended the business.
+turnaround,회생,비즈니스,5,The firm achieved a turnaround after the crisis.,The turnaround plan took two years.,Her turnaround as a manager was impressive.
+merchandise,상품,비즈니스,5,The store sells many kinds of merchandise.,This merchandise is on sale now.,The merchandise arrived in good condition.
+quarter,분기,비즈니스,3,Sales grew in the first quarter.,The report is due at the end of the quarter.,We review our goals every quarter.

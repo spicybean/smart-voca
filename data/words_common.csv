@@ -1,0 +1,1001 @@
+english,korean_meaning,category,level,example_1,example_2,example_3
+apple,사과,일상,1,I eat an apple every morning.,She put a red apple in her bag.,This apple tastes sweet and juicy.
+water,물,일상,1,Please drink some water after exercise.,The water in the lake is very clear.,Plants need water to grow.
+bread,빵,일상,1,I bought fresh bread at the bakery.,We eat bread with butter for breakfast.,This bread is still warm.
+milk,우유,일상,1,Would you like some milk in your coffee?,The baby drinks milk three times a day.,I bought a carton of milk today.
+rice,밥,일상,1,We eat rice with almost every meal.,She cooked rice in a big pot.,Rice is a main food in many countries.
+coffee,커피,일상,1,I drink coffee every morning.,Would you like a cup of coffee?,This coffee is too hot to drink.
+tea,차,일상,1,She drinks green tea before bed.,We had hot tea on a cold day.,Would you like some tea?
+juice,주스,일상,1,I want a glass of orange juice.,The kids drank apple juice after school.,This juice is fresh and cold.
+egg,달걀,일상,1,I cooked two eggs for breakfast.,The hen laid a brown egg today.,Boil the egg for ten minutes.
+meat,고기,일상,1,He does not eat meat.,The meat is cooking on the grill.,Fresh meat should be kept in the fridge.
+fish,생선,일상,1,We had grilled fish for dinner.,The fish swam quickly in the pond.,I like fish more than meat.
+chicken,닭고기,일상,1,We ordered fried chicken for dinner.,Chicken is a popular food in Korea.,The chicken soup smells wonderful.
+vegetable,채소,일상,1,Eat more vegetables to stay healthy.,She grows vegetables in her garden.,This soup has many fresh vegetables.
+fruit,과일,일상,1,Bananas are my favorite fruit.,We bought some fruit at the market.,This fruit is very sweet.
+cake,케이크,일상,1,We ate a chocolate cake on her birthday.,She baked a cake for the party.,The cake is in the box on the table.
+cookie,쿠키,일상,1,I baked cookies with my sister.,He ate three cookies with his milk.,This cookie is crispy outside and soft inside.
+breakfast,아침 식사,일상,1,I eat breakfast at seven o'clock.,Breakfast is the most important meal of the day.,She skipped breakfast this morning.
+lunch,점심 식사,일상,1,Let's have lunch together at noon.,I packed a sandwich for lunch.,The restaurant is busy at lunch time.
+dinner,저녁 식사,일상,1,We had dinner at a Korean restaurant.,What is for dinner tonight?,Dinner is ready on the table.
+house,집,일상,1,They live in a small house near the river.,My house has a big garden.,The house is painted white.
+room,방,일상,1,My room is on the second floor.,Please clean your room before dinner.,The room is warm and bright.
+door,문,일상,1,Please close the door when you leave.,Someone is knocking on the door.,The door is locked.
+window,창문,일상,1,Open the window to let in fresh air.,She looked out of the window.,The window is broken.
+bed,침대,일상,1,I go to bed at eleven o'clock.,The bed is very soft.,She made her bed this morning.
+chair,의자,일상,1,Please sit on that chair.,This chair is very comfortable.,He pulled a chair up to the table.
+table,탁자,일상,1,Put the book on the table.,We ate dinner at the round table.,The table is covered with papers.
+kitchen,부엌,일상,1,My mother is cooking in the kitchen.,The kitchen smells of fresh bread.,We keep the knives in the kitchen drawer.
+bathroom,욕실,일상,1,The bathroom is at the end of the hall.,I take a shower in the bathroom every morning.,Please turn off the light in the bathroom.
+school,학교,일상,1,I walk to school every day.,The school starts at eight thirty.,My brother goes to a different school.
+teacher,선생님,일상,1,My teacher is very kind.,The teacher explained the lesson clearly.,She wants to become a teacher.
+student,학생,일상,1,He is a student at this university.,The students are reading in the library.,Every student must wear a uniform.
+friend,친구,일상,1,She is my best friend.,We met a new friend at the park.,I invited my friends to my house.
+family,가족,일상,1,My family eats dinner together every night.,She visits her family in Busan every year.,Our family likes to travel in summer.
+mother,어머니,일상,1,My mother makes the best soup.,His mother works at a hospital.,Call your mother tonight.
+father,아버지,일상,1,My father reads the newspaper every morning.,Her father is a doctor.,Ask your father for help.
+baby,아기,일상,1,The baby is sleeping in the crib.,She is holding a baby in her arms.,The baby smiled at her mother.
+child,아이,일상,1,Every child needs love and care.,The child is playing with a ball.,She has two children.
+boy,소년,일상,1,The boy kicked the ball across the field.,A young boy waved at us.,That boy is my cousin.
+girl,소녀,일상,1,The girl is reading a comic book.,A little girl ran into the room.,She is a clever girl.
+man,남자,일상,1,The man is waiting at the bus stop.,A tall man opened the door.,He is a kind man.
+woman,여자,일상,1,The woman is my aunt.,A woman in a red coat smiled at me.,She is a strong woman.
+day,하루,일상,1,Have a nice day!,It was a sunny day in March.,I study English every day.
+night,밤,일상,1,The stars are bright at night.,I could not sleep last night.,We walked along the river at night.
+morning,아침,일상,1,Good morning! How are you?,I drink water every morning.,The train leaves early in the morning.
+evening,저녁,일상,1,We went for a walk in the evening.,The shop closes early in the evening.,See you this evening.
+week,주,일상,1,I have English class twice a week.,The movie will be released next week.,It rained all week.
+month,달,일상,1,She will move to Seoul next month.,The rent is paid once a month.,This month has thirty days.
+year,해,일상,1,I started learning English last year.,He is ten years old.,Next year we will travel to Japan.
+today,오늘,일상,1,What are you doing today?,Today is my birthday.,I feel good today.
+tomorrow,내일,일상,1,See you tomorrow.,We will go to the beach tomorrow.,Tomorrow will be cold.
+yesterday,어제,일상,1,I met my old friend yesterday.,Yesterday was a busy day.,Did you finish the homework yesterday?
+time,시간,일상,1,What time is it now?,We do not have much time.,This is a good time to study.
+hour,시간,일상,1,The movie lasts two hours.,We waited for an hour at the station.,The shop is open for another hour.
+minute,분,일상,1,Wait one minute and I will be ready.,The bus arrives in five minutes.,It took a minute to find my keys.
+second,초,일상,1,Give me one second to think.,The race was won by a second.,Count to ten seconds slowly.
+clock,시계,일상,1,The clock on the wall is wrong.,She looked at the clock.,The alarm clock woke me up.
+weather,날씨,일상,1,The weather is nice today.,How is the weather in Seoul?,Check the weather before you travel.
+rain,비,일상,1,The rain stopped in the afternoon.,I forgot my umbrella in the rain.,It will rain tomorrow.
+snow,눈,일상,1,The snow covered the mountains.,Children played in the snow.,It snowed all night.
+sun,태양,일상,1,The sun rises in the east.,We sat in the sun to read.,The sun is very hot today.
+moon,달,일상,1,The moon is bright tonight.,We watched the moon from the balcony.,The moon goes around the earth.
+star,별,일상,1,I can see a star in the sky.,The stars shine at night.,She is a movie star.
+sky,하늘,일상,1,The sky is blue today.,Birds fly across the sky.,Dark clouds filled the sky.
+tree,나무,일상,1,The tree in our yard is very old.,We climbed a tall tree.,Leaves fell from the tree.
+flower,꽃,일상,1,She gave me a red flower.,The flowers bloom in spring.,This flower smells sweet.
+grass,풀,일상,1,Do not walk on the grass.,The grass is green and soft.,He cut the grass in the garden.
+dog,개,일상,1,My dog likes to run in the park.,The dog barked at the stranger.,We walk our dog every evening.
+cat,고양이,일상,1,The cat is sleeping on the sofa.,My cat likes to play with a string.,Our cat catches mice.
+bird,새,일상,1,A bird sang in the tree.,The bird flew over the river.,That bird has a long tail.
+horse,말,일상,1,She rides a horse on weekends.,The horse ran across the field.,The horse is eating hay.
+cow,소,일상,1,The cow gives us milk.,A cow is standing in the field.,The farmer feeds the cows every morning.
+pig,돼지,일상,1,The pig is eating in the mud.,A pig lives on that farm.,The pig is pink.
+car,자동차,일상,1,He drives his car to work.,My car needs a new tire.,We bought a small car.
+bus,버스,일상,1,I take the bus to school.,The bus is late again.,Get on the bus at the next stop.
+train,기차,일상,1,The train leaves at nine.,We took the train to Busan.,The train is full today.
+bicycle,자전거,일상,1,I ride my bicycle to the park.,Her bicycle is red.,Please lock your bicycle here.
+airplane,비행기,일상,1,The airplane takes off at noon.,We flew on an airplane to Jeju.,The airplane landed safely.
+ship,배,일상,1,The ship sailed across the ocean.,A big ship docked at the port.,They traveled by ship.
+road,길,일상,1,The road is very long.,Be careful when you cross the road.,This road goes to the station.
+city,도시,일상,1,Seoul is a big city.,She lives in a busy city.,The city is full of tall buildings.
+town,마을,일상,1,We live in a quiet town.,The town has one small school.,The town is near the mountains.
+country,나라,일상,1,Korea is a beautiful country.,Which country do you want to visit?,Many people moved to another country.
+park,공원,일상,1,We walked in the park.,Children play in the park after school.,The park is full of flowers.
+store,가게,일상,1,The store opens at nine.,I bought milk at the corner store.,She works in a clothing store.
+market,시장,일상,1,We went to the market to buy fruit.,The fish market is busy in the morning.,Vegetables are cheap at the market.
+go,가다,일상,1,I go to school by bus.,Let's go to the park.,She goes swimming on Sundays.
+come,오다,일상,1,Please come to my house tonight.,The bus will come soon.,Where do you come from?
+eat,먹다,일상,1,We eat dinner at seven.,Do you eat breakfast every day?,The cat ate all of its food.
+drink,마시다,일상,1,I drink a glass of water every morning.,He drinks coffee after lunch.,Please drink this medicine.
+sleep,자다,일상,1,I sleep eight hours a night.,The baby is sleeping now.,She could not sleep well last night.
+walk,걷다,일상,1,I walk to work every day.,We walked along the beach.,Let's take a walk after dinner.
+run,달리다,일상,1,He runs in the park every morning.,I ran to catch the bus.,She won the race by running fast.
+sit,앉다,일상,1,Please sit down and wait.,The dog sat by the door.,We sat on the grass.
+stand,서다,일상,1,Please stand in line.,He stood up to greet her.,I cannot stand the noise.
+read,읽다,일상,1,I read a book before bed.,She reads the news every morning.,He read the letter twice.
+write,쓰다,일상,1,Please write your name here.,I write in my diary every night.,She wrote a letter to her friend.
+speak,말하다,일상,1,Can you speak more slowly?,He speaks three languages.,She spoke to the manager about the problem.
+listen,듣다,일상,1,Listen to the teacher carefully.,I like to listen to music.,Please listen to my question.
+look,보다,일상,1,Look at this picture.,She looked out of the window.,Look both ways before you cross.
+see,보다,일상,1,I can see the mountains from here.,Did you see the movie last night?,I will see you tomorrow.
+watch,지켜보다,일상,1,We watch TV after dinner.,Watch your step on the stairs.,She watched the children play.
+play,놀다,일상,1,The children play in the yard.,He plays the piano very well.,Let's play a game.
+study,공부하다,일상,1,I study English every night.,She is studying for the exam.,They studied hard for the test.
+learn,배우다,일상,1,I want to learn Spanish.,Children learn many things at school.,He learned to swim last summer.
+teach,가르치다,일상,1,She teaches math at a high school.,My father taught me how to ride a bike.,He teaches English to adults.
+help,돕다,일상,1,Can you help me with this bag?,Friends help each other.,Thank you for your help.
+like,좋아하다,일상,1,I like this song very much.,Do you like spicy food?,She likes to read at night.
+love,사랑하다,일상,1,I love my family.,They love each other.,She loves to travel.
+want,원하다,일상,1,I want a new phone.,Do you want some tea?,He wants to be a doctor.
+need,필요하다,일상,1,You need a passport to travel abroad.,I need more time to finish.,Does she need any help?
+know,알다,일상,1,I know the answer.,Do you know where the station is?,He knew her name.
+think,생각하다,일상,1,I think it will rain today.,What do you think about the plan?,She thought for a long time.
+feel,느끼다,일상,1,I feel tired after work.,The fabric feels soft.,He felt happy about the news.
+make,만들다,일상,1,She makes delicious soup.,We made a cake for his birthday.,Let's make a plan together.
+take,가져가다,일상,1,Please take your umbrella.,I take the subway to work.,It takes two hours to get there.
+give,주다,일상,1,Please give me the pen.,He gave her a gift.,She gives money to charity.
+bring,가져오다,일상,1,Please bring your books tomorrow.,She brought a cake to the party.,Can you bring me a glass of water?
+buy,사다,일상,1,I want to buy a new bag.,We bought tickets online.,Where can I buy stamps?
+sell,팔다,일상,1,They sell fresh vegetables at this store.,He sold his old car.,We sell coffee and tea here.
+open,열다,일상,1,Please open the window.,The store opens at nine.,The book is open on the desk.
+close,닫다,일상,1,Please close the door.,The shop closes at eight.,Close your eyes and relax.
+start,시작하다,일상,1,The movie starts at seven.,Let's start the meeting now.,I started learning guitar last year.
+stop,멈추다,일상,1,The bus stopped at the corner.,Please stop talking.,It stopped raining.
+wait,기다리다,일상,1,Please wait here for a moment.,I waited for an hour.,We are waiting for the train.
+call,전화하다,일상,1,I will call you tonight.,She called her mother from the station.,Please call me back later.
+use,사용하다,일상,1,You can use my pen.,How do you use this machine?,Please use the back door.
+find,찾다,일상,1,I cannot find my keys.,We found a cheap hotel.,Did you find the answer?
+lose,잃어버리다,일상,1,I lost my wallet on the bus.,Do not lose your ticket.,Our team lost the game.
+keep,보관하다,일상,1,Please keep this receipt.,I keep my notes in a folder.,Keep the door closed.
+put,놓다,일상,1,Put the cup on the table.,She put her bag on the chair.,Where did you put the keys?
+get,얻다,일상,1,I got a letter from my friend.,We need to get some milk.,It is getting dark outside.
+cook,요리하다,일상,1,My father likes to cook dinner.,She cooks rice every day.,We cooked pasta together.
+clean,청소하다,일상,1,I clean my room every Sunday.,Please clean the table before dinner.,He cleaned the car this morning.
+wash,씻다,일상,1,Please wash your hands before eating.,I wash the dishes after dinner.,She washed her face with cold water.
+dance,춤추다,일상,1,They dance together at the party.,She loves to dance.,We danced all night.
+sing,노래하다,일상,1,She sings in the choir.,Let's sing a song together.,He sang a famous song.
+swim,수영하다,일상,1,I swim in the pool every week.,Can you swim across the river?,The children swam in the lake.
+jump,뛰다,일상,1,The kids jump into the pool.,He jumped over the fence.,She can jump very high.
+drive,운전하다,일상,1,My father drives to work.,Can you drive a car?,We drove to the beach yesterday.
+fly,날다,일상,1,Birds fly south in winter.,We will fly to Japan next week.,The bee flew into the room.
+ride,타다,일상,1,I ride a bike to school.,They rode horses in the park.,Let's ride the train.
+travel,여행하다,일상,1,We traveled to Europe last year.,I love to travel by train.,She travels for work every month.
+visit,방문하다,일상,1,We visit our grandparents every month.,She visited Paris last summer.,Visit our website for more information.
+meet,만나다,일상,1,Let's meet at the station.,I met my teacher at the store.,Nice to meet you.
+talk,이야기하다,일상,1,We talked for an hour.,Can we talk after class?,He talks too much.
+ask,묻다,일상,1,You can ask me any question.,She asked where the bank was.,I asked my teacher for help.
+answer,대답하다,일상,1,Please answer the question.,He answered the phone quickly.,I did not know the answer.
+agree,동의하다,일상,1,I agree with your idea.,They agreed on the price.,Do you agree or disagree?
+hope,희망하다,일상,1,I hope you feel better soon.,We hope to see you again.,She has hope for the future.
+wish,바라다,일상,1,I wish I could fly.,She wished him good luck.,What is your wish?
+forget,잊다,일상,1,Do not forget your homework.,I forgot his name.,Never forget to smile.
+remember,기억하다,일상,1,I remember your birthday.,Do you remember the way home?,He could not remember the words.
+smile,웃다,일상,1,She smiled at me.,Smile when you take the photo.,He has a warm smile.
+cry,울다,일상,1,The baby began to cry.,She cried during the movie.,Do not cry over spilled milk.
+laugh,웃다,일상,1,We laughed at the funny joke.,He laughs a lot.,Her laugh is very loud.
+hear,듣다,일상,1,I can hear the music.,Did you hear the news?,I heard a strange noise last night.
+touch,만지다,일상,1,Please do not touch the painting.,She touched the soft fabric.,Do not touch the hot pan.
+big,큰,일상,1,That is a big house.,The dog is bigger than the cat.,She has big eyes.
+small,작은,일상,1,I have a small room.,The phone is very small.,A small dog ran across the road.
+good,좋은,일상,1,This is a good book.,She is good at math.,Have a good day.
+bad,나쁜,일상,1,The weather is bad today.,He made a bad decision.,That is a bad habit.
+new,새로운,일상,1,I bought a new bag.,We live in a new apartment.,This is news to me.
+old,오래된,일상,1,This house is very old.,My grandfather is an old man.,I found an old photo.
+young,젊은,일상,1,She is young and smart.,He looks young for his age.,The young boy likes football.
+hot,뜨거운,일상,1,The soup is too hot.,It is hot in summer.,Please give me a hot drink.
+cold,차가운,일상,1,The water is cold.,It is cold in winter.,I have a cold today.
+warm,따뜻한,일상,1,The room is warm.,I like warm milk before bed.,Put on a warm coat.
+happy,행복한,일상,1,I am very happy today.,She looks happy.,We had a happy day together.
+sad,슬픈,일상,1,He felt sad after the movie.,The story is very sad.,She looked sad at the news.
+fast,빠른,일상,1,He is a fast runner.,The train is fast.,She types very fast.
+slow,느린,일상,1,The old man walks slowly.,The internet is very slow today.,Please speak more slowly.
+easy,쉬운,일상,1,This question is easy.,The app is easy to use.,Learning a language is not easy.
+hard,어려운,일상,1,This math problem is hard.,Hard work leads to success.,The bread is hard.
+long,긴,일상,1,She has long hair.,This is a long road.,The movie is very long.
+short,짧은,일상,1,He has short hair.,The meeting was short.,This pencil is too short.
+tall,키가 큰,일상,1,My brother is very tall.,He is taller than his father.,She lives in a tall building.
+high,높은,일상,1,The mountain is very high.,The price is high.,The birds fly high in the sky.
+low,낮은,일상,1,The water level is low.,The shelf is low.,The price is low this week.
+dirty,더러운,일상,1,Your shoes are dirty.,The dirty dishes are in the sink.,The room is dirty.
+full,가득 찬,일상,1,The bus is full.,My glass is full of water.,I am full after dinner.
+empty,빈,일상,1,The box is empty.,The street is empty at night.,Please empty the trash.
+rich,부유한,일상,1,He is a rich man.,She became rich after the business.,The soup is rich and creamy.
+poor,가난한,일상,1,They are poor but happy.,The poor family needs help.,The food was poor in quality.
+beautiful,아름다운,일상,1,The view from here is beautiful.,She wore a beautiful dress.,What a beautiful day!
+ugly,못생긴,일상,1,The old building looks ugly.,That is an ugly color.,Don't be so ugly to others.
+nice,좋은,일상,1,You look nice today.,That is a nice idea.,The weather is nice.
+kind,친절한,일상,1,She is a kind person.,The nurse was very kind.,Thank you for your kind words.
+funny,재미있는,일상,1,The movie was very funny.,He tells funny stories.,That is a funny joke.
+sweet,달콤한,일상,1,The cake tastes very sweet.,She has a sweet voice.,These grapes are sweet.
+bitter,쓴,일상,1,Coffee can taste bitter.,This medicine is bitter.,The lemon was bitter.
+dark,어두운,일상,1,The room is dark.,It gets dark early in winter.,She wore a dark coat.
+bright,밝은,일상,1,The sun is very bright.,She has a bright smile.,The room is bright and clean.
+quiet,조용한,일상,1,Please be quiet in the library.,The town is quiet at night.,He is a quiet boy.
+loud,시끄러운,일상,1,The music is too loud.,Don't speak so loud.,The thunder was very loud.
+safe,안전한,일상,1,Is this area safe at night?,Keep the money in a safe place.,The children are safe at home.
+dangerous,위험한,일상,1,Swimming alone can be dangerous.,The road is dangerous in the rain.,It is a dangerous animal.
+right,옳은,일상,1,You are right about that.,Turn right at the corner.,Did I get the answer right?
+wrong,틀린,일상,1,I think the answer is wrong.,Something is wrong with my phone.,He went to the wrong station.
+true,사실인,일상,1,Is this story true?,That is a true friend.,The statement is true.
+same,같은,일상,1,We wear the same shirt.,She has the same name as me.,The answer is the same.
+different,다른,일상,1,This is a different color.,Their ideas are different.,She looks different today.
+important,중요한,일상,1,Health is important.,This is an important meeting.,Water is important for life.
+special,특별한,일상,1,Today is a special day.,She has a special gift for you.,This food is special to me.
+free,무료의,일상,1,The museum is free on Sundays.,I have free time after lunch.,The dog ran free in the park.
+busy,바쁜,일상,1,I am busy this week.,The street is busy in the morning.,She has a busy schedule.
+ready,준비된,일상,1,Dinner is ready.,Are you ready to go?,I am ready for the test.
+sick,아픈,일상,1,He is sick in bed today.,She felt sick after the trip.,I got sick last week.
+healthy,건강한,일상,1,Eat healthy food every day.,The baby is healthy.,He lives a healthy life.
+tired,피곤한,일상,1,I am tired after work.,She looked tired this morning.,We were tired after the hike.
+hungry,배고픈,일상,1,I am very hungry.,The dog looks hungry.,Let's get something to eat because I am hungry.
+thirsty,목마른,일상,1,I am thirsty after running.,The plants are thirsty in summer.,He drank water because he was thirsty.
+angry,화난,일상,1,She was angry about the noise.,Don't get angry with your friend.,He looked angry.
+afraid,두려워하는,일상,1,I am afraid of spiders.,The child was afraid of the dark.,Don't be afraid.
+sorry,미안한,일상,1,I am sorry for being late.,She said sorry to her friend.,Sorry I did not hear you.
+glad,기쁜,일상,1,I am glad to see you.,She was glad about the news.,We are glad you came.
+bag,가방,일상,2,I put my books in my bag.,This bag is heavy.,She bought a new leather bag.
+wallet,지갑,일상,2,I lost my wallet at the store.,He keeps his photos in his wallet.,Check your wallet before you leave.
+key,열쇠,일상,2,I cannot find my house key.,Please give me the key to the car.,The key is under the mat.
+phone,전화기,일상,2,My phone battery is almost empty.,Please turn off your phone in class.,She answered the phone right away.
+computer,컴퓨터,일상,2,I use my computer for homework.,The computer is broken again.,He works on a computer all day.
+laptop,노트북,일상,2,I carry my laptop to school.,The laptop is on the desk.,She bought a light laptop for travel.
+television,텔레비전,일상,2,We watch television after dinner.,The television is in the living room.,Turn off the television and go to sleep.
+radio,라디오,일상,2,I listen to the radio in the car.,The radio plays old songs.,Please turn down the radio.
+camera,카메라,일상,2,She took a photo with her camera.,This camera takes clear pictures.,Please do not use a camera here.
+picture,사진,일상,2,Look at this picture of my family.,She drew a picture of a house.,The picture hangs on the wall.
+photo,사진,일상,2,He took a photo of the sunset.,Send me the photo from the trip.,This photo is very old.
+newspaper,신문,일상,2,My father reads the newspaper at breakfast.,I found an article in the newspaper.,The newspaper came early today.
+magazine,잡지,일상,2,She reads a fashion magazine every month.,The magazine has many nice pictures.,I left the magazine on the bus.
+letter,편지,일상,2,I wrote a letter to my grandmother.,She received a letter from her friend.,The letter arrived yesterday.
+paper,종이,일상,2,Please write on this paper.,The paper is wet from the rain.,I need a sheet of paper.
+pen,펜,일상,2,Can I borrow your pen?,This pen writes very smoothly.,I lost my pen in class.
+pencil,연필,일상,2,Use a pencil for the drawing.,The pencil is too short.,Sharpen your pencil before the test.
+book,책,일상,1,I am reading an interesting book.,The library has many books.,This book is about history.
+notebook,공책,일상,2,I wrote the answers in my notebook.,Please bring your notebook to class.,The notebook has a blue cover.
+desk,책상,일상,2,She studies at her desk every night.,The desk is by the window.,Put your books on the desk.
+lamp,램프,일상,2,Please turn on the lamp.,The lamp gives a soft light.,The desk lamp is broken.
+light,빛,일상,2,The room is filled with light.,Turn off the light before you leave.,The light from the sun is warm.
+money,돈,일상,2,I saved some money this month.,Money does not grow on trees.,He spent all his money on books.
+price,가격,일상,2,What is the price of this shirt?,The price went up last month.,The price includes tax.
+cost,비용,일상,2,The cost of the trip was high.,What is the cost of a ticket?,Living costs are rising.
+shop,가게,일상,2,I visited a small shop near my home.,The shop sells fresh bread.,The shop is closed on Mondays.
+restaurant,식당,일상,2,We ate dinner at a Chinese restaurant.,This restaurant is very popular.,The restaurant opens at eleven.
+hotel,호텔,일상,2,We stayed at a hotel in Seoul.,The hotel room has a nice view.,The hotel breakfast was delicious.
+hospital,병원,일상,2,My grandmother is in the hospital.,The hospital is near the station.,She works as a nurse at a hospital.
+doctor,의사,일상,2,The doctor checked my heart.,I want to become a doctor.,Call a doctor if you feel sick.
+nurse,간호사,일상,2,The nurse gave me medicine.,My aunt is a nurse.,The nurse smiled at the patient.
+police,경찰,일상,2,The police arrived in five minutes.,Call the police if you see a fire.,A police officer helped the old man.
+office,사무실,일상,2,My office is on the fifth floor.,The office is quiet in the morning.,She works in an office downtown.
+bank,은행,일상,2,I go to the bank on Monday.,The bank is across the street.,He works at a bank.
+post,우편,일상,2,I will send the package by post.,The post office is near here.,Please post this letter today.
+church,교회,일상,2,We go to church on Sundays.,The church is very old.,There is a small church in the village.
+museum,박물관,일상,2,We visited the history museum.,The museum has many old paintings.,The museum is free for students.
+library,도서관,일상,2,I study at the library after school.,The library has a large collection.,She borrowed three books from the library.
+theater,극장,일상,2,We watched a play at the theater.,The theater was full of people.,The theater is on the main street.
+station,역,일상,2,I met her at the train station.,The station is very crowded at noon.,Get off at the next station.
+airport,공항,일상,2,We arrived at the airport early.,The airport is far from the city.,Pick me up at the airport.
+bridge,다리,일상,2,We walked across the bridge.,The bridge spans the wide river.,The old bridge was repaired last year.
+river,강,일상,2,We sat by the river and talked.,The river flows into the sea.,Fish live in the river.
+lake,호수,일상,2,We went boating on the lake.,The lake is very calm today.,A small lake sits in the park.
+sea,바다,일상,2,The sea is calm in the morning.,We swam in the sea.,She loves the smell of the sea.
+ocean,대양,일상,2,The ocean is very deep.,Whales live in the ocean.,He sailed across the Pacific Ocean.
+mountain,산,일상,2,We hiked up the mountain.,The mountain is covered with snow.,I can see the mountain from my window.
+hill,언덕,일상,2,The children ran down the hill.,There is a small house on the hill.,We walked up the hill slowly.
+forest,숲,일상,2,The forest is quiet and green.,Deer live in the forest.,We walked through a dark forest.
+desert,사막,일상,2,The desert is very hot during the day.,Camels can survive in the desert.,They crossed the desert by car.
+island,섬,일상,2,We took a boat to the island.,The island is famous for its beaches.,Many people live on this island.
+beach,해변,일상,2,We played volleyball on the beach.,The beach is crowded in summer.,She collected shells at the beach.
+field,들판,일상,2,Cows graze in the green field.,We played soccer in the field.,The field is full of flowers.
+farm,농장,일상,2,My uncle works on a farm.,The farm grows corn and rice.,We visited a farm last weekend.
+garden,정원,일상,2,She grows roses in the garden.,The garden is full of flowers.,We had lunch in the garden.
+yard,마당,일상,2,The kids play in the yard.,There is a big tree in our yard.,He cut the grass in the yard.
+wall,벽,일상,2,A picture hangs on the wall.,The wall is painted blue.,Do not write on the wall.
+floor,바닥,일상,2,The floor is wet so be careful.,Put the box on the floor.,We live on the third floor.
+roof,지붕,일상,2,The roof is covered with snow.,Birds built a nest on the roof.,The roof leaks when it rains.
+stairs,계단,일상,2,Walk up the stairs to the second floor.,The stairs are steep.,Be careful on the stairs.
+elevator,엘리베이터,일상,2,Take the elevator to the tenth floor.,The elevator is broken today.,We waited for the elevator.
+hall,복도,일상,2,The classroom is at the end of the hall.,Please walk quietly in the hall.,Students wait in the hall.
+towel,수건,일상,2,Please bring me a clean towel.,She dried her hands with a towel.,The towel is wet.
+soap,비누,일상,2,Use soap to wash your hands.,This soap smells like lemon.,The soap is almost gone.
+toothbrush,칫솔,일상,2,I brush my teeth with a new toothbrush.,Your toothbrush is in the bathroom.,The toothbrush is old.
+shirt,셔츠,일상,2,He wears a white shirt to work.,This shirt is too small.,I bought a blue shirt.
+pants,바지,일상,2,These pants are very comfortable.,I need new pants for school.,He wore black pants.
+dress,드레스,일상,2,She wore a red dress to the party.,This dress fits me well.,The dress is made of silk.
+skirt,치마,일상,2,She bought a short skirt.,The skirt is too long for me.,She wears a skirt to school.
+shoes,신발,일상,2,I need new shoes for running.,Take off your shoes at the door.,These shoes are very comfortable.
+socks,양말,일상,2,I put on clean socks.,Your socks are on the floor.,She bought three pairs of socks.
+hat,모자,일상,2,He wears a hat in the sun.,She bought a warm hat for winter.,Take off your hat inside.
+coat,코트,일상,2,Wear a warm coat in winter.,He left his coat on the chair.,This coat is very long.
+jacket,재킷,일상,2,I need a light jacket for spring.,She put on her leather jacket.,The jacket has big pockets.
+glasses,안경,일상,2,She wears glasses to read.,My glasses are on the table.,He bought new glasses last week.
+wristwatch,손목시계,일상,2,He checked his wristwatch.,My wristwatch stopped working.,She gave me a gold wristwatch.
+ring,반지,일상,2,She wears a diamond ring.,He bought a ring for his wife.,The ring is made of silver.
+necklace,목걸이,일상,2,She wore a pearl necklace.,The necklace is very beautiful.,I lost my necklace at the beach.
+hair,머리카락,일상,2,She has long black hair.,I need to cut my hair.,His hair turned gray.
+face,얼굴,일상,2,She washed her face in the morning.,He has a friendly face.,Her face turned red.
+eye,눈,일상,2,She has blue eyes.,Close your eyes and count to ten.,I have something in my eye.
+ear,귀,일상,2,He put the phone to his ear.,My ears feel cold.,The music hurt my ears.
+nose,코,일상,2,The flower smells good to the nose.,He has a small nose.,I have a cold and a runny nose.
+mouth,입,일상,2,Open your mouth and say ah.,Do not talk with food in your mouth.,She covered her mouth with her hand.
+hand,손,일상,2,Please raise your hand.,He held her hand.,Wash your hands before eating.
+foot,발,일상,2,I hurt my foot while running.,Her feet are very small.,Take off your shoes before you enter.
+leg,다리,일상,2,He broke his leg in the accident.,My legs are tired after the hike.,She crossed her legs.
+arm,팔,일상,2,She raised her arm to answer.,He carried the box in his arms.,The baby is in her arms.
+head,머리,일상,2,I hit my head on the door.,She nodded her head.,He has a headache.
+heart,심장,일상,2,My heart beats fast when I run.,The doctor listened to her heart.,She has a kind heart.
+body,몸,일상,2,Exercise is good for your body.,Her body is very strong.,The body needs enough sleep.
+back,등,일상,2,My back hurts after the long day.,Please step back from the door.,He came back home late.
+finger,손가락,일상,2,She pointed her finger at the sign.,He cut his finger.,My fingers are cold.
+tooth,이,일상,2,I lost a tooth yesterday.,Brush your teeth twice a day.,This tooth hurts.
+salad,샐러드,일상,2,I ordered a salad for lunch.,This salad has fresh vegetables.,Add some dressing to the salad.
+soup,수프,일상,2,The soup is hot and spicy.,She made chicken soup for dinner.,Please add some salt to the soup.
+sandwich,샌드위치,일상,2,I had a turkey sandwich for lunch.,The sandwich is on the table.,Would you like a sandwich?
+noodle,국수,일상,2,I ate a bowl of cold noodles.,Noodles are popular in many countries.,The noodles were very hot.
+pizza,피자,일상,2,We ordered a large pizza tonight.,The pizza has cheese and tomato.,I love pizza with mushrooms.
+hamburger,햄버거,일상,2,He ate a big hamburger for lunch.,The hamburger was juicy.,I would like two hamburgers please.
+sugar,설탕,일상,2,Add a spoon of sugar to the tea.,Too much sugar is bad for you.,Sugar makes the cake sweet.
+salt,소금,일상,2,Please pass the salt.,The soup needs a little salt.,Seawater contains a lot of salt.
+butter,버터,일상,2,Spread butter on the bread.,This cookie has a lot of butter.,The butter is soft.
+cheese,치즈,일상,2,She put cheese on the pizza.,I like cheese with crackers.,This cheese smells strong.
+ice,얼음,일상,2,Put some ice in my drink.,The lake is covered with ice.,The ice melted quickly in the sun.
+cup,컵,일상,2,Please give me a cup of tea.,This cup is made of paper.,She broke a cup this morning.
+glass,유리잔,일상,2,He poured water into a glass.,This glass is very clean.,Be careful because the glass is fragile.
+bottle,병,일상,2,Buy a bottle of water.,The bottle is empty.,Please recycle the glass bottle.
+plate,접시,일상,2,Put the food on a plate.,The plate is very hot.,She washed the plates after dinner.
+bowl,그릇,일상,2,Fill the bowl with rice.,A bowl of soup is on the table.,He ate cereal from a big bowl.
+knife,칼,일상,2,Cut the bread with a knife.,The knife is very sharp.,Keep the knife away from children.
+fork,포크,일상,2,Use a fork to eat the salad.,The fork fell on the floor.,Please bring me a clean fork.
+spoon,숟가락,일상,2,Stir the soup with a spoon.,I need a spoon for my ice cream.,The spoon is made of silver.
+banana,바나나,일상,2,She ate a banana for breakfast.,Bananas are yellow when they are ripe.,The banana is sweet.
+orange,오렌지,일상,2,I peeled an orange.,Orange juice is good for you.,The orange sky looked beautiful.
+grape,포도,일상,2,These grapes are very sweet.,She ate a bunch of grapes.,Grapes grow on vines.
+strawberry,딸기,일상,2,Strawberries are my favorite fruit.,She put strawberries on the cake.,The strawberry jam tastes great.
+watermelon,수박,일상,2,We ate watermelon in the summer.,The watermelon is cold and juicy.,He cut the watermelon in half.
+potato,감자,일상,2,We ate mashed potato for dinner.,Potatoes grow under the ground.,Fry the potato in oil.
+tomato,토마토,일상,2,Add a tomato to the salad.,The tomato is red and ripe.,Tomatoes are a good source of vitamins.
+onion,양파,일상,2,Cut the onion into small pieces.,The onion makes me cry.,Fry the onion until it is soft.
+carrot,당근,일상,2,The rabbit ate a carrot.,Carrots are good for your eyes.,She cut the carrot into slices.
+corn,옥수수,일상,2,We ate fresh corn at the festival.,Corn grows tall in the summer.,Popcorn is made from corn.
+lemon,레몬,일상,2,Add a slice of lemon to the tea.,The lemon tastes very sour.,Lemonade is cold and refreshing.
+peach,복숭아,일상,2,This peach is very juicy.,I bought peaches at the market.,Peach trees bloom in spring.
+bean,콩,일상,2,Beans are full of protein.,She cooked black beans for dinner.,Plant the bean seeds in the soil.
+beef,소고기,일상,2,We ordered beef for dinner.,Beef is expensive in Korea.,The beef was cooked very well.
+pork,돼지고기,일상,2,Pork is my favorite meat.,She cooked pork with kimchi.,The pork is fresh.
+shrimp,새우,일상,2,I ordered shrimp noodles.,Fried shrimp is crispy.,Shrimp live in the sea.
+lion,사자,일상,2,The lion roared loudly.,A lion sleeps for many hours.,Lions live in groups.
+tiger,호랑이,일상,2,The tiger walked slowly through the forest.,A tiger has striped fur.,We saw a tiger at the zoo.
+bear,곰,일상,2,A bear lives in the mountain.,The bear caught a fish.,A brown bear walked across the road.
+rabbit,토끼,일상,2,The rabbit ran into the bushes.,My daughter has a white rabbit.,Rabbits eat carrots and grass.
+mouse,쥐,일상,2,A mouse ran across the kitchen floor.,The cat caught a mouse.,A computer mouse is on the desk.
+snake,뱀,일상,2,A snake lives in the grass.,The snake slid across the rock.,Do not touch a snake.
+monkey,원숭이,일상,2,The monkey climbed the tree.,We fed the monkeys at the zoo.,The monkey is eating a banana.
+elephant,코끼리,일상,2,An elephant has a long trunk.,The elephant drank water from the river.,Elephants live in large families.
+duck,오리,일상,2,The duck swam in the pond.,Ducks like to eat bread.,A duck quacked loudly.
+sheep,양,일상,2,The sheep are eating grass.,A farmer keeps sheep on the hill.,The sheep have white wool.
+frog,개구리,일상,2,A frog jumped into the pond.,The frog sat on a lily pad.,We heard a frog croak at night.
+butterfly,나비,일상,2,A butterfly landed on the flower.,The butterfly has colorful wings.,She chased a butterfly in the garden.
+bee,벌,일상,2,A bee flew around the flowers.,The bee stung my hand.,Bees make honey.
+ant,개미,일상,2,The ants carried the food home.,An ant walked across the table.,Ants live in colonies.
+honey,꿀,일상,2,I put honey in my tea.,Bees make honey from flowers.,This honey tastes sweet.
+arrive,도착하다,일상,2,The train will arrive at noon.,We arrived at the hotel late.,Please arrive on time for class.
+leave,떠나다,일상,2,We leave for Jeju tomorrow morning.,She left the room quietly.,Do not leave your bag here.
+return,돌아오다,일상,2,He will return home next week.,Please return the book to the library.,She returned my call yesterday.
+enter,들어가다,일상,2,Please enter the room quietly.,Do not enter without permission.,He entered the house through the back door.
+pass,지나가다,일상,2,The bus will pass the school soon.,I passed the test with good grades.,Please pass me the salt.
+cross,건너다,일상,2,Look both ways before you cross the street.,We crossed the river on a small boat.,Cross the bridge to get there.
+follow,따라가다,일상,2,Follow me to the station.,Please follow the instructions carefully.,The dog followed its owner everywhere.
+carry,나르다,일상,2,He carried the box up the stairs.,Can you carry this bag for me?,She carries a small umbrella.
+hold,잡다,일상,2,Please hold my hand while we cross.,She held the baby gently.,Hold the rail when you go down.
+pick,고르다,일상,2,Pick any card you like.,She picked a red dress for the party.,Pick up your toys after playing.
+throw,던지다,일상,2,He threw the ball to his friend.,Do not throw trash on the street.,She threw a party for her son.
+catch,잡다,일상,2,The cat tried to catch the mouse.,I caught the bus just in time.,Catch the ball with both hands.
+kick,차다,일상,2,The boy kicked the ball hard.,Kick the stone off the path.,He kicked off his shoes.
+push,밀다,일상,2,Push the door to open it.,The crowd pushed forward.,Please push the button.
+pull,당기다,일상,2,Pull the handle to open the drawer.,He pulled the rope with all his strength.,Do not pull the cord.
+cut,자르다,일상,2,Cut the paper along the line.,She cut the apple into four pieces.,Be careful not to cut your finger.
+break,깨뜨리다,일상,2,I accidentally broke a glass.,Do not break the rules.,The egg broke when it fell.
+fix,고치다,일상,2,Can you fix my bicycle?,The mechanic fixed the car quickly.,I need to fix this problem.
+build,짓다,일상,2,They want to build a new school.,The workers built the bridge in one year.,Birds build nests in the trees.
+paint,칠하다,일상,2,We painted the walls white.,She paints pictures on weekends.,Let the paint dry before you touch it.
+draw,그리다,일상,2,She likes to draw animals.,Draw a line under the answer.,He drew a map of the town.
+plan,계획하다,일상,2,We plan to visit Busan next month.,Have you made a plan for the trip?,They planned the party carefully.
+decide,결정하다,일상,2,I decided to study abroad.,We need to decide before Friday.,She could not decide what to eat.
+choose,고르다,일상,2,Choose one book from the shelf.,You can choose any color you like.,He chose the blue car.
+prefer,선호하다,일상,2,I prefer tea to coffee.,Which do you prefer summer or winter?,She prefers to walk to school.
+expect,기대하다,일상,2,I expect the weather to be warm.,We expect many guests tonight.,He did not expect such a good result.
+believe,믿다,일상,2,I believe you.,She believes in her dreams.,Many people believe that he is right.
+imagine,상상하다,일상,2,Imagine a world without rain.,I can not imagine living there.,Try to imagine the sound of the ocean.
+explain,설명하다,일상,2,Can you explain the rule again?,The teacher explained the lesson clearly.,Please explain why you were late.
+describe,묘사하다,일상,2,Describe your favorite place.,She described the accident in detail.,Can you describe the man you saw?
+mention,언급하다,일상,2,He did not mention the price.,Please do not mention it again.,She mentioned her trip in the letter.
+discuss,토론하다,일상,2,We discussed the plan for an hour.,Let us discuss this problem later.,They discussed the book in class.
+share,나누다,일상,2,Let us share the cake.,Please share your notes with me.,They share a room in the dorm.
+join,참가하다,일상,2,Would you like to join our club?,She joined the choir last year.,Join us for dinner tonight.
+continue,계속하다,일상,2,Please continue reading the story.,The rain will continue all day.,We continued our walk after lunch.
+finish,끝내다,일상,2,I will finish my homework tonight.,The movie finished at ten.,He finished the race first.
+complete,완료하다,일상,2,Complete the form and sign it.,She completed her training last month.,The work is almost complete.
+succeed,성공하다,일상,2,She succeeded in her job.,If you practice you will succeed.,He succeeded in finding a job.
+fail,실패하다,일상,2,He failed the driving test.,Do not be afraid to fail.,The plan failed because of the rain.
+try,노력하다,일상,2,Try your best in the exam.,Let me try this food.,She tried to open the box.
+practice,연습하다,일상,2,I practice the piano every day.,They practiced for the game all week.,Practice makes perfect.
+prepare,준비하다,일상,2,We prepare dinner together.,She is preparing for the exam.,Please prepare your ticket before boarding.
+improve,향상시키다,일상,2,I want to improve my English.,Her cooking has improved a lot.,The weather is improving.
+change,바꾸다,일상,2,Please change your clothes before dinner.,She changed her mind at the last minute.,The weather can change quickly.
+grow,자라다,일상,2,Plants grow fast in the spring.,My son has grown very tall.,They grow rice in this area.
+rise,오르다,일상,2,The sun rises early in summer.,The price of rice has risen again.,Water will rise after the rain.
+fall,떨어지다,일상,2,The leaves fall in autumn.,He fell down the stairs.,Snow began to fall at noon.
+increase,늘리다,일상,2,The number of visitors increased this year.,Please increase the volume a little.,Costs will increase next month.
+decrease,줄어들다,일상,2,The temperature will decrease tonight.,Sales decreased last month.,Please decrease your speed.
+reduce,줄이다,일상,2,We need to reduce waste.,Try to reduce sugar in your diet.,This car helps reduce fuel use.
+save,저축하다,일상,2,I save money every month.,Save the file before you close it.,Save some cake for me.
+spend,쓰다,일상,2,I spend two hours on my homework.,She spent all her money on clothes.,We spend the summer at the beach.
+pay,지불하다,일상,2,Please pay for the meal at the counter.,I paid the bill in cash.,He paid me back yesterday.
+earn,벌다,일상,2,She earns money by teaching.,He earned a scholarship.,You must work hard to earn respect.
+borrow,빌리다,일상,2,Can I borrow your pen?,She borrowed a book from the library.,I need to borrow some money.
+lend,빌려주다,일상,2,Can you lend me your umbrella?,He lent me his bike for the day.,The bank will lend money to the family.
+win,이기다,일상,2,Our team won the game.,She won a prize in the contest.,He always wins at chess.
+defeat,패배시키다,일상,3,We defeated the champion in the final.,The army was defeated in the battle.,She defeated her rival in the election.
+possible,가능한,일상,2,Is it possible to finish today?,We will do everything possible to help.,Is this plan possible?
+impossible,불가능한,일상,2,Climbing that mountain is impossible for me.,Nothing is impossible if you try.,The task seemed impossible.
+real,진짜의,일상,2,Is this diamond real?,She is a real friend.,The story is based on real events.
+fake,가짜의,일상,2,The bag is fake.,He showed a fake ID at the door.,Be careful of fake news.
+simple,간단한,일상,2,The answer is very simple.,Please give me a simple explanation.,The recipe is simple to follow.
+complex,복잡한,일상,3,The problem is complex.,The system has many complex parts.,The rules are complex.
+clear,분명한,일상,2,The message is clear.,The water is clear and cold.,Is everything clear to you?
+strange,이상한,일상,2,I heard a strange sound.,The room felt strange at night.,That is a strange idea.
+normal,보통의,일상,2,It is normal to feel nervous before a test.,Things are back to normal now.,Her behavior was normal today.
+common,흔한,일상,2,Colds are very common in winter.,That is a common name in Korea.,Cats are common pets.
+rare,드문,일상,3,This bird is very rare.,Sunny days are rare this year.,It is rare to see snow here.
+useful,유용한,일상,2,This app is very useful.,The tips were useful for my study.,A map is useful when you travel.
+useless,쓸모없는,일상,3,The old computer is useless now.,This advice is useless.,He felt useless after losing his job.
+popular,인기 있는,일상,2,This song is very popular.,Pizza is popular with children.,She is a popular teacher.
+famous,유명한,일상,2,He is a famous singer.,Paris is famous for its art.,The restaurant is famous for its soup.
+cheap,싼,일상,2,This shirt is cheap.,Food is cheap in this town.,I found a cheap hotel.
+expensive,비싼,일상,2,This car is very expensive.,Fresh fruit can be expensive.,The ticket was too expensive.
+heavy,무거운,일상,2,This box is very heavy.,The bag is heavy with books.,It was a heavy rain.
+strong,강한,일상,2,He is very strong.,This coffee is strong.,The bridge is strong enough for trucks.
+weak,약한,일상,2,The signal is weak here.,She felt weak after the illness.,Do not make weak excuses.
+soft,부드러운,일상,2,The bed is very soft.,This blanket feels soft.,The cake is soft and warm.
+wide,넓은,일상,2,The road is very wide.,The river is wide here.,She has a wide smile.
+narrow,좁은,일상,2,The street is narrow.,The door is too narrow for the sofa.,This path is narrow and steep.
+deep,깊은,일상,2,The lake is very deep.,The hole was deep.,He has a deep voice.
+shallow,얕은,일상,3,The water is shallow here.,Children can play in the shallow pool.,His knowledge is shallow.
+thick,두꺼운,일상,2,This book has thick pages.,Wear a thick coat in winter.,The soup is thick and creamy.
+thin,얇은,일상,2,The paper is very thin.,She is tall and thin.,The ice is thin here.
+wet,젖은,일상,2,My shoes are wet.,The ground is wet after the rain.,Her hair was wet from the pool.
+dry,마른,일상,2,The clothes are dry now.,The weather is hot and dry.,Keep the medicine in a dry place.
+fresh,신선한,일상,2,The fish is very fresh.,We need fresh air.,This bread is fresh from the oven.
+perfect,완벽한,일상,2,The weather is perfect for a picnic.,Her answer was perfect.,Nobody is perfect.
+correct,정확한,일상,2,Your answer is correct.,Please write the correct address.,Is this the correct bus?
+careful,조심하는,일상,2,Be careful on the stairs.,She is careful with money.,Please drive carefully.
+careless,부주의한,일상,3,Careless mistakes cost me points.,He is careless with his things.,Do not be careless with fire.
+serious,심각한,일상,2,The problem is very serious.,He looked serious during the meeting.,This is a serious matter.
+calm,차분한,일상,2,She stayed calm during the storm.,The sea is calm this morning.,Take a deep breath and stay calm.
+nervous,긴장한,일상,2,I feel nervous before the test.,He looked nervous on his first day.,Do not be nervous because you will be fine.
+excited,신이 난,일상,2,The kids are excited about the trip.,I am excited to meet you.,She was excited about the news.
+bored,지루해하는,일상,2,I am bored at home today.,He looked bored during the lecture.,Let us play a game because I am bored.
+proud,자랑스러운,일상,2,Her parents are proud of her.,I am proud of my work.,He felt proud after winning the prize.
+lonely,외로운,일상,2,She feels lonely in a new city.,He is lonely since his friend moved away.,A lonely dog waited at the gate.
+shy,수줍은,일상,2,He is shy with new people.,The little girl gave a shy smile.,She felt shy when she spoke in public.
+honest,정직한,일상,2,He is an honest man.,Be honest with your friends.,She gave an honest answer.
+polite,예의 바른,일상,2,The waiter was very polite.,It is polite to say thank you.,Children should be polite to adults.
+lazy,게으른,일상,2,He is too lazy to clean his room.,Do not be lazy about your homework.,The cat is lazy in the afternoon.
+brave,용감한,일상,2,The firefighter was very brave.,It was brave of her to speak up.,Be brave and try again.
+smart,똑똑한,일상,2,She is a smart student.,This phone is very smart.,He made a smart choice.
+stupid,어리석은,일상,2,That was a stupid mistake.,Do not say stupid things.,He felt stupid after the joke.
+problem,문제,일상,2,I have a problem with my computer.,Math is not a problem for me.,We solved the problem together.
+question,질문,일상,2,Do you have any questions?,She asked a good question.,Please answer the question.
+reason,이유,일상,2,What is the reason for your delay?,There is no reason to worry.,He gave a clear reason.
+result,결과,일상,2,The result of the test will come out soon.,What was the result of the game?,The result surprised everyone.
+idea,생각,일상,2,That is a good idea.,I have an idea for the party.,She shared her idea with the class.
+goal,목표,일상,2,My goal is to speak English well.,He reached his goal this year.,Set a goal and work toward it.
+dream,꿈,일상,2,She has a dream of becoming a pilot.,I had a strange dream last night.,Follow your dream.
+choice,선택,일상,2,The choice is yours.,I made the right choice.,You have many choices for lunch.
+chance,기회,일상,2,This is a chance to learn something new.,I did not get a chance to talk to him.,Take the chance and try.
+risk,위험,일상,3,Swimming in the sea has some risk.,There is a risk of rain today.,Do not take a big risk.
+fact,사실,일상,2,It is a fact that the earth is round.,Tell me the facts.,That story is not based on fact.
+news,소식,일상,2,I have good news for you.,The news is on at eight.,Did you hear the news about Mina?
+story,이야기,일상,2,She told a funny story.,Read the story aloud.,The movie is based on a true story.
+music,음악,일상,2,I like to listen to music in the morning.,Classical music helps me relax.,The music is too loud.
+song,노래,일상,2,This song is my favorite.,We sang a song together.,She wrote a song for her mother.
+movie,영화,일상,2,Let us watch a movie tonight.,This movie is very exciting.,I saw a good movie last weekend.
+game,게임,일상,2,We played a card game after dinner.,He wins every game.,The game starts at seven.
+sport,스포츠,일상,2,Swimming is my favorite sport.,Many people enjoy sports on weekends.,She plays a sport at school.
+team,팀,일상,2,Our team won the match.,She joined the soccer team.,Every member of the team tried hard.
+player,선수,일상,2,He is a great soccer player.,The players are ready on the field.,She is the best player on the team.
+coach,코치,일상,2,Our coach gives us good advice.,The coach blew the whistle.,He became a swimming coach.
+party,파티,일상,2,We are having a party on Saturday.,She invited many friends to the party.,The party was a lot of fun.
+holiday,휴일,일상,2,Next Monday is a national holiday.,We went abroad during the holiday.,Christmas is a big holiday.
+birthday,생일,일상,2,Happy birthday to you!,When is your birthday?,We sang at her birthday party.
+gift,선물,일상,2,She gave me a beautiful gift.,This gift is for you.,He wrapped the gift in paper.
+card,카드,일상,2,I sent a birthday card to my friend.,Use your card to pay.,Show your student card at the gate.
+prize,상,일상,3,She won first prize in the contest.,The prize is a trip to Jeju.,He received a prize for his drawing.
+trip,여행,일상,2,We took a trip to the mountains.,How was your trip to Japan?,The school trip was fun.
+vacation,휴가,일상,2,I am going on vacation next week.,They spent their vacation at the beach.,The office is closed during the vacation.
+ticket,표,일상,2,I bought two tickets for the concert.,The ticket costs ten dollars.,Show your ticket at the door.
+passport,여권,일상,2,You need a passport to travel abroad.,I lost my passport at the airport.,Keep your passport safe.
+map,지도,일상,2,Let us look at the map.,I need a map of the city.,The map shows every street.
+route,경로,일상,3,Which route is the fastest?,We took a different route home.,The bus route changes on Sundays.
+suitcase,여행 가방,일상,3,She packed her suitcase for the trip.,The suitcase is very heavy.,Please put your suitcase here.
+umbrella,우산,일상,2,Take an umbrella because it may rain.,I left my umbrella on the bus.,The umbrella protected us from the rain.
+sunglasses,선글라스,일상,3,He wore sunglasses at the beach.,These sunglasses block the sun.,Put on your sunglasses.
+toy,장난감,일상,2,The child played with a toy car.,This toy is for kids aged five.,Please put your toys away.
+ball,공,일상,2,The boy kicked the ball.,Throw me the ball.,The ball rolled under the bed.
+doll,인형,일상,2,She holds a doll in her arms.,The doll has long blond hair.,The doll is made of wood.
+subway,지하철,일상,2,I take the subway to school.,The subway is very crowded in the morning.,We got off at the next subway station.
+taxi,택시,일상,2,We took a taxi to the airport.,Please call a taxi for me.,The taxi driver was very friendly.
+truck,트럭,일상,2,A truck carried the boxes to the store.,The truck is parked outside.,He drives a big truck.
+motorcycle,오토바이,일상,3,He rides a motorcycle to work.,The motorcycle is very fast.,Be careful of motorcycles on the road.
+engine,엔진,일상,3,The engine makes a strange noise.,The car engine is very powerful.,Turn off the engine when you park.
+traffic,교통,일상,3,The traffic is heavy this morning.,There was a lot of traffic on the highway.,Traffic lights control the cars.
+rule,규칙,일상,2,Follow the rules of the game.,What is the rule for this game?,Everyone must obey the rule.
+law,법,일상,3,Everyone must obey the law.,The new law starts next year.,She studies law at university.
+war,전쟁,일상,3,The war ended many years ago.,Many people lost their homes in the war.,They wanted peace after the war.
+peace,평화,일상,3,We hope for peace in the world.,The village enjoyed a time of peace.,Let us live in peace.
+history,역사,일상,2,I love learning about history.,The museum shows the history of the city.,This event is important in history.
+science,과학,일상,2,She likes science more than math.,Science helps us understand nature.,He is a science teacher.
+math,수학,일상,2,I am good at math.,Math homework is difficult.,She studies math after school.
+language,언어,일상,2,English is an international language.,How many languages do you speak?,Learning a language takes time.
+word,단어,일상,1,What does this word mean?,I learned five new words today.,Write the word in your notebook.
+sentence,문장,일상,2,Read the sentence aloud.,This sentence is too long.,Write a short sentence about your day.
+grammar,문법,일상,3,English grammar can be hard.,Study the grammar before the test.,The grammar of this sentence is wrong.
+vocabulary,어휘,일상,3,Build your vocabulary by reading.,Her vocabulary is very wide.,Learn five new words of vocabulary each day.
+exam,시험,일상,2,The exam is next Friday.,She passed the exam with high marks.,Do not forget to bring your pencil to the exam.
+test,시험,일상,2,We have a spelling test today.,The test was easy.,Take the test in the classroom.
+homework,숙제,일상,2,I finished my homework early.,Do your homework before dinner.,The teacher gave us a lot of homework.
+class,수업,일상,2,My English class starts at nine.,The class is very interesting.,We have a math class after lunch.
+lesson,수업,일상,2,Today's lesson is about animals.,The lesson lasted one hour.,I learned a useful lesson from that mistake.
+subject,과목,일상,2,My favorite subject is art.,Which subject do you like best?,This book covers many subjects.
+grade,성적,일상,2,She got a good grade on the test.,What grade did you get?,He is in the third grade.
+dictionary,사전,일상,2,Look up the word in the dictionary.,I bought a new English dictionary.,The dictionary has many examples.
+information,정보,일상,2,I need more information about the trip.,The website has useful information.,Please give me your contact information.
+internet,인터넷,일상,2,I use the internet to find recipes.,The internet is slow today.,We connected to the internet.
+email,이메일,일상,2,I sent an email to my teacher.,Check your email every day.,The email has a file attached.
+message,메시지,일상,2,I got a message from my friend.,Please leave a message after the tone.,The message was very short.
+website,웹사이트,일상,2,This website has many free lessons.,Visit our website for more details.,The website is down again.
+password,비밀번호,일상,2,Please enter your password.,Do not share your password.,I forgot my password.
+video,영상,일상,2,We watched a funny video online.,This video teaches cooking.,Upload the video to the website.
+sound,소리,일상,2,I heard a strange sound at night.,The sound of the rain is calming.,The music sound is very clear.
+noise,소음,일상,2,The noise from the street is loud.,Please reduce the noise after ten.,I could not sleep because of the noise.
+voice,목소리,일상,2,She has a soft voice.,I recognized his voice on the phone.,Please speak in a low voice.
+smell,냄새,일상,2,The bread has a sweet smell.,I can smell smoke in the kitchen.,This flower has a nice smell.
+taste,맛,일상,2,The soup has a spicy taste.,This fruit has a sweet taste.,Taste the sauce before you add salt.
+color,색,일상,2,What color is your bag?,Choose a color for the wall.,The color of the sky changes at sunset.
+red,빨간,일상,1,She wears a red dress.,The apple is red.,Stop when the light is red.
+blue,파란,일상,1,The sky is blue.,He painted the door blue.,She has blue jeans.
+green,초록,일상,1,The grass is green in spring.,Green tea is good for your health.,The traffic light turned green.
+yellow,노란,일상,1,The banana is yellow.,She has a yellow umbrella.,The sun looks yellow in the morning.
+black,검은,일상,1,The cat is black and white.,He wears a black coat.,The coffee is black.
+white,흰,일상,1,The snow is white.,She wore a white dress.,The paper is white.
+pink,분홍색,일상,2,She has a pink bag.,The sky turned pink at sunset.,He likes pink flowers.
+purple,보라색,일상,2,The grapes are dark purple.,She wore a purple scarf.,The flower is purple.
+brown,갈색,일상,2,The dog has brown fur.,He likes brown bread.,The leaves turned brown in autumn.
+gray,회색,일상,2,The sky is gray today.,He wears a gray jacket.,The old house has gray walls.
+gold,금,일상,2,The ring is made of gold.,She won a gold medal.,The sun turned the hills gold.
+silver,은,일상,2,She wears a silver necklace.,The car is silver.,He won a silver medal.
+shape,모양,일상,2,The box has a square shape.,What shape is the table?,Clouds change shape in the wind.
+circle,원,일상,2,Draw a circle on the paper.,The children sat in a circle.,The moon looks like a circle.
+square,사각형,일상,2,The table is a square.,Draw a square on the board.,The park is in the town square.
+triangle,삼각형,일상,2,Draw a triangle with three sides.,The sign is a yellow triangle.,A triangle has three corners.
+size,크기,일상,2,What size shoes do you wear?,The size of the room is small.,Choose a size that fits you.
+weight,무게,일상,2,The weight of the box is ten kilos.,Please check your bag weight.,He lost weight this year.
+length,길이,일상,2,What is the length of the table?,The length of the movie is two hours.,Measure the length of the rope.
+distance,거리,일상,2,The distance to school is short.,We can see the mountain from a long distance.,The distance between the two cities is long.
+speed,속도,일상,2,The car is driving at high speed.,Check your speed on this road.,The speed of the train is fast.
+number,숫자,일상,2,What is your phone number?,Write the number on the board.,Count the numbers from one to ten.
+amount,양,일상,2,What amount of sugar do you need?,A large amount of water is in the lake.,Pay the correct amount.
+half,절반,일상,2,Eat half of the apple.,Half of the class is absent.,He finished half the book.
+piece,조각,일상,2,Cut the cake into four pieces.,Would you like a piece of bread?,I found a small piece of paper.
+part,부분,일상,2,This part of the book is interesting.,Which part of the city do you live in?,Each part of the machine has a name.
+top,꼭대기,일상,2,We reached the top of the hill.,Put the book on top of the box.,Write your name at the top of the page.
+bottom,바닥,일상,2,The bottom of the bag is wet.,He sat at the bottom of the stairs.,Scroll to the bottom of the page.
+side,쪽,일상,2,Sit on the other side of the table.,Look at both sides of the coin.,The house is on the left side.
+front,앞,일상,2,Stand in front of the door.,The bus stops at the front of the school.,She sat in the front row.
+middle,가운데,일상,2,Put the cup in the middle of the table.,We are in the middle of the book.,The shop is in the middle of town.
+corner,모퉁이,일상,2,The bank is on the corner.,Turn left at the corner.,He put the box in the corner.
+left,왼쪽,일상,2,Turn left at the next light.,Write your name on the left side.,She waved with her left hand.
+center,중심,일상,3,The center of the city is busy.,Stand in the center of the room.,The park is at the center of town.
+edge,가장자리,일상,3,Do not stand near the edge of the cliff.,The table is at the edge of the room.,The knife has a sharp edge.
+bench,벤치,일상,2,We sat on a bench in the park.,The bench is painted green.,Someone left a bag on the bench.
+sofa,소파,일상,2,She is reading on the sofa.,The sofa is very soft.,Let us move the sofa to the wall.
+pillow,베개,일상,2,I need a soft pillow to sleep well.,The pillow fell on the floor.,She hugged her pillow tightly.
+blanket,담요,일상,2,Put a blanket on the bed.,The baby is wrapped in a warm blanket.,Bring a blanket because it is cold.
+curtain,커튼,일상,2,Close the curtain before you sleep.,The curtain is blowing in the wind.,This curtain is too long.
+mirror,거울,일상,2,She looked in the mirror.,The mirror is on the bathroom wall.,Clean the mirror with a cloth.
+shelf,선반,일상,2,Put the books on the top shelf.,The shelf is full of old magazines.,The shelf is broken.
+drawer,서랍,일상,2,The pen is in the drawer.,Open the drawer and find the key.,She keeps her socks in the drawer.
+box,상자,일상,2,Put the toys in the box.,The box is full of old letters.,This box is very heavy.
+basket,바구니,일상,2,She carried a basket of apples.,Put the dirty clothes in the basket.,The basket is made of straw.
+bucket,양동이,일상,3,Fill the bucket with water.,The bucket fell into the well.,Carry the bucket carefully.
+can,캔,일상,2,Open the can of soda.,I bought a can of tuna.,Put the empty can in the bin.
+pot,냄비,일상,2,Boil the water in a big pot.,The soup is in the pot.,Wash the pot after cooking.
+pan,프라이팬,일상,2,Heat the oil in the pan.,The eggs are cooking in the pan.,Use a big pan for the pasta.
+oven,오븐,일상,2,Heat the oven to two hundred degrees.,The cookies are in the oven.,The oven is very hot.
+fridge,냉장고,일상,2,Put the milk in the fridge.,The fridge is empty today.,There is some cake in the fridge.
+microwave,전자레인지,일상,2,Heat the soup in the microwave.,The microwave is broken.,Do not put metal in the microwave.
+sink,싱크대,일상,2,Wash the dishes in the sink.,The sink is full of dirty cups.,The water in the sink is cold.
+stove,가스레인지,일상,3,Turn on the stove to boil the water.,The stove is hot so be careful.,She cooked soup on the stove.
+napkin,냅킨,일상,2,Please give me a napkin.,Put the napkin on your lap.,Wipe your mouth with a napkin.
+straw,빨대,일상,2,Drink your juice with a straw.,The straw is bent.,She put the straw in her cup.
+menu,메뉴,일상,2,Can I see the menu please?,The menu has many kinds of noodles.,The menu changes every month.
+waiter,웨이터,일상,2,The waiter brought our food.,Ask the waiter for more water.,He works as a waiter at night.
+cashier,계산원,일상,3,The cashier gave me the change.,Pay the cashier at the front.,The cashier smiled at the customer.
+customer,고객,일상,2,The customer asked for a refund.,A customer came into the shop.,Our customers like the new menu.
+medicine,약,일상,2,Take this medicine after meals.,The medicine made me sleepy.,Keep the medicine away from children.
+pill,알약,일상,3,Swallow the pill with water.,The pill is small and white.,She takes a pill every morning.
+fever,열,일상,3,He has a high fever today.,Her fever went down after the medicine.,Children often get a fever in winter.
+cough,기침,일상,2,I have a bad cough.,The cough kept me awake all night.,He coughed during the lecture.
+headache,두통,일상,2,I have a headache after the meeting.,Take some medicine for your headache.,A bad headache made her stay home.
+pain,통증,일상,2,I feel pain in my back.,The pain went away after a rest.,He cried from the pain.
+injury,부상,일상,3,He got a serious injury in the game.,The injury took a long time to heal.,She was treated for a leg injury.
+flu,독감,일상,3,He caught the flu last week.,Wash your hands to avoid the flu.,The flu is common in winter.
+spring,봄,일상,1,Flowers bloom in spring.,Spring is my favorite season.,We will travel in the spring.
+summer,여름,일상,1,It is very hot in summer.,We went to the sea last summer.,Summer vacation starts in July.
+autumn,가을,일상,2,The leaves change color in autumn.,Autumn is cool and dry.,We went hiking in the autumn.
+winter,겨울,일상,1,It snows a lot in winter.,I like to wear a coat in winter.,Winter nights are very long.
+season,계절,일상,2,Spring is a beautiful season.,Each season has its own charm.,Fruit is cheap this season.
+weekend,주말,일상,1,What are you doing this weekend?,We visited the museum on the weekend.,The shops are busy on weekends.
+age,나이,일상,2,What is your age?,She is young for her age.,The children are of different ages.
+date,날짜,일상,2,What is today's date?,Write the date at the top of the page.,We set a date for the trip.
+calendar,달력,일상,2,Check the calendar for the test date.,Hang the calendar on the wall.,I marked the trip on my calendar.
+moment,순간,일상,2,Please wait a moment.,It was a happy moment for me.,Let me think for a moment.
+while,동안,일상,2,I read while I wait for the bus.,Stay here while I get the car.,Please keep quiet while the teacher talks.
+early,일찍,일상,1,I wake up early every day.,The train arrived early.,Please come early tomorrow.
+late,늦은,일상,1,I am sorry I am late.,The movie started late.,She stayed up late last night.
+soon,곧,일상,1,The bus will come soon.,I will call you soon.,Dinner will be ready soon.
+often,자주,일상,2,We often go to the park.,She often reads before bed.,How often do you exercise?
+always,항상,일상,1,He always wakes up at six.,I always wear a seat belt.,She is always kind to me.
+never,결코 ~않다,일상,1,I have never been to Europe.,He never eats breakfast.,She never forgets my birthday.
+sometimes,가끔,일상,1,Sometimes I walk to school.,We sometimes eat out on Sundays.,Sometimes it rains in summer.
+usually,보통,일상,2,I usually wake up at seven.,She usually takes the bus.,We usually eat dinner together.
+already,이미,일상,2,I have already eaten lunch.,The store is already closed.,She finished her work already.
+still,아직,일상,2,I am still waiting for the bus.,He is still sleeping.,Is the baby still crying?
+again,다시,일상,1,Please say that again.,Let us try again tomorrow.,She came back again.
+ago,전에,일상,2,I moved here two years ago.,We met a week ago.,He left a few minutes ago.
+before,전에,일상,1,Please wash your hands before dinner.,I saw her before the meeting.,Call me before you leave.
+after,후에,일상,1,We went for a walk after dinner.,Come to my house after school.,The shop opens after lunch.
+later,나중에,일상,1,I will call you later.,See you later!,Let us talk about it later.
+gate,탑승구,일상,2,Our flight leaves from gate ten.,Please wait at the gate.,The gate opens at eight.
+platform,승강장,일상,3,The train is waiting at platform two.,Stand behind the yellow line on the platform.,The platform is crowded.
+seat,좌석,일상,2,Please take your seat.,This seat is taken.,The seat is very comfortable.
+luggage,짐,일상,3,Put your luggage in the overhead bin.,My luggage is missing.,The luggage is heavy.
+tour,관광,일상,2,We went on a tour of the palace.,The tour guide told many stories.,They took a city tour yesterday.
+guide,안내원,일상,2,The guide showed us the way.,We hired a local guide.,Read the guide before you travel.
+camp,캠프,일상,2,We went to a summer camp.,They set up a tent at the camp.,The camp is near the lake.
+sunset,석양,일상,2,We watched the sunset from the beach.,The sunset was orange and red.,The sunset is beautiful tonight.
+sunrise,일출,일상,3,We woke up early to see the sunrise.,The sunrise over the sea was amazing.,The sunrise is at six.
+wind,바람,일상,2,The wind is very strong today.,A cool wind blew through the window.,The wind knocked down the tree.
+cloud,구름,일상,2,A white cloud floats in the sky.,Dark clouds are coming.,There is not a cloud in the sky.
+storm,폭풍,일상,3,A big storm hit the town last night.,The storm damaged many houses.,We stayed inside during the storm.
+thunder,천둥,일상,3,I heard thunder in the distance.,The thunder woke the baby.,Thunder and lightning came together.
+lightning,번개,일상,3,Lightning struck the tall tree.,We saw lightning over the sea.,Stay inside during lightning.
+fire,불,일상,2,Build a fire to keep warm.,The fire spread quickly.,Put out the fire before you leave.
+earth,지구,일상,2,The earth goes around the sun.,Plants grow in the earth.,The earth is very old.
+air,공기,일상,2,Fresh air makes me feel better.,The air is cold this morning.,Open the window for some air.
+dust,먼지,일상,3,The table is covered with dust.,Dust fills the air in the summer.,Wipe the dust off the shelf.
+mud,진흙,일상,3,The children played in the mud.,My shoes are covered in mud.,The road turned into mud after the rain.
+stone,돌,일상,2,She threw a stone into the lake.,The house is made of stone.,A stone blocked the path.
+rock,바위,일상,2,We climbed a big rock.,The waves hit the rock.,This rock is very heavy.
+sand,모래,일상,2,The children built a castle in the sand.,The sand is hot in summer.,Sand covers the beach.
+soil,흙,일상,3,Plant the seeds in the soil.,The soil is dark and rich.,Water the soil every day.
+leaf,나뭇잎,일상,2,A leaf fell from the tree.,The leaves turn yellow in autumn.,This leaf is green and fresh.
+seed,씨앗,일상,2,Plant a seed in the soil.,The bird ate the seeds.,The seed grew into a tall plant.
+root,뿌리,일상,3,The roots of the tree are deep.,Water reaches the roots of the plant.,Pull the weed out by the root.
+shower,샤워,일상,2,I take a shower every morning.,She is in the shower now.,The shower water is warm.
+wear,입다,일상,2,She wears a red hat.,He wears glasses to read.,You should wear a coat today.
+belong,속하다,일상,3,This book belongs to me.,She belongs to the swimming club.,Where do these shoes belong?
+include,포함하다,일상,2,The price includes lunch.,The menu includes soup and salad.,Include your phone number in the form.
+contain,담고 있다,일상,3,This box contains old photos.,The bottle contains fresh milk.,The food contains a lot of sugar.
+cover,덮다,일상,2,Cover the pot with a lid.,Snow covered the ground.,Please cover your mouth when you cough.
+shake,흔들다,일상,2,Shake the bottle before you drink.,The earthquake made the house shake.,He shook my hand.
+shout,소리치다,일상,2,Please do not shout in the library.,She shouted for help.,He shouted at the dog.
+whisper,속삭이다,일상,3,She whispered a secret in my ear.,Please whisper so you do not wake the baby.,He whispered his name.
+hug,껴안다,일상,2,She gave her mother a big hug.,They hugged each other at the station.,I hug my dog every night.
+greet,인사하다,일상,3,The teacher greeted each student at the door.,She greeted her neighbors with a smile.,He greeted me warmly.
+wave,손을 흔들다,일상,2,She waved goodbye from the train.,He waved at his friend across the street.,Wave if you need help.
+nod,고개를 끄덕이다,일상,3,He nodded in agreement.,She nodded and smiled.,Nod your head if you understand.
+rest,쉬다,일상,2,Take a rest after lunch.,She needs to rest for a while.,The old man rests in the shade.
+relax,휴식하다,일상,2,I like to relax with music.,Take a deep breath and relax.,We relaxed at the beach all day.
+wake,깨다,일상,2,I wake up at six every morning.,She woke the baby by accident.,The noise woke everyone in the house.
+show,보여주다,일상,1,Show me your photo.,Can you show me the way to the station?,The museum shows many old paintings.
+tell,말해주다,일상,1,Tell me about your trip.,She told a funny joke.,Please tell the truth.
+say,말하다,일상,1,What did you say?,He says hello to everyone.,She said thank you with a smile.
+shampoo,샴푸,일상,2,Use shampoo to wash your hair.,This shampoo smells like lemon.,The shampoo bottle is empty.
+toilet,변기,일상,2,The toilet is clean.,The toilet is down the hall.,Flush the toilet after use.
+bath,목욕,일상,2,She takes a bath every night.,A warm bath helps me relax.,Let me run a bath for you.
+tub,욕조,일상,3,The baby sat in the tub.,Fill the tub with warm water.,The bathroom has a large tub.
+brush,솔,일상,2,Use a brush to clean the floor.,Her hair brush is on the table.,He painted the wall with a big brush.
+comb,빗,일상,2,She combed her hair in the mirror.,Find a comb in the drawer.,The comb has broken teeth.
+razor,면도기,일상,3,He uses an electric razor every morning.,The razor is sharp.,Throw away the old razor.
+sponge,스펀지,일상,3,Wipe the table with a wet sponge.,This cake is light like a sponge.,The sponge is full of water.
+broom,빗자루,일상,3,Sweep the floor with a broom.,The broom is in the corner.,He bought a new broom.
+vacuum,진공청소기,일상,3,Use the vacuum to clean the carpet.,The vacuum is very loud.,I need to vacuum the room today.
+iron,다리미,일상,3,Use the iron to smooth the shirt.,The iron is hot so be careful.,She ironed her dress this morning.
+laundry,빨래,일상,3,I do the laundry every Sunday.,The laundry is hanging outside.,Put your dirty clothes in the laundry basket.
+washer,세탁기,일상,3,Put the clothes in the washer.,The washer is making a noise.,Our new washer is very quiet.
+trash,쓰레기,일상,2,Take the trash out tonight.,Put the paper in the trash can.,The street is full of trash.
+recycle,재활용하다,일상,3,Please recycle the glass bottles.,We recycle paper and cans.,Plastic can be recycled.
+electricity,전기,일상,3,The house has no electricity.,Electricity costs more in winter.,Turn off the electricity before you fix it.
+heat,열,일상,2,The heat from the sun is strong.,Turn on the heat because it is cold.,Remove the pan from the heat.
+fan,선풍기,일상,2,Turn on the fan because it is hot.,The fan makes a soft sound.,The fan stopped working.
+heater,난방기,일상,3,Turn on the heater in the bedroom.,The heater keeps the room warm.,This heater is very old.
+plug,플러그,일상,3,Put the plug into the socket.,Pull the plug out of the wall.,The plug is broken.
+socket,콘센트,일상,3,Plug the charger into the socket.,The socket is on the wall.,There are two sockets in the room.
+battery,배터리,일상,2,My phone battery is low.,Change the battery in the clock.,The battery lasts all day.
+charger,충전기,일상,3,I forgot my charger at home.,This charger is very fast.,Plug the charger in tonight.
+screen,화면,일상,2,The screen is very bright.,Look at the screen for the answer.,The screen of my phone is cracked.
+keyboard,키보드,일상,3,Type on the keyboard carefully.,The keyboard is very quiet.,This keyboard has no numbers.
+printer,프린터,일상,3,The printer is out of paper.,Send the file to the printer.,The printer makes a loud noise.
+speaker,스피커,일상,2,Connect the speaker to the phone.,The speaker is playing music.,The speaker gave a long talk.
+headphones,헤드폰,일상,3,I listen to music with headphones.,These headphones are very comfortable.,Put on your headphones.
+tablet,태블릿,일상,3,She reads books on her tablet.,The tablet battery is charging.,I bought a new tablet.
+app,앱,일상,2,Download the app to your phone.,This app helps me learn words.,The app crashes every day.
+account,계정,일상,3,Create an account to use the service.,My account is locked.,Log in to your account.
+file,파일,일상,2,Save the file on your computer.,Open the file and read it.,The file is too large to send.
+folder,폴더,일상,2,Put the photos in a new folder.,The folder is on the desktop.,Open the folder to find the document.
+download,내려받다,일상,3,You can download the book for free.,The file took a long time to download.,Download the app from the store.
+upload,올리다,일상,3,Upload the photo to the website.,I uploaded my homework last night.,The video is uploading now.
+click,클릭하다,일상,2,Click the button to continue.,Double click the icon to open it.,Click here for more information.
+search,검색하다,일상,2,Search the word in the dictionary.,I searched for a hotel online.,Use the search bar at the top.
+browse,둘러보다,일상,3,She likes to browse the shops.,You can browse the menu online.,I browsed the books on the shelf.
+comment,댓글,일상,3,Please leave a comment below.,The comment was very kind.,I read all the comments.
+joy,기쁨,일상,3,She felt great joy at the news.,The children jumped with joy.,Her smile brought joy to everyone.
+fear,두려움,일상,2,He felt fear in the dark.,Fear kept her from speaking.,Do not let fear stop you.
+anger,분노,일상,3,His voice was full of anger.,She could not hide her anger.,Anger can hurt your friends.
+trust,신뢰,일상,3,Trust is important in friendship.,I trust my teacher completely.,He lost the trust of his friends.
+kindness,친절,일상,3,Her kindness made me happy.,Thank you for your kindness.,Show kindness to others.
+courage,용기,일상,3,It takes courage to speak in public.,He showed great courage.,She found the courage to try again.
+patience,인내,일상,3,Teaching children requires patience.,Have patience and you will learn.,He lost his patience quickly.
+luck,행운,일상,2,Good luck on your test!,I had good luck at the casino.,We need some luck to win.
+mistake,실수,일상,2,I made a mistake on the test.,Everyone makes mistakes.,Correct your mistakes before you submit.
+accident,사고,일상,2,There was an accident on the road.,He was hurt in a car accident.,Be careful to avoid an accident.
+habit,습관,일상,2,Reading before bed is a good habit.,She has a habit of biting her nails.,It is hard to break a bad habit.
+neighbor,이웃,일상,2,My neighbor has a big dog.,We help our neighbors every day.,The neighbors are very friendly.
+guest,손님,일상,2,We have a guest for dinner tonight.,The guest sat on the sofa.,Our hotel welcomes every guest.
+visitor,방문객,일상,2,The museum has many visitors.,A visitor asked for directions.,Visitors must wear a badge.
+stranger,낯선 사람,일상,2,Do not talk to strangers.,A stranger helped me find the way.,He felt like a stranger in the city.
+couple,커플,일상,2,The couple walked along the beach.,A young couple sat by the window.,They are a happy couple.
+parent,부모,일상,2,Both parents came to the meeting.,Parents should listen to their children.,My parent works in Seoul.
+son,아들,일상,2,His son is a student.,They have one son and one daughter.,My son likes soccer.
+daughter,딸,일상,2,Her daughter plays the violin.,They named their daughter Mina.,My daughter is five years old.
+brother,형제,일상,2,My brother is older than me.,He has two brothers.,Her brother lives in Canada.
+sister,자매,일상,2,My sister is a nurse.,She has a younger sister.,I went shopping with my sister.
+uncle,삼촌,일상,2,My uncle lives in Busan.,Her uncle is a farmer.,We visited our uncle yesterday.
+aunt,이모,일상,2,My aunt makes delicious cookies.,Her aunt is a teacher.,We visited our aunt on Sunday.
+grandmother,할머니,일상,2,My grandmother tells great stories.,We visit our grandmother every month.,She learned to cook from her grandmother.
+grandfather,할아버지,일상,2,My grandfather likes to fish.,His grandfather was a soldier.,We went to see our grandfather.
+cousin,사촌,일상,2,My cousin is studying in London.,I played games with my cousin.,Her cousin lives next door.
+wife,아내,일상,2,His wife is a doctor.,She is my wife.,The man and his wife went out for dinner.
+husband,남편,일상,2,Her husband cooks dinner on Sundays.,My husband likes to read.,The couple's husband works at a bank.
+relative,친척,일상,3,We visited a relative in the countryside.,All my relatives came to the wedding.,She is a distant relative of mine.
+people,사람들,일상,1,Many people live in this city.,The people in the village are kind.,Young people like this song.
+person,사람,일상,1,She is a very kind person.,Each person has a different story.,A person can learn anything.
+crowd,군중,일상,2,A large crowd gathered in the square.,The crowd cheered for the team.,I could not see through the crowd.
+group,무리,일상,2,Our group went on a trip together.,Work in small groups.,A group of students came to the library.
+community,지역 사회,일상,3,Our community helps each other.,The community center is open on Sunday.,She works for a local community.
+society,사회,일상,3,Education is important for society.,Society changes over time.,He studies human society.
+comfortable,편안한,일상,2,This chair is very comfortable.,I feel comfortable with my friends.,The hotel room was clean and comfortable.
+quick,빠른,일상,2,Give me a quick answer.,He took a quick look at the map.,She is quick at math.
+alone,혼자인,일상,2,I like to walk alone in the park.,She lives alone in a small flat.,He felt alone in the big city.
+sure,확신하는,일상,2,Are you sure about the answer?,I am sure you will pass the test.,Make sure the door is locked.
+public,공공의,일상,3,The library is a public place.,Public transport is cheap in this city.,The park is open to the public.
+private,개인의,일상,3,This is my private room.,Please keep your opinion private.,The school is a private school.
+local,지역의,일상,3,We ate at a local restaurant.,The local news is on at six.,She knows the local people well.
+national,국가의,일상,3,The national holiday is next week.,He won a national prize.,The national museum is free.
+foreign,외국의,일상,3,She studies a foreign language.,He travels to many foreign countries.,Foreign food is popular here.
+modern,현대의,일상,3,This building is very modern.,Modern technology changes fast.,They live in a modern apartment.
+traditional,전통적인,일상,3,We wore traditional clothes for the festival.,This is a traditional recipe.,The village keeps traditional customs.
+natural,자연의,일상,3,The park has many natural plants.,Natural food is good for health.,Her smile looks very natural.
+electric,전기의,일상,3,The car runs on electric power.,An electric fan is on the table.,He bought an electric kettle.
+digital,디지털의,일상,3,I prefer digital books to paper books.,Digital photos are easy to share.,This is a digital clock.
+daily,매일의,일상,3,I follow a daily routine.,Check your daily schedule every morning.,The newspaper is a daily paper.
+annual,연간의,일상,4,The school holds an annual festival.,This is an annual report.,The annual meeting is in May.
+final,마지막의,일상,3,This is the final exam.,The final round starts at noon.,The final score was two to one.
+first,첫 번째의,일상,1,This is my first time here.,She came first in the race.,He is the first person to arrive.
+last,마지막의,일상,1,This is the last bus tonight.,He was the last to leave.,I read the last page of the book.
+next,다음의,일상,1,The next stop is the station.,See you next Monday.,Let us meet at the next corner.
+previous,이전의,일상,3,The previous answer was wrong.,Read the previous chapter first.,She worked here in a previous job.
+main,주요한,일상,2,The main road is very busy.,The main reason is money.,The main dish is chicken.
+basic,기본적인,일상,3,Learn the basic rules first.,This book covers basic grammar.,Water is a basic need.
+extra,추가의,일상,3,Do you want an extra bag?,Pay a little extra for the upgrade.,Take an extra blanket for the trip.
+total,전체의,일상,3,What is the total cost?,The total number of students is fifty.,The total score is ninety.
+example,예,일상,2,Please give me an example.,This sentence is an example of the past tense.,Try this food for example.
+sample,샘플,일상,3,Try a free sample of the cake.,The sample is on the table.,Send me a sample of the product.
+type,종류,일상,2,What type of music do you like?,This type of bread is famous.,There are two types of cars here.
+way,방법,일상,2,Is there a way to fix it?,This is the best way to learn.,Show me the way to the station.
+method,방법,일상,3,The new method saves time.,Which method do you use to study?,The teacher explained a simple method.
+step,단계,일상,2,Follow the steps in the book.,Take one step at a time.,Please take a step back.
+stage,단계,일상,3,The project is at the final stage.,The actors waited on the stage.,The baby is at an early stage of growth.
+level,수준,일상,2,What level are you at?,The game has three levels.,The water level is rising.
+point,점,일상,2,That is a good point.,I got ten points in the game.,Mark the point on the map.
+line,줄,일상,2,Stand in a straight line.,Draw a line under the title.,There was a long line at the bank.
+list,목록,일상,2,Make a list of things to buy.,The list is on the fridge.,Check the list before you leave.
+page,페이지,일상,2,Open the book to page ten.,Read the next page please.,This page is missing.
+name,이름,일상,1,What is your name?,Please write your name here.,Her name is Yuna.
+address,주소,일상,2,What is your address?,Write the address on the envelope.,The address is on this card.
+birth,출생,일상,3,The baby's birth was on a rainy day.,Her birth date is in May.,He was born in Seoul.
+health,건강,일상,2,Good health is important.,Check your health every year.,She is in good health.
+care,돌봄,일상,2,The nurse takes good care of patients.,Please take care of yourself.,They need care after the surgery.
+safety,안전,일상,2,Safety comes first.,Wear a helmet for safety.,The school checks the safety of the building.
+danger,위험,일상,2,There is danger in the river.,Stay away from danger.,The sign warns of danger.
+sign,표지판,일상,2,Read the sign before you cross.,There is a sign on the door.,The sign says the road is closed.
+signal,신호,일상,3,Wait for the green signal.,The signal is weak in the mountains.,She gave a signal to start.
+symbol,상징,일상,3,The dove is a symbol of peace.,The heart is a symbol of love.,This symbol means stop.
+flag,깃발,일상,3,The flag waves in the wind.,Our country's flag is red and white.,Raise the flag at the top of the tower.
+abroad,해외에,일상,3,She wants to study abroad next year.,Many students travel abroad in summer.,He has lived abroad for five years.
+actually,실제로,일상,2,I actually enjoyed the movie.,Actually I forgot my wallet.,What actually happened last night?
+advice,조언,일상,3,Thank you for your advice.,Ask a teacher for advice.,Her advice helped me a lot.
+afford,감당하다,일상,3,I cannot afford a new car.,We can afford a small house.,Can you afford the ticket?
+aim,목표,일상,3,My aim is to win the contest.,The aim of this game is to score points.,Aim for the top of the target.
+allow,허락하다,일상,3,Phones are not allowed in class.,Parents do not allow children to swim alone.,The rules allow us to leave early.
+amazing,놀라운,일상,2,The view from the top is amazing.,She has an amazing voice.,That was an amazing movie.
+anxious,불안한,일상,4,She felt anxious before the interview.,He is anxious about the test.,Do not be anxious about the result.
+apologize,사과하다,일상,3,I apologize for the mistake.,He apologized to his friend.,You should apologize to her.
+appear,나타나다,일상,3,The moon appeared behind the clouds.,A new problem appeared suddenly.,He appears to be tired.
+apply,지원하다,일상,3,She applied for the scholarship.,I want to apply for this job.,You can apply online.
+appreciate,감사하다,일상,3,I appreciate your help.,We appreciate your patience.,She appreciated the gift.
+approach,접근하다,일상,3,The bus is approaching the station.,Approach the desk and wait.,Let us try a new approach.
+arrange,준비하다,일상,3,She arranged a meeting for next week.,Arrange the flowers in a vase.,He arranged for a taxi to the airport.
+athlete,운동선수,일상,3,The athlete trains every day.,She is a famous athlete.,Many athletes came to the event.
+attend,참석하다,일상,3,I will attend the concert tonight.,Did you attend the meeting?,Many students attended the lecture.
+attention,주의,일상,3,Please pay attention to the teacher.,He caught my attention.,Give your full attention to the task.
+attract,끌다,일상,3,The bright light attracts insects.,The city attracts many tourists.,Her smile attracts many friends.
+audience,청중,일상,3,The audience clapped at the end.,The audience was very quiet.,The speaker spoke to a large audience.
+avoid,피하다,일상,3,Avoid eating too much sugar.,He tried to avoid the crowd.,Try to avoid traffic at rush hour.
+award,상,일상,3,She received an award for her work.,The award was given at the ceremony.,He won an award for his film.
+aware,알고 있는,일상,3,Are you aware of the new rules?,I was not aware of the problem.,She is aware of her mistakes.
+bake,굽다,일상,2,I like to bake bread on Sundays.,She baked a pie for the party.,We will bake cookies tomorrow.
+balance,균형,일상,3,Keep a good balance between work and rest.,He lost his balance and fell.,Balance the budget carefully.
+beat,이기다,일상,3,Our team beat the other school.,She beat me at chess.,Beat the eggs before you cook them.
+behave,행동하다,일상,3,Please behave well at the party.,The children behaved very well.,The dog behaves strangely today.
+behavior,행동,일상,3,His behavior was very polite.,Good behavior is rewarded at school.,The animal's behavior changed suddenly.
+benefit,이익,일상,3,Exercise has many health benefits.,The new law will benefit everyone.,What is the benefit of this plan?
+blame,탓하다,일상,3,Do not blame others for your mistakes.,He blamed the rain for being late.,Nobody is to blame for the accident.
+blood,피,일상,2,The cut bled a lot of blood.,Blood flows through the body.,Donate blood to help others.
+boil,끓이다,일상,2,Boil the water for five minutes.,The pot is boiling on the stove.,Boil the eggs until they are hard.
+border,국경,일상,3,They crossed the border at night.,The border is guarded by soldiers.,The two countries share a long border.
+brief,짧은,일상,4,Give me a brief summary of the story.,The meeting was brief.,She gave a brief speech.
+celebrate,축하하다,일상,2,We celebrate her birthday every year.,They celebrated the win with a party.,Let us celebrate the new year.
+celebration,축하,일상,3,The celebration lasted all night.,We held a celebration for the winners.,The birthday celebration was fun.
+century,세기,일상,3,The house was built in the last century.,We are living in the twenty first century.,This tree is over a century old.
+certain,확실한,일상,3,I am certain she will come.,Are you certain about the answer?,Certain foods make me sick.
+chase,쫓다,일상,3,The dog chased the cat across the yard.,The police chased the thief.,Do not chase your dreams too hard.
+check,확인하다,일상,2,Please check your answer again.,I checked the time on my phone.,Check the weather before you go.
+cheer,응원하다,일상,3,The fans cheered for the team.,Cheer up because it will be fine.,We cheered when the bus arrived.
+chew,씹다,일상,2,Chew your food slowly.,The dog chewed the shoe.,Chew gum after lunch.
+collect,모으다,일상,3,She collects stamps from around the world.,Please collect your bags at the desk.,They collected money for the school.
+combine,결합하다,일상,4,Combine the eggs and flour in a bowl.,The two companies combined last year.,Combine the colors to make green.
+comfort,위로하다,일상,4,She tried to comfort her crying friend.,The soft bed gives comfort.,His words were a comfort to me.
+complain,불평하다,일상,3,Stop complaining about the food.,He complained to the manager.,She often complains about the weather.
+concern,걱정,일상,3,Her health is my main concern.,The teacher showed concern for the student.,There is no concern about the test.
+confident,자신 있는,일상,3,She is confident in her ability.,Be confident when you speak.,I feel confident about the exam.
+connect,연결하다,일상,3,Connect the phone to the charger.,This road connects the two towns.,We are connected through the internet.
+consider,고려하다,일상,3,Consider all the options before you decide.,I am considering a trip to Japan.,She considered his advice carefully.
+contact,연락하다,일상,3,Please contact me by email.,How can I contact the office?,Keep in contact with your friends.
+control,통제하다,일상,3,You cannot control the weather.,Keep control of your emotions.,He lost control of the car.
+convince,설득하다,일상,4,I convinced him to join the team.,She could not convince her parents.,He is convinced that he is right.
+copy,복사하다,일상,2,Make a copy of the document.,Please copy the notes into your book.,This photo is a copy of the original.
+count,세다,일상,2,Count the apples on the table.,Count from one to twenty.,I need to count the money.
+crash,충돌하다,일상,3,The two cars crashed on the bridge.,My computer crashed while I was working.,The waves crashed on the rocks.
+create,만들다,일상,3,She created a new song.,We need to create a plan.,The artist created a beautiful painting.
+creative,창의적인,일상,3,She is a very creative designer.,Creative ideas can change the world.,He wrote a creative story.
+criticize,비판하다,일상,4,Do not criticize others too harshly.,The critics criticized the movie.,He was criticized for his decision.
+culture,문화,일상,3,Korean culture is very rich.,Learning about other cultures is fun.,Music is part of every culture.
+curious,궁금한,일상,3,I am curious about your trip.,The child was curious about the stars.,She is curious and asks many questions.
+damage,손상,일상,3,The storm caused a lot of damage.,The water damage ruined the carpet.,Do not damage the books.
+decade,10년,일상,4,Prices have risen over the last decade.,She lived in Paris for a decade.,The town has changed in one decade.
+decorate,장식하다,일상,3,We decorate the room for the party.,She decorated the cake with fruit.,They decorated the tree with lights.
+defend,방어하다,일상,4,The soldiers defended the city.,He defended his friend from the bully.,Lawyers defend their clients.
+delay,지연시키다,일상,3,The flight was delayed by two hours.,Do not delay your decision.,The train will be delayed because of snow.
+delicious,맛있는,일상,2,This soup is delicious.,The cake smells delicious.,We ate a delicious dinner.
+deliver,배달하다,일상,3,The package will be delivered tomorrow.,They deliver food to the office.,The mail carrier delivers letters daily.
+depend,의존하다,일상,3,It depends on the weather.,Children depend on their parents.,Your score depends on your effort.
+destroy,파괴하다,일상,3,The fire destroyed the old house.,Do not destroy the environment.,The virus can destroy cells.
+develop,발달시키다,일상,3,Children develop language skills early.,The company developed a new app.,The city has developed quickly.
+device,기기,일상,3,This device helps you sleep better.,Turn off all electronic devices.,A phone is a small device.
+discover,발견하다,일상,3,Scientists discovered a new planet.,I discovered a hidden park near my home.,She discovered her talent for music.
+disease,질병,일상,3,This disease is common in old age.,Doctors are looking for a cure for the disease.,The virus caused a serious disease.
+divide,나누다,일상,3,Divide the cake into four equal parts.,The river divides the town in two.,Ten divided by two is five.
+document,서류,일상,3,Please sign the document.,Bring all your documents to the office.,This document explains the rules.
+doubt,의심하다,일상,3,I doubt that he will come.,There is no doubt about it.,Do not doubt yourself.
+emotion,감정,일상,3,Music can express strong emotions.,She did not show any emotion.,Emotions can be hard to control.
+encourage,격려하다,일상,3,Parents encourage their children to read.,Her friends encouraged her to try again.,The coach encouraged the team.
+energy,에너지,일상,3,Solar energy comes from the sun.,I have no energy after work.,Save energy by turning off the lights.
+enjoy,즐기다,일상,2,I enjoy listening to music.,We enjoyed the dinner very much.,Enjoy your trip to Jeju.
+enormous,거대한,일상,4,The whale is enormous.,They built an enormous castle.,He has an enormous amount of work.
+escape,탈출하다,일상,3,The prisoner tried to escape.,The cat escaped from the box.,We escaped from the heat by going to the sea.
+essay,에세이,일상,3,I wrote an essay about my summer.,The essay is due next Monday.,This essay explains the history.
+evidence,증거,일상,4,The police found evidence at the scene.,There is no evidence of the crime.,The data is evidence of the change.
+exact,정확한,일상,3,Tell me the exact time.,This is the exact same bag.,What is the exact amount?
+exchange,교환하다,일상,3,Can I exchange this shirt for a bigger one?,They exchanged gifts at the party.,We exchanged emails after the class.
+exercise,운동,일상,2,Exercise is good for your health.,I do light exercise every morning.,Do the exercise on page five.
+experience,경험,일상,2,I have experience in teaching.,Travel is a great experience.,She shared her experience with us.
+experiment,실험,일상,3,The students did a science experiment.,The experiment failed the first time.,Scientists run many experiments.
+explore,탐험하다,일상,3,We explored the old castle.,Children love to explore the forest.,Explore the city on foot.
+express,표현하다,일상,3,She expressed her feelings in a letter.,Words cannot express my thanks.,Try to express your ideas clearly.
+fashion,패션,일상,3,She follows the latest fashion.,Fashion changes every season.,He works in the fashion industry.
+feature,특징,일상,3,The best feature of this phone is the camera.,The hotel has many features.,This feature is very useful.
+festival,축제,일상,2,We went to the spring festival.,The festival has music and food.,The town holds a festival every year.
+fill,채우다,일상,2,Fill the glass with water.,Please fill out this form.,The room was filled with laughter.
+focus,집중하다,일상,3,Focus on your studies.,It is hard to focus when it is noisy.,The camera will focus on the bird.
+forecast,예보,일상,3,The weather forecast says it will rain.,Check the forecast before you travel.,The forecast was wrong again.
+forgive,용서하다,일상,3,I forgive you for being late.,Please forgive me for my mistake.,She forgave her brother quickly.
+frequent,잦은,일상,4,He makes frequent trips to Busan.,Frequent rain caused floods.,She is a frequent visitor to the library.
+fuel,연료,일상,3,The car needs more fuel.,Fuel prices went up this week.,The plane runs on jet fuel.
+function,기능,일상,3,This button has a special function.,What is the function of this tool?,The machine does not function well.
+gather,모이다,일상,3,The family gathered for dinner.,Let us gather in the hall at noon.,Students gathered around the teacher.
+generous,관대한,일상,4,She is very generous with her time.,He gave a generous gift to the school.,It was generous of you to help.
+grateful,감사하는,일상,3,I am grateful for your help.,She was grateful for the warm welcome.,Be grateful for what you have.
+guard,지키다,일상,3,The soldier guards the gate.,A dog guards the house at night.,The security guard checked our bags.
+harvest,수확,일상,4,The farmers gathered the harvest in autumn.,The harvest was very good this year.,They harvest rice in September.
+hesitate,망설이다,일상,4,Do not hesitate to ask me.,He hesitated before answering.,She hesitated at the door.
+honor,명예,일상,4,It is an honor to meet you.,He received an honor for his work.,They fought for the honor of their family.
+identify,확인하다,일상,4,Please identify the birds in the picture.,The police identified the suspect.,Can you identify the author of this book?
+ignore,무시하다,일상,3,Do not ignore the warning signs.,She ignored the noise outside.,He ignored my question.
+immediately,즉시,일상,3,Please leave the room immediately.,The bus arrived immediately.,Call the doctor immediately.
+impress,감동시키다,일상,3,Her speech impressed the audience.,The new design impressed everyone.,He tried to impress his boss.
+independent,독립적인,일상,4,She is an independent woman.,The country became independent in 1945.,Children should learn to be independent.
+influence,영향,일상,3,Parents have a strong influence on children.,Music can influence our mood.,He had a big influence on my life.
+inform,알리다,일상,3,Please inform me of any changes.,The notice informs students about the test.,We will inform you by email.
+invent,발명하다,일상,4,Who invented the telephone?,He invented a new kind of lamp.,Scientists invent new tools every year.
+invite,초대하다,일상,2,She invited me to her party.,Please invite your friends.,We invited the teacher to dinner.
+involve,포함하다,일상,4,The project involves many people.,This job involves a lot of travel.,Do not get involved in the fight.
+gentle,온화한,일상,3,She has a gentle voice.,The nurse was very gentle with the baby.,Use a gentle soap on your face.
+giant,거대한,일상,3,A giant tree stood in the field.,The giant robot was very tall.,The company is a giant in the market.
+glory,영광,일상,4,The team won glory in the final.,He sought glory in his career.,They fought for the glory of their country.
+gravity,중력,일상,4,Gravity keeps us on the ground.,Things fall because of gravity.,The astronaut floated without gravity.
+heal,치유하다,일상,4,Time will heal the wound.,The doctor helped the patient heal quickly.,Rest is important to heal.
+hero,영웅,일상,3,He is a hero to many children.,The firefighter was a hero.,Every story needs a hero.
+hobby,취미,일상,3,My hobby is painting.,Reading is a popular hobby.,What is your favorite hobby?
+host,주최하다,일상,3,She will host the party tonight.,Our school hosted the English contest.,He is the host of the show.
+humor,유머,일상,4,He has a great sense of humor.,Her humor made everyone laugh.,The book uses humor to teach history.
+ideal,이상적인,일상,4,This is the ideal place for a picnic.,She is my ideal partner.,The ideal weight depends on your height.
+imagination,상상력,일상,4,Children have a wild imagination.,Use your imagination to write a story.,His imagination is very rich.
+incident,사건,일상,4,The incident happened at night.,Nobody was hurt in the incident.,The police are investigating the incident.
+industry,산업,일상,4,The car industry is large in Korea.,She works in the tourism industry.,The food industry is growing fast.
+insect,곤충,일상,3,A bee is an insect.,Many insects live in the forest.,The insect landed on my arm.
+instead,대신에,일상,3,I will walk instead of taking the bus.,Let us have tea instead of coffee.,He sent a card instead.
+intelligence,지능,일상,4,Dogs show great intelligence.,She has high intelligence.,Artificial intelligence is changing our world.
+interest,흥미,일상,3,She has an interest in music.,His interest in history grew over time.,The book is of great interest to me.
+interrupt,방해하다,일상,4,Please do not interrupt me.,The noise interrupted our talk.,The meeting was interrupted by a phone call.
+invest,투자하다,일상,4,He invested his money in stocks.,It is wise to invest in your education.,Many people invest in houses.
+journey,여정,일상,3,The journey to Busan took five hours.,Life is a long journey.,We began our journey early in the morning.
+judge,판단하다,일상,3,Do not judge people by their looks.,The judge made a fair decision.,It is hard to judge the quality of food.
+justice,정의,일상,4,Everyone deserves justice.,The court seeks justice for all.,They fought for justice and equal rights.
+lack,부족,일상,3,The town has a lack of water.,She lacks confidence in herself.,There is no lack of ideas in the group.
+lately,최근에,일상,3,I have been tired lately.,The weather has been strange lately.,She has not called me lately.
+lead,이끌다,일상,3,She will lead the team to victory.,Follow the guide who leads the group.,This road leads to the lake.
+leader,지도자,일상,3,He is a strong leader.,The class leader helped us a lot.,A good leader listens to others.
+limit,제한,일상,3,There is a speed limit on this road.,Please limit your time on the phone.,The limit for each person is two.
+loan,대출,일상,4,He took out a loan to buy a house.,The bank approved the loan.,She paid back the loan on time.
+luxury,사치,일상,4,A yacht is a luxury.,This hotel offers luxury rooms.,They live a life of luxury.
+major,주요한,일상,3,Water is a major part of our diet.,She has a major in biology.,The city has a major airport.
+manner,방식,일상,4,She greeted us in a friendly manner.,Good manners are important.,He spoke in a calm manner.
+material,재료,일상,3,The bag is made of soft material.,We need building materials for the house.,Read the material before the test.
+mature,성숙한,일상,4,He is mature for his age.,The fruit is mature and sweet.,She acts in a mature way.
+meaning,의미,일상,3,What is the meaning of this word?,The meaning of the story is clear.,Ask the teacher about the meaning.
+medal,메달,일상,3,She won a gold medal.,The medal is made of metal.,He received a medal for bravery.
+memory,기억,일상,3,I have a good memory of that trip.,Her memory is very strong.,This song brings back memories.
+mild,온화한,일상,4,The weather is mild in spring.,This soup has a mild taste.,The doctor said the pain is mild.
+minor,사소한,일상,4,It is a minor problem.,He had only a minor injury.,This change is minor.
+miss,놓치다,일상,2,I missed the bus this morning.,Do not miss the chance to learn.,I will miss you.
+mood,기분,일상,3,Her mood improved after lunch.,The music sets the mood for the party.,He was in a good mood today.
+motion,움직임,일상,4,The motion of the waves is calming.,The car came to a sudden motion.,Watch the motion of the dancer.
+neat,깔끔한,일상,3,Her room is always neat.,Please write your answer in neat handwriting.,He has a neat appearance.
+nature,자연,일상,2,I love the beauty of nature.,We walked in nature all day.,Human nature can be complicated.
+necessary,필요한,일상,3,Is it necessary to go today?,Water is necessary for life.,Bring only the necessary items.
+neither,둘 다 아닌,일상,4,Neither of them came to the party.,I like neither the red nor the blue one.,Neither answer is correct.
+notice,알아차리다,일상,3,Did you notice the change?,I did not notice the sign.,Please notice the warning on the door.
+obey,따르다,일상,4,Children should obey the rules.,Dogs learn to obey their owners.,You must obey the law.
+object,물체,일상,3,This object is very old.,The object fell from the shelf.,Put the object back in the box.
+obvious,분명한,일상,3,The answer is obvious.,It is obvious that she is tired.,The mistake was obvious to everyone.
+occur,발생하다,일상,4,The accident occurred at noon.,Changes occur slowly over time.,Such problems rarely occur.
+offer,제안하다,일상,3,She offered to help me carry the box.,They offered a lower price.,Thank you for your kind offer.
+operate,작동하다,일상,4,This machine is easy to operate.,The store operates from nine to six.,He knows how to operate the camera.
+opinion,의견,일상,3,What is your opinion on this issue?,Everyone has a different opinion.,I respect your opinion.
+opposite,반대의,일상,3,The bank is on the opposite side of the street.,They have opposite opinions.,Stand on the opposite side of the room.
+option,선택지,일상,3,There are three options for lunch.,You have the option to stay or go.,This is the best option for us.
+organize,조직하다,일상,4,She organized a trip for the class.,Let us organize the files by date.,He organized the books on the shelf.
+origin,기원,일상,4,The origin of the word is Latin.,What is the origin of this custom?,The fruit has its origin in Asia.
+outdoor,야외의,일상,3,We enjoy outdoor activities in spring.,The outdoor pool is open in summer.,Wear outdoor clothes for the hike.
+pace,속도,일상,4,He walks at a steady pace.,Keep your own pace when you run.,The pace of life is fast in the city.
+pattern,패턴,일상,3,The dress has a flower pattern.,Look for a pattern in the numbers.,The pattern repeats every day.
+perform,공연하다,일상,3,The band will perform tonight.,She performed well in the test.,The students performed a short play.
+period,기간,일상,3,The test is in a period of two weeks.,There was a long period of rain.,The class period is forty minutes.
+permit,허락하다,일상,4,The sign does not permit parking here.,Your ticket permits you to enter.,The rules permit food in the park.
+persuade,설득하다,일상,4,She persuaded me to try the new food.,He tried to persuade his parents.,It is hard to persuade him.
+pirate,해적,일상,3,The pirate sailed across the sea.,Children love stories about pirates.,The ship was attacked by pirates.
+plenty,충분한 양,일상,3,There is plenty of food for everyone.,We have plenty of time.,Plenty of people came to the event.
+polish,닦다,일상,3,Polish your shoes before the party.,She polished the silver spoons.,The floor was polished until it shined.
+pollution,오염,일상,4,Air pollution is a problem in big cities.,Pollution can harm the river.,Reduce pollution by using less plastic.
+pour,붓다,일상,3,Pour the water into the glass.,She poured tea for her guests.,It is pouring rain outside.
+praise,칭찬하다,일상,3,The teacher praised my hard work.,Parents praise their children for good grades.,He received praise for his speech.
+pride,자부심,일상,3,She takes pride in her work.,He felt pride when he finished the race.,Her pride kept her from asking for help.
+principle,원칙,일상,4,Honesty is an important principle.,He never breaks his principles.,The idea is based on a simple principle.
+priority,우선순위,일상,4,Health is my top priority.,Set your priorities for the week.,Safety is the first priority.
+process,과정,일상,3,Learning a language is a long process.,The process takes about a week.,Follow the process step by step.
+produce,생산하다,일상,4,This factory produces cars.,The farm produces fresh vegetables.,We can produce more food this year.
+promise,약속,일상,3,I will keep my promise.,She made a promise to her mother.,Do not break your promise.
+protect,보호하다,일상,3,Wear a helmet to protect your head.,The law protects children.,Protect the environment for the future.
+tough,강인한,일상,3,He is a tough man.,This meat is tough to chew.,The exam was tough for everyone.
