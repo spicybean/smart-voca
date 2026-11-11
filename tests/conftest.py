@@ -42,9 +42,11 @@ def make_candidate():
         correct_rate: float | None = None,
         last_reviewed: date | None = None,
         next_review: date | None = None,
+        english: str | None = None,
     ) -> WordCandidate:
         return WordCandidate(
             word_id=word_id,
+            english=english or f"word{word_id}",
             meaning=meaning or f"뜻{word_id}",
             level=level,
             category=category,

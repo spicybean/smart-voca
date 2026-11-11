@@ -30,6 +30,7 @@ class WordCandidate:
     correct_rate: float | None
     last_reviewed: date | None
     next_review: date | None
+    english: str = ""
 
 
 @dataclass(frozen=True)

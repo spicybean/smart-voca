@@ -17,12 +17,12 @@ from domain.rules import DISTRACTOR_LEVEL_RANGE, MIN_OPTION_WORDS
 DISTRACTOR_COUNT = MIN_OPTION_WORDS - 1
 
 
-def pick_distractors(
+def pick_distractor_candidates(
     answer: WordCandidate,
     pool: list[WordCandidate],
     rng: random.Random,
-) -> list[str] | None:
-    """보기 오답 3개의 한글 뜻을 돌려준다. 후보가 모자라면 None.
+) -> list[WordCandidate] | None:
+    """보기 오답 3개를 단어 객체로 돌려준다 (한→영 보기는 영어 단어가 필요하므로). 후보가 모자라면 None.
 
     None이면 호출자(quiz_service)가 해당 문항을 오늘 퀴즈에서 제외한다.
     """
@@ -36,14 +36,26 @@ def pick_distractors(
     same_category = [c for c in others if c.category == answer.category]
     steps = [same_category_and_level, same_category, others]
 
-    chosen_meanings: list[str] = []
+    chosen: list[WordCandidate] = []
+    chosen_meanings: set[str] = set()
     for step_candidates in steps:
         shuffled = list(step_candidates)
         rng.shuffle(shuffled)
         for candidate in shuffled:
             if candidate.meaning in chosen_meanings:
                 continue
-            chosen_meanings.append(candidate.meaning)
-            if len(chosen_meanings) == DISTRACTOR_COUNT:
-                return chosen_meanings
+            chosen.append(candidate)
+            chosen_meanings.add(candidate.meaning)
+            if len(chosen) == DISTRACTOR_COUNT:
+                return chosen
     return None
+
+
+def pick_distractors(
+    answer: WordCandidate,
+    pool: list[WordCandidate],
+    rng: random.Random,
+) -> list[str] | None:
+    """보기 오답 3개의 한글 뜻을 돌려준다. 후보가 모자라면 None."""
+    chosen = pick_distractor_candidates(answer, pool, rng)
+    return None if chosen is None else [candidate.meaning for candidate in chosen]
