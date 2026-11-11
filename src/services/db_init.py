@@ -17,6 +17,8 @@ from pathlib import Path
 from sqlalchemy import func, inspect, select
 from sqlalchemy.orm import Session
 
+import config
+import database
 from database import create_db_engine
 from logger import LOGGER_NAME
 from models import CATEGORY_VALUES, Base, DBVersion, Example, Progress, Settings, Word
@@ -173,3 +175,17 @@ def initialize_database(db_path: Path, csv_paths: list[Path]) -> InitResult:
 
     log.info("DB 초기화 완료: 단어 %d개, 기본 예문 %d개", len(rows), example_count)
     return InitResult(word_count=len(rows), example_count=example_count)
+
+
+def reset_database() -> InitResult:
+    """초기화: DB 파일을 지우고 CSV 초기 데이터부터 다시 만든다 (UI 설계서 2.5.1)."""
+    db_path = config.get_db_path()
+    try:
+        database.get_engine().dispose()
+    except RuntimeError:
+        pass
+    db_path.unlink(missing_ok=True)
+    result = initialize_database(db_path, default_csv_paths())
+    database.init_engine(db_path)
+    log.info("DB 초기화(리셋) 완료: 단어 %d개", result.word_count)
+    return result

@@ -132,3 +132,16 @@ def test_manual_backup_fails_when_no_database(tmp_path, monkeypatch):
 
     with pytest.raises(BackupError):
         create_manual_backup()
+
+
+def test_reset_rebuilds_initial_data_and_removes_learning_records(live_db):
+    from services.db_init import reset_database
+    from services.word_service import add_word as add
+
+    add("banana", "바나나")
+    assert len(list_words().items) == 2
+
+    result = reset_database()
+
+    assert result.word_count == 1500
+    assert len(list_words(page_size=5000).items) == 1500
