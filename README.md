@@ -2,8 +2,8 @@
 
 간격 반복 학습과 사전 API를 활용한 **영단어 개인 학습 시스템** (PyQt 데스크톱 앱)
 
-> **현재 상태**: 🚀 기획 단계 (2026-10-21 시작)
-> **기술 스택**: Python 3.11+ | PyQt5/6 | SQLite
+> **현재 상태**: 🛠️ 설계 완료, 구현 시작 전 (기획 2026-10-21 시작, 설계 확정 2026-11-11)
+> **기술 스택**: Python 3.11+ | PyQt6 | SQLite
 
 ---
 
@@ -36,11 +36,11 @@
 | 계층 | 기술 |
 |------|------|
 | **언어** | Python 3.11+ |
-| **GUI 프레임워크** | PyQt5 또는 PyQt6 |
+| **GUI 프레임워크** | PyQt6 |
 | **프론트엔드** | PyQt (Python 기반) |
 | **데이터베이스** | SQLite |
-| **ORM** | SQLAlchemy |
-| **외부 API** | WordsAPI / Cambridge Dictionary |
+| **ORM** | SQLAlchemy 2.x |
+| **외부 API** | WordsAPI |
 | **배포** | PyInstaller (.exe / .app) |
 
 ---
@@ -104,39 +104,45 @@ SmartVoca.app 더블클릭
 smart-voca/
 ├── CLAUDE.md                     # Claude Code 운용 지침
 ├── README.md                     # 본 문서
-├── requirements.txt              # Python 의존성
+├── requirements.txt              # Python 의존성 (구현 단계에서 작성)
+├── .env.example                  # 환경 변수 예시 (값은 비움)
 ├── docs/                         # 승인된 최종 산출물
 ├── ai-agent/
-│   ├── claude/                   # Claude 작업 디렉토리
-│   │   └── 기획_261021_스마트보카 프로젝트 기획서 v1.0.md
+│   ├── claude/                   # Claude 작업 디렉토리 (기획·분석·설계 문서)
 │   ├── uploads/                  # 외부 참고자료
 │   └── scripts/
-│       └── init_db.py            # DB 초기화 스크립트
-├── src/                          # 소스 코드
-│   ├── main.py                   # PyQt 앱 진입점
-│   ├── app.py                    # PyQt 메인 윈도우
-│   ├── models.py                 # DB 모델 (SQLAlchemy)
-│   ├── database.py               # DB 연결
-│   ├── ui/                       # PyQt UI 화면들
-│   │   ├── home_widget.py        # 홈 화면
-│   │   ├── quiz_widget.py        # 퀴즈 화면
-│   │   ├── word_widget.py        # 단어 관리 화면
-│   │   └── settings_widget.py    # 설정 화면
-│   └── utils.py                  # 유틸리티 함수
-├── data/                         # 데이터
-│   ├── smart_voca.db             # SQLite DB
+│       └── init_db.py            # DB 초기화 스크립트 (얇은 CLI 래퍼)
+├── src/                          # 소스 코드 (구현 단계에서 작성)
+│   ├── main.py                   # 진입점
+│   ├── config.py                 # 경로, 환경 변수, 실행 모드
+│   ├── logger.py                 # 로깅 설정
+│   ├── utils.py                  # 공용 유틸
+│   ├── database.py               # engine, session
+│   ├── models.py                 # SQLAlchemy 모델 (7개 테이블)
+│   ├── domain/                   # 순수 로직 (간격 반복, 퀴즈 구성, 보기, 보너스)
+│   ├── services/                 # 유스케이스 조율 (단어, 예문, 퀴즈, 진도, 설정, 백업)
+│   ├── api/                      # 사전 API (DictionaryClient, WordsAPI 구현)
+│   └── ui/                       # PyQt6 화면 (메인 창, 홈, 퀴즈, 단어, 설정)
+├── tests/                        # pytest 단위 테스트 (구현 단계에서 작성)
+├── data/                         # 초기 데이터 (Git 추적)
 │   ├── words_common.csv          # 일상 단어 (1,000개)
 │   └── words_business.csv        # 비즈니스 단어 (500개)
-└── dist/                         # 빌드 결과 (배포용)
-    ├── SmartVoca.exe             # Windows 설치 파일
-    └── SmartVoca.app             # Mac 설치 파일
+└── dist/                         # 빌드 결과 (배포용, Git 제외)
+    ├── SmartVoca.exe             # Windows 실행 파일 (1차 배포)
+    └── SmartVoca.app             # Mac 실행 파일 (후속 단계)
+
+> 개발 중 DB는 `data/smart_voca.db`, 배포 exe의 DB는 `%APPDATA%\SmartVoca\smart_voca.db`에 생성된다 (시스템 구조 설계서 ADR-03).
 ```
 
 ---
 
 ## 📖 문서
 
-- **프로젝트 기획서**: `ai-agent/claude/기획_261021_스마트보카 프로젝트 기획서 v1.0.md`
+- **프로젝트 기획서**: `ai-agent/claude/기획_261104_스마트보카 프로젝트 기획서 v1.1.md`
+- **요구사항 명세서**: `ai-agent/claude/분석_261111_요구사항명세서 v1.2.md`
+- **데이터 설계서**: `ai-agent/claude/분석_261111_데이터설계서 v1.2.md`
+- **UI 설계서**: `ai-agent/claude/분석_261111_UI설계서 v1.2.md`
+- **시스템 구조 설계서**: `ai-agent/claude/설계_261028_시스템 구조 v1.0.md`
 - **개발 방법론**: `docs/개발방법론__AIsw.md`
 - **Claude Code 지침**: `CLAUDE.md`
 
@@ -168,28 +174,26 @@ pytest --cov=src tests/
 ### Windows 배포
 ```bash
 # 1. PyInstaller로 exe 생성
-pyinstaller --onefile --windowed --add-data "data:data" --name "SmartVoca" src/main.py
+pyinstaller --onefile --windowed --add-data "data/words_common.csv;data" --add-data "data/words_business.csv;data" --name "SmartVoca" src/main.py
 
-# 2. 결과: dist/SmartVoca.exe
-# 3. 사용자에게 배포
+# 2. 결과: dist/SmartVoca.exe (CSV만 포함, DB는 포함하지 않음)
+# 3. 사용자에게 exe 파일 1개를 직접 전달 (설치 프로그램 없음)
 ```
 
-### Mac 배포
+### Mac 배포 (후속 단계, Mac 환경에서 빌드)
 ```bash
 # 1. PyInstaller로 app 생성
-pyinstaller --onefile --windowed --add-data "data:data" \
+pyinstaller --onefile --windowed --add-data "data/words_common.csv:data" --add-data "data/words_business.csv:data" \
   --osx-bundle-identifier=com.smartvoca --name "SmartVoca" src/main.py
 
 # 2. 결과: dist/SmartVoca.app
-# 3. dmg로 변환 (선택사항)
-hdiutil create -volname "SmartVoca" -srcfolder dist -ov -format UDZO SmartVoca.dmg
 ```
 
 ### 최종 사용자 설치
 ```
-1. SmartVoca.exe (또는 SmartVoca.app) 다운로드
-2. 설치 프로그램 또는 앱 실행
-3. 첫 실행 시 DB 자동 초기화
+1. SmartVoca.exe 파일 받기 (Python 설치 불필요)
+2. 실행
+3. 첫 실행 시 DB 자동 생성 (%APPDATA%\SmartVoca\)
 4. 학습 시작!
 ```
 
@@ -198,10 +202,10 @@ hdiutil create -volname "SmartVoca" -srcfolder dist -ov -format UDZO SmartVoca.d
 ## 📝 개발 진행 상황
 
 ### v1.0 (진행 중)
-- [x] 기획 (완료 ✅ 2026-10-21)
-- [x] 요구사항 분석 (완료 ✅ 2026-10-21, 요구사항 명세서 v1.0)
-- [ ] 시스템 설계 (진행 중: 데이터 설계서·UI 설계서 v1.0 완료, 시스템 구조 설계 미작성)
-- [ ] 기능 구현 (미착수)
+- [x] 기획 (완료 ✅ 2026-11-04, 기획서 v1.1)
+- [x] 요구사항 분석 (완료 ✅ 2026-11-11, 요구사항 명세서 v1.2)
+- [x] 시스템 설계 (완료 ✅ 2026-11-11, 데이터·UI 설계서 v1.2, 시스템 구조 설계서 v1.0)
+- [ ] 기능 구현 (미착수, 다음: M1 `src/domain/` + 단위 테스트)
 - [ ] 테스트 및 배포 (미착수)
 
 ### 인프라
