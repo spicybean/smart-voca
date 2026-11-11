@@ -219,6 +219,12 @@ def can_start_quiz(category: str | None = None) -> QuizAvailability:
     return QuizAvailability(available=count > 0, candidate_count=count)
 
 
+def has_basic_answers_on(day: date) -> bool:
+    """그날 기본 퀴즈 답변이 있는지. 준비 화면의 '다시 풀기' 안내에 쓴다."""
+    with session_scope() as session:
+        return _has_basic_answers_on(session, day)
+
+
 def start_session(today: date | None = None, rng: random.Random | None = None) -> QuizSessionView:
     """오늘의 기본 퀴즈를 만들어 세션으로 저장한다 (FR-3.1, FR-3.2, FR-3.6)."""
     today = today or today_local()
