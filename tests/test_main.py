@@ -22,14 +22,10 @@ def qapp():
     yield QApplication.instance() or QApplication([])
 
 
-def tab_titles(window) -> list[str]:
-    return [window.tabs.tabText(index) for index in range(window.tabs.count())]
-
-
 def test_window_has_four_tabs_in_order(db_engine, qapp):
     window = main.create_main_window(on_close=lambda: None)
 
-    assert tab_titles(window) == ["홈", "퀴즈", "단어", "설정"]
+    assert window.tab_titles() == ["홈", "퀴즈", "단어", "설정"]
 
 
 def test_home_start_button_switches_to_quiz_tab(db_engine, qapp):

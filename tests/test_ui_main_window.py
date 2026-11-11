@@ -33,8 +33,7 @@ def test_four_tabs_in_order(qapp):
     for title in ("홈", "퀴즈", "단어", "설정"):
         window.add_tab(title, QWidget())
 
-    titles = [window.tabs.tabText(index) for index in range(window.tabs.count())]
-    assert titles == ["홈", "퀴즈", "단어", "설정"]
+    assert window.tab_titles() == ["홈", "퀴즈", "단어", "설정"]
 
 
 def test_unknown_tab_is_rejected(qapp):

@@ -30,19 +30,13 @@ from services.word_service import (
     WordListItem,
 )
 from ui import message_boxes
-from ui.styles import DANGER, PRIMARY, SECONDARY, TEXT, WARNING
+from ui.styles import DANGER, STATUS_COLORS, TEXT
 from ui.word_detail_dialog import WordDetailDialog
 from ui.word_form_dialog import WordFormDialog
 
 CATEGORY_CHOICES = (ALL_CATEGORIES, "일상", "비즈니스", "미분류")
 SORT_CHOICES = (("단어순", SORT_ENGLISH), ("상태순", SORT_STATUS), ("진도순", SORT_PROGRESS))
 HEADERS = ("단어", "뜻", "상태", "습득도", "마지막복습", "정답/시도", "")
-STATUS_COLORS = {
-    "숙달": PRIMARY,
-    "학습중": SECONDARY,
-    "복습필요": WARNING,
-    "미학습": TEXT,
-}
 
 
 class WordWidget(QWidget):
