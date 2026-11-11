@@ -31,7 +31,8 @@ SIDEBAR_WIDTH = 180
 
 APP_STYLESHEET = f"""
 QWidget {{ background: {WHITE}; color: {TEXT}; font-size: 12pt; }}
-QListWidget#sidebar {{ background: {SIDEBAR}; border: none; padding-top: 12px; font-size: 13pt; }}
+QLabel, QToolButton {{ background: transparent; }}
+QListWidget#sidebar {{ background: {SIDEBAR}; border: none; outline: 0; padding-top: 12px; font-size: 13pt; }}
 QListWidget#sidebar::item {{ padding: 12px 20px; border-radius: 8px; margin: 2px 10px; }}
 QListWidget#sidebar::item:selected {{ background: {PRIMARY}; color: {WHITE}; }}
 QListWidget#sidebar::item:hover:!selected {{ background: {PRIMARY_SOFT}; }}
