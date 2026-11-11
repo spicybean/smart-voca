@@ -9,6 +9,7 @@ from datetime import date
 
 from PyQt6.QtCore import pyqtSignal
 from PyQt6.QtWidgets import (
+    QFrame,
     QHBoxLayout,
     QLabel,
     QProgressBar,
@@ -36,9 +37,11 @@ class HomeWidget(QWidget):
         super().__init__(parent)
         self.total_bar = QProgressBar()
         self.total_bar.setRange(0, 100)
+        self.total_bar.setTextVisible(False)
         self.count_label = QLabel()
         self.today_label = QLabel()
-        self.empty_label = QLabel("단어를 추가해 주세요.")
+        self.empty_label = QLabel("아직 단어가 없어요. [단어] 메뉴에서 단어를 추가해 보세요.")
+        self.empty_label.setObjectName("muted")
         self.empty_label.setVisible(False)
 
         self.toggle_button = QToolButton()
@@ -49,16 +52,21 @@ class HomeWidget(QWidget):
         self.category_bars: dict[str, QProgressBar] = {}
         self.category_box = QWidget()
         category_layout = QVBoxLayout(self.category_box)
+        category_layout.setContentsMargins(0, 0, 0, 0)
         for name in CATEGORY_VALUES:
             row = QHBoxLayout()
-            row.addWidget(QLabel(name))
+            label = QLabel(name)
+            label.setFixedWidth(90)
+            row.addWidget(label)
             bar = QProgressBar()
             bar.setRange(0, 100)
+            bar.setTextVisible(False)
             row.addWidget(bar)
             category_layout.addLayout(row)
             self.category_bars[name] = bar
 
         self.recent_label = QLabel()
+        self.recent_label.setObjectName("muted")
         self.quiz_button = QPushButton("퀴즈 시작하기")
         self.quiz_button.setObjectName("primary")
         self.quiz_button.clicked.connect(self._on_quiz_clicked)
@@ -67,21 +75,45 @@ class HomeWidget(QWidget):
         settings_button = QPushButton("설정")
         settings_button.clicked.connect(self.settings_requested)
 
+        title = QLabel("오늘의 학습")
+        title.setObjectName("title")
+
+        stats = QHBoxLayout()
+        stats.addWidget(self._card(
+            [QLabel("전체 진도율"), self.total_bar, self.count_label]
+        ), 1)
+        stats.addWidget(self._card([QLabel("오늘 목표"), self.today_label]), 1)
+
+        categories = self._card([self.toggle_button, self.category_box])
+        recent = self._card([QLabel("최근 활동"), self.recent_label])
+
+        actions = QHBoxLayout()
+        actions.addWidget(self.quiz_button, 2)
+        actions.addWidget(words_button, 1)
+        actions.addWidget(settings_button, 1)
+
         layout = QVBoxLayout(self)
-        layout.addWidget(QLabel("📊 학습 현황"))
+        layout.setSpacing(16)
+        layout.setContentsMargins(24, 20, 24, 20)
+        layout.addWidget(title)
         layout.addWidget(self.empty_label)
-        layout.addWidget(self.total_bar)
-        layout.addWidget(self.count_label)
-        layout.addWidget(self.today_label)
-        layout.addWidget(self.toggle_button)
-        layout.addWidget(self.category_box)
-        layout.addWidget(QLabel("🔥 최근 활동"))
-        layout.addWidget(self.recent_label)
-        buttons = QHBoxLayout()
-        for button in (self.quiz_button, words_button, settings_button):
-            buttons.addWidget(button)
-        layout.addLayout(buttons)
+        layout.addLayout(stats)
+        layout.addWidget(categories)
+        layout.addWidget(recent)
+        layout.addStretch(1)
+        layout.addLayout(actions)
         self.refresh()
+
+    @staticmethod
+    def _card(widgets: list[QWidget]) -> QFrame:
+        frame = QFrame()
+        frame.setObjectName("card")
+        layout = QVBoxLayout(frame)
+        layout.setContentsMargins(20, 16, 20, 16)
+        layout.setSpacing(10)
+        for widget in widgets:
+            layout.addWidget(widget)
+        return frame
 
     def _set_category_visible(self, visible: bool) -> None:
         self.category_box.setVisible(visible)

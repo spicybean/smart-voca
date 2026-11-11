@@ -24,7 +24,7 @@ def test_empty_database_shows_add_words_hint(db_engine, qapp):
     home = HomeWidget()
 
     assert not home.empty_label.isHidden()
-    assert home.empty_label.text() == "단어를 추가해 주세요."
+    assert "단어를 추가" in home.empty_label.text()
     assert home.quiz_button.text() == "퀴즈 시작하기"
 
 
