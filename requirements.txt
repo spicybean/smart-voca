@@ -1,0 +1,17 @@
+# 스마트보카 의존성 (Python 3.11+)
+# 설치: python -m pip install -r requirements.txt  (venv 활성화 후)
+
+# GUI (설계서 ADR-01)
+PyQt6==6.12.0
+
+# DB (설계서 ADR, 데이터 설계서)
+SQLAlchemy==2.1.8
+
+# 초기 CSV 로드 (기획서 6장)
+pandas==3.1.1
+
+# 테스트 (설계서 8장)
+pytest==9.2.0
+
+# 배포 빌드 (Windows exe, 설계서 10장)
+pyinstaller==6.22.3
