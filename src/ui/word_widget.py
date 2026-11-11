@@ -31,6 +31,7 @@ from services.word_service import (
 )
 from ui import message_boxes
 from ui.styles import DANGER, PRIMARY, SECONDARY, TEXT, WARNING
+from ui.word_detail_dialog import WordDetailDialog
 from ui.word_form_dialog import WordFormDialog
 
 CATEGORY_CHOICES = (ALL_CATEGORIES, "일상", "비즈니스", "미분류")
@@ -158,7 +159,13 @@ class WordWidget(QWidget):
         if column == 6:
             self._delete_word(word_id, cell.text())
         else:
-            self.word_selected.emit(word_id)
+            self._open_detail(word_id)
+
+    def _open_detail(self, word_id: int) -> None:
+        dialog = WordDetailDialog(self, word_id)
+        dialog.exec()
+        self.word_selected.emit(word_id)
+        self.refresh()
 
     # 추가·삭제 --------------------------------------------------------
 

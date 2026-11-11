@@ -241,3 +241,32 @@ def list_words(
         page=page,
         page_size=page_size,
     )
+
+
+@dataclass(frozen=True)
+class WordDetail:
+    info: WordInfo
+    status: str
+    correct_count: int
+    wrong_count: int
+    consecutive_correct: int
+    correct_rate: float | None
+    next_review_date: date | None
+
+
+def get_word_detail(word_id: int) -> WordDetail:
+    """단어 상세 보기용 정보와 학습 통계를 돌려준다 (FR-4.2)."""
+    with session_scope() as session:
+        word = session.get(Word, word_id)
+        if word is None:
+            raise WordNotFoundError(f"단어 id {word_id}를 찾을 수 없습니다.")
+        progress = word.progress
+        return WordDetail(
+            info=_to_info(word),
+            status=progress.status if progress else "미학습",
+            correct_count=progress.correct_count if progress else 0,
+            wrong_count=progress.wrong_count if progress else 0,
+            consecutive_correct=progress.consecutive_correct if progress else 0,
+            correct_rate=progress.correct_rate if progress else None,
+            next_review_date=progress.next_review_date if progress else None,
+        )
