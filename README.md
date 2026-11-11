@@ -102,25 +102,26 @@ SmartVoca.app 더블클릭
 smart-voca/
 ├── CLAUDE.md                     # Claude Code 운용 지침
 ├── README.md                     # 본 문서
-├── requirements.txt              # Python 의존성 (구현 단계에서 작성)
-├── .env.example                  # 환경 변수 예시 (값은 비움)
+├── requirements.txt              # Python 의존성 (버전 고정)
+├── pytest.ini                    # pytest 설정 (src/를 import 경로에 추가)
+├── .env.example                  # 환경 변수 예시 (현재 필수 값 없음)
 ├── docs/                         # 승인된 최종 산출물
 ├── ai-agent/
 │   ├── claude/                   # Claude 작업 디렉토리 (기획·분석·설계 문서)
 │   ├── uploads/                  # 외부 참고자료
 │   └── scripts/
 │       └── init_db.py            # DB 초기화 스크립트 (얇은 CLI 래퍼)
-├── src/                          # 소스 코드 (구현 단계에서 작성)
-│   ├── main.py                   # 진입점
+├── src/                          # 소스 코드
+│   ├── main.py                   # 진입점 (구현 예정)
 │   ├── config.py                 # 경로, 환경 변수, 실행 모드
 │   ├── logger.py                 # 로깅 설정
 │   ├── utils.py                  # 공용 유틸
 │   ├── database.py               # engine, session
 │   ├── models.py                 # SQLAlchemy 모델 (7개 테이블)
 │   ├── domain/                   # 순수 로직 (간격 반복, 퀴즈 구성, 보기, 보너스)
-│   ├── services/                 # 유스케이스 조율 (단어, 예문, 퀴즈, 진도, 설정, 백업)
-│   └── ui/                       # PyQt6 화면 (메인 창, 홈, 퀴즈, 단어, 설정)
-├── tests/                        # pytest 단위 테스트 (구현 단계에서 작성)
+│   ├── services/                 # 유스케이스 조율 (구현: DB 초기화, 단어, 진도, 설정 / 예정: 퀴즈, 예문, 백업)
+│   └── ui/                       # PyQt6 화면 (구현 예정)
+├── tests/                        # pytest 단위 테스트 (구현 완료분)
 ├── data/                         # 초기 데이터 (Git 추적)
 │   ├── words_common.csv          # 일상 단어 (1,000개)
 │   └── words_business.csv        # 비즈니스 단어 (500개)
@@ -135,24 +136,24 @@ smart-voca/
 
 ## 📖 문서
 
-- **프로젝트 기획서**: `docs/기획_261111_스마트보카 프로젝트 기획서 v1.3.md`
-- **요구사항 명세서**: `docs/분석_261111_요구사항명세서 v1.4.md`
-- **데이터 설계서**: `docs/분석_261111_데이터설계서 v1.3.md`
-- **UI 설계서**: `docs/분석_261111_UI설계서 v1.3.md`
-- **시스템 구조 설계서**: `docs/설계_261111_시스템 구조 v1.2.md`
+- **프로젝트 기획서**: `docs/기획_261111_스마트보카 프로젝트 기획서 v1.4.md`
+- **요구사항 명세서**: `docs/분석_261111_요구사항명세서 v1.5.md`
+- **데이터 설계서**: `docs/분석_261111_데이터설계서 v1.4.md`
+- **UI 설계서**: `docs/분석_261111_UI설계서 v1.4.md`
+- **시스템 구조 설계서**: `docs/설계_261111_시스템 구조 v1.3.md`
 - **개발 방법론**: `docs/개발방법론__AIsw.md`
 - **Claude Code 지침**: `CLAUDE.md`
 
 ---
 
-## 🧪 테스트 (구현 후)
+## 🧪 테스트
 
 ```bash
 # 단위 테스트 실행
 pytest tests/ -v
 
 # UI 테스트 (수동)
-python src/main.py  # 실행 후 각 탭/기능 테스트
+python src/main.py  # UI 구현 후: 실행하여 각 탭/기능 테스트
 
 # 커버리지 확인
 pytest --cov=src tests/
@@ -198,11 +199,11 @@ pyinstaller --onefile --windowed --add-data "data/words_common.csv:data" --add-d
 ## 📝 개발 진행 상황
 
 ### v1.0 (진행 중)
-- [x] 기획 (완료 ✅ 2026-11-04, 기획서 v1.1)
-- [x] 요구사항 분석 (완료 ✅ 2026-11-11, 요구사항 명세서 v1.2)
-- [x] 시스템 설계 (완료 ✅ 2026-11-11, 데이터·UI 설계서 v1.2, 시스템 구조 설계서 v1.0)
-- [ ] 기능 구현 (미착수, 다음: M1 `src/domain/` + 단위 테스트)
-- [ ] 테스트 및 배포 (미착수)
+- [x] 기획 (완료 ✅ 기획서 v1.3)
+- [x] 요구사항 분석 (완료 ✅ 요구사항 명세서 v1.4)
+- [x] 시스템 설계 (완료 ✅ 데이터·UI 설계서 v1.3, 시스템 구조 설계서 v1.2)
+- [ ] 기능 구현 (진행 중: M1~M4 완료 — 도메인 로직, 설정·DB 모델, DB 초기화, 단어·진도·설정 서비스 / 다음: M5 퀴즈 서비스)
+- [ ] 테스트 및 배포 (단위 테스트 진행 중, UI 테스트와 빌드는 미착수)
 
 ### 인프라
 - [x] Git 저장소 및 GitHub 연동 (2026-10-28, private 저장소 `spicybean/smart-voca`)
