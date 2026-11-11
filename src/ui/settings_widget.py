@@ -10,6 +10,7 @@ from pathlib import Path
 from PyQt6.QtCore import pyqtSignal
 from PyQt6.QtWidgets import (
     QButtonGroup,
+    QFrame,
     QHBoxLayout,
     QInputDialog,
     QLabel,
@@ -89,27 +90,53 @@ class SettingsWidget(QWidget):
         reset.setObjectName("danger")
         reset.clicked.connect(self._reset)
 
-        layout = QVBoxLayout(self)
-        layout.addWidget(QLabel("📚 학습 설정"))
-        layout.addWidget(QLabel("학습 분야:"))
-        layout.addLayout(category_row)
-        layout.addWidget(QLabel("일일 학습량:"))
-        layout.addLayout(amount_row)
-        layout.addWidget(self.custom_spin)
-        layout.addWidget(QLabel("설정은 저장 즉시 반영되며, 퀴즈는 다음 '퀴즈 시작'부터 적용됩니다."))
-        layout.addWidget(self.save_button)
-        layout.addWidget(QLabel("📊 정보"))
-        layout.addWidget(self.info_label)
-        layout.addWidget(QLabel(f"데이터베이스: {DB_FILE_NAME}"))
-        layout.addWidget(self.storage_label)
-        layout.addWidget(QLabel("📁 데이터 관리"))
+        title = QLabel("설정")
+        title.setObjectName("title")
+
+        learn_card = self._card([
+            QLabel("학습 분야"), category_row, QLabel("일일 학습량"), amount_row, self.custom_spin,
+            QLabel("설정은 저장 즉시 반영되며, 퀴즈는 다음 '퀴즈 시작'부터 적용됩니다."),
+        ])
+        save_row = QHBoxLayout()
+        save_row.addStretch(1)
+        save_row.addWidget(self.save_button)
+        learn_card.layout().addLayout(save_row)
+
+        info_card = self._card([
+            QLabel("정보"), self.info_label,
+            QLabel(f"데이터베이스: {DB_FILE_NAME}"), self.storage_label,
+        ])
+
         data_row = QHBoxLayout()
         for button in (backup, restore, reset):
             data_row.addWidget(button)
-        layout.addLayout(data_row)
+        data_card = self._card([QLabel("데이터 관리"), data_row])
+
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(24, 20, 24, 20)
+        layout.setSpacing(16)
+        layout.addWidget(title)
+        layout.addWidget(learn_card)
+        layout.addWidget(info_card)
+        layout.addWidget(data_card)
+        layout.addStretch(1)
         self._dirty = False
         self._loading = False
         self.load()
+
+    @staticmethod
+    def _card(items: list) -> QFrame:
+        frame = QFrame()
+        frame.setObjectName("card")
+        layout = QVBoxLayout(frame)
+        layout.setContentsMargins(20, 16, 20, 16)
+        layout.setSpacing(10)
+        for item in items:
+            if isinstance(item, QWidget):
+                layout.addWidget(item)
+            else:
+                layout.addLayout(item)
+        return frame
 
     # 표시와 저장 -----------------------------------------------------
 
