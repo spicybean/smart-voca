@@ -51,6 +51,7 @@ class HomeWidget(QWidget):
         self.toggle_button.toggled.connect(self._set_category_visible)
         self.category_bars: dict[str, QProgressBar] = {}
         self.category_box = QWidget()
+        self.category_box.setStyleSheet("background: transparent;")
         category_layout = QVBoxLayout(self.category_box)
         category_layout.setContentsMargins(0, 0, 0, 0)
         for name in CATEGORY_VALUES:
