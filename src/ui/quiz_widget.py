@@ -8,8 +8,9 @@
 보너스 화면(2.3.3)은 다음 단계에서 추가한다. 지금은 기본 퀴즈가 끝나면 결과 화면으로 간다.
 """
 
-from PyQt6.QtCore import pyqtSignal
+from PyQt6.QtCore import Qt, pyqtSignal
 from PyQt6.QtWidgets import (
+    QFrame,
     QHBoxLayout,
     QLabel,
     QProgressBar,
@@ -30,7 +31,7 @@ from services.quiz_service import (
 )
 from services.settings_service import get_settings
 from ui import message_boxes
-from ui.styles import DANGER, PRIMARY
+from ui.styles import DANGER, SUCCESS
 from utils import today_local
 
 PAGE_PREP, PAGE_RESUME, PAGE_PLAY, PAGE_RESULT, PAGE_BONUS = range(5)
@@ -129,19 +130,39 @@ class QuizWidget(QWidget):
     def _build_play_page(self, stop_button: QPushButton) -> QWidget:
         page = QWidget()
         layout = QVBoxLayout(page)
+        layout.setSpacing(12)
+        self.play_retry_badge.setObjectName("muted")
         layout.addWidget(self.play_retry_badge)
+        self.play_progress.setTextVisible(False)
+        self.play_progress.setFixedHeight(8)
         layout.addWidget(self.play_progress)
-        layout.addWidget(self.play_type)
-        layout.addWidget(self.play_question)
+
+        card = QFrame()
+        card.setObjectName("card")
+        card_layout = QVBoxLayout(card)
+        card_layout.setContentsMargins(32, 24, 32, 24)
+        card_layout.setSpacing(16)
+        self.play_type.setObjectName("muted")
+        self.play_type.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.play_question.setObjectName("question")
+        self.play_question.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.play_question.setWordWrap(True)
+        card_layout.addWidget(self.play_type)
+        card_layout.addWidget(self.play_question)
         for index in range(4):
             button = QPushButton()
+            button.setObjectName("option")
             button.clicked.connect(lambda _checked=False, i=index: self._answer(i))
             self.option_buttons.append(button)
-            layout.addWidget(button)
+            card_layout.addWidget(button)
+        layout.addWidget(card, 1)
+
+        self.play_result.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(self.play_result)
         buttons = QHBoxLayout()
-        buttons.addWidget(self.play_next)
         buttons.addWidget(stop_button)
+        buttons.addStretch(1)
+        buttons.addWidget(self.play_next)
         layout.addLayout(buttons)
         return page
 
@@ -311,10 +332,10 @@ class QuizWidget(QWidget):
         for button_index, button in enumerate(self.option_buttons):
             button.setEnabled(False)
             if button_index == result.correct_index:
-                button.setStyleSheet(f"border: 2px solid {PRIMARY}; font-weight: bold;")
+                button.setStyleSheet(f"border: 2px solid {SUCCESS}; background: #E8F5E9; color: {SUCCESS}; font-weight: bold;")
         if result.is_correct:
             self.play_result.setText("✓ 정답입니다!")
-            self.play_result.setStyleSheet(f"color: {PRIMARY};")
+            self.play_result.setStyleSheet(f"color: {SUCCESS}; font-weight: bold;")
         else:
             correct_text = self.option_buttons[result.correct_index].text()
             self.option_buttons[index].setStyleSheet(f"background: {DANGER}; color: white;")
