@@ -75,5 +75,9 @@ def warn_not_enough_words(parent: QWidget | None) -> None:
     _notice(parent, "퀴즈를 만들 수 없음", "분야 단어가 4개 미만이라 보기를 만들 수 없습니다.")
 
 
+def warn_invalid_input(parent: QWidget | None, message: str) -> None:
+    _notice(parent, "입력 확인", message)
+
+
 def warn_database_error(parent: QWidget | None) -> None:
     _notice(parent, "데이터베이스 오류", "데이터를 읽을 수 없습니다. 백업에서 복구하거나 초기화할 수 있습니다.")
