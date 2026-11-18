@@ -51,7 +51,9 @@ class HomeWidget(QWidget):
         self.toggle_button.toggled.connect(self._set_category_visible)
         self.category_bars: dict[str, QProgressBar] = {}
         self.category_box = QWidget()
-        self.category_box.setStyleSheet("background: transparent;")
+        # 선택자 없이 쓰면 자식 막대의 트랙 배경까지 투명해져서 막대가 보이지 않는다
+        self.category_box.setObjectName("categoryBox")
+        self.category_box.setStyleSheet("#categoryBox { background: transparent; }")
         category_layout = QVBoxLayout(self.category_box)
         category_layout.setContentsMargins(0, 0, 0, 0)
         for name in CATEGORY_VALUES:
