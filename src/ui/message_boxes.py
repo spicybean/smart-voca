@@ -64,9 +64,9 @@ def confirm_reset(parent: QWidget | None) -> bool:
 def confirm_discard_session(parent: QWidget | None) -> bool:
     return _ask(
         parent,
-        "이어서 풀기 취소",
+        "퀴즈 그만하기",
         "저장된 퀴즈 세션을 삭제합니다. 지금까지 답한 기록은 유지됩니다.",
-        "버리기",
+        "그만하기",
         "취소",
     )
 

@@ -61,7 +61,7 @@ class QuizWidget(QWidget):
         resume_button = QPushButton("이어서 풀기")
         resume_button.setObjectName("primary")
         resume_button.clicked.connect(self._resume_quiz)
-        discard_button = QPushButton("세션 버리기")
+        discard_button = QPushButton("그만하기")
         discard_button.setObjectName("danger")
         discard_button.clicked.connect(self._discard_quiz)
         self.stack.addWidget(self._build_resume_page(resume_button, discard_button))

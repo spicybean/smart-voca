@@ -388,7 +388,7 @@ def stop_session() -> None:
 
 
 def discard_session() -> None:
-    """이어 풀기 화면의 [세션 버리기]. 그만하기와 같은 동작이다."""
+    """이어 풀기 화면의 [그만하기]. 퀴즈 화면의 [그만하기]와 같은 동작이다."""
     stop_session()
 
 

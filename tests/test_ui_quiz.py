@@ -156,8 +156,8 @@ def seed_bonus_scenario(today):
             progress.wrong_count = 3
             progress.correct_rate = 0.0
             progress.last_reviewed_date = today - timedelta(days=10)
-            progress.next_review_date = today - timedelta(days=10)
-            progress.status = "복습필요"
+            progress.next_review_date = today + timedelta(days=1)
+            progress.status = "학습중"
         for english in ("cherry", "grape", "melon", "peach"):
             word = session.scalars(select(Word).where(Word.english == english)).one()
             for _ in range(5):
