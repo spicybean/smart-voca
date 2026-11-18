@@ -14,8 +14,8 @@ import random
 from dataclasses import dataclass
 from datetime import date
 
-from domain.rules import RATIO_REVIEW, RATIO_WRONG, WEAK_RATE_THRESHOLD
-from domain.srs import is_frequently_wrong
+from domain.rules import RATIO_REVIEW, RATIO_WRONG
+from domain.srs import STATUS_LEARNING, STATUS_NEW, is_frequently_wrong
 
 
 @dataclass(frozen=True)
@@ -31,6 +31,8 @@ class WordCandidate:
     last_reviewed: date | None
     next_review: date | None
     english: str = ""
+    # 학습 상태(미학습·학습중·복습필요·숙달). 신규·약한 단어 판정에 쓴다 (FR-3.1-A)
+    status: str = STATUS_NEW
 
 
 @dataclass(frozen=True)
@@ -121,10 +123,8 @@ def select_review(
 
 
 def is_new_or_weak(candidate: WordCandidate) -> bool:
-    """신규(시도 0) 또는 약한 단어(정답률 70% 미만)."""
-    if candidate.attempts == 0:
-        return True
-    return candidate.correct_rate is not None and candidate.correct_rate < WEAK_RATE_THRESHOLD
+    """신규·약한 단어: 학습 상태가 미학습 또는 학습중인 단어 (FR-3.1-A)."""
+    return candidate.status in (STATUS_NEW, STATUS_LEARNING)
 
 
 def select_new_or_weak(

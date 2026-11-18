@@ -11,6 +11,7 @@ import pytest
 from domain.quiz_builder import (
     build_quiz_plan,
     plan_bucket_sizes,
+    is_new_or_weak,
     select_new_or_weak,
     select_review,
     select_wrong,
@@ -58,15 +59,22 @@ def test_select_review_includes_due_today_and_sorts_by_date(make_candidate, toda
     assert select_review(candidates, limit=5, today=today) == [2, 1]
 
 
-def test_select_new_or_weak_takes_unattempted_and_low_rate_only(make_candidate):
+def test_select_new_or_weak_takes_new_and_learning_only(make_candidate):
+    # FR-3.1-A: 신규·약한 단어 = 학습 상태가 미학습 또는 학습중
     candidates = [
-        make_candidate(1, attempts=0),
-        make_candidate(2, attempts=4, correct_rate=69.0),
-        make_candidate(3, attempts=4, correct_rate=70.0),
-        make_candidate(4, attempts=4, correct_rate=95.0),
+        make_candidate(1, status="미학습"),
+        make_candidate(2, attempts=4, correct_rate=69.0, status="학습중"),
+        make_candidate(3, attempts=4, correct_rate=95.0, status="숙달"),
+        make_candidate(4, attempts=4, correct_rate=30.0, status="복습필요"),
     ]
     picked = select_new_or_weak(candidates, limit=10, rng=random.Random(1))
     assert sorted(picked) == [1, 2]
+
+
+def test_learning_word_is_not_judged_by_correct_rate(make_candidate):
+    # 정답률이 높아도 상태가 학습중이면 신규·약한 단어다 (정답률 기준은 쓰지 않는다)
+    candidate = make_candidate(1, attempts=4, correct_rate=99.0, status="학습중")
+    assert is_new_or_weak(candidate)
 
 
 def test_build_plan_fills_each_bucket_when_enough_words(make_candidate, today):

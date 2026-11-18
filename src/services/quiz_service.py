@@ -25,6 +25,7 @@ from database import session_scope
 from domain.bonus import select_bonus
 from domain.distractors import pick_distractor_candidates
 from domain.quiz_builder import WordCandidate, build_quiz_plan, split_quiz_types
+from domain.srs import STATUS_NEW
 from logger import LOGGER_NAME
 from models import Progress, Quiz, QuizSession, Word
 from services.progress_service import apply_result
@@ -127,6 +128,7 @@ def _load_candidates(session: Session, category: str | None) -> list[WordCandida
             correct_rate=progress.correct_rate if progress else None,
             last_reviewed=progress.last_reviewed_date if progress else None,
             next_review=progress.next_review_date if progress else None,
+            status=progress.status if progress else STATUS_NEW,
         ))
     return candidates
 

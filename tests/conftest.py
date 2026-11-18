@@ -30,7 +30,11 @@ def db_engine():
 
 @pytest.fixture
 def make_candidate():
-    """테스트마다 필요한 값만 바꿔 WordCandidate를 만드는 팩토리."""
+    """테스트마다 필요한 값만 바꿔 WordCandidate를 만드는 팩토리.
+
+    status를 주지 않으면 시도 0이면 미학습, 시도가 있으면 숙달로 본다.
+    숙달은 신규·약한 묶음에 들지 않으므로, 필요한 테스트는 status를 명시한다.
+    """
 
     def _make(
         word_id: int,
@@ -43,7 +47,10 @@ def make_candidate():
         last_reviewed: date | None = None,
         next_review: date | None = None,
         english: str | None = None,
+        status: str | None = None,
     ) -> WordCandidate:
+        if status is None:
+            status = "미학습" if attempts == 0 else "숙달"
         return WordCandidate(
             word_id=word_id,
             english=english or f"word{word_id}",
@@ -54,6 +61,7 @@ def make_candidate():
             correct_rate=correct_rate,
             last_reviewed=last_reviewed,
             next_review=next_review,
+            status=status,
         )
 
     return _make
