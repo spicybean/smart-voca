@@ -7,7 +7,7 @@
 
 from datetime import date
 
-from PyQt6.QtCore import pyqtSignal
+from PyQt6.QtCore import Qt, pyqtSignal
 from PyQt6.QtWidgets import (
     QFrame,
     QHBoxLayout,
@@ -50,6 +50,7 @@ class HomeWidget(QWidget):
         self.toggle_button.setChecked(True)
         self.toggle_button.toggled.connect(self._set_category_visible)
         self.category_bars: dict[str, QProgressBar] = {}
+        self.category_percents: dict[str, QLabel] = {}
         self.category_box = QWidget()
         # 선택자 없이 쓰면 자식 막대의 트랙 배경까지 투명해져서 막대가 보이지 않는다
         self.category_box.setObjectName("categoryBox")
@@ -65,8 +66,13 @@ class HomeWidget(QWidget):
             bar.setRange(0, 100)
             bar.setTextVisible(False)
             row.addWidget(bar)
+            percent = QLabel("0%")
+            percent.setFixedWidth(48)
+            percent.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
+            row.addWidget(percent)
             category_layout.addLayout(row)
             self.category_bars[name] = bar
+            self.category_percents[name] = percent
 
         self.recent_label = QLabel()
         self.recent_label.setObjectName("muted")
@@ -145,7 +151,9 @@ class HomeWidget(QWidget):
             f"등록된 단어: {stats.total_words:,}개  |  학습 완료: {stats.mastered_count:,}개"
         )
         for name, bar in self.category_bars.items():
-            bar.setValue(int(round(per_category[name].progress_rate)))
+            rate = int(round(per_category[name].progress_rate))
+            bar.setValue(rate)
+            self.category_percents[name].setText(f"{rate}%")
 
         if session_view is not None:
             self.today_label.setText(f"오늘 학습할 단어: {session_view.total_count}개 (진행 중)")
