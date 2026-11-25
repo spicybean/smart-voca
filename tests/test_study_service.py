@@ -9,6 +9,16 @@ from app import study_service
 from app.models import ExamItem, Word, db
 
 
+def _real_session_id():
+    """외래키가 켜져 있으므로 실제로 존재하는 시험 회차 id를 만든다."""
+    from app.models import ExamSession
+
+    session = ExamSession(question_count=1, direction_mode="en_ko", formats="short", position=1, status="done")
+    db.session.add(session)
+    db.session.commit()
+    return session.id
+
+
 def _ids_in_order():
     return list(db.session.scalars(db.select(Word.id).order_by(Word.id)))
 
@@ -58,7 +68,7 @@ def test_frequent_wrong_words_join_the_day(seeded):
     study_service.set_daily_amount(5)
     ids = _ids_in_order()
     wrong_word = ids[0]
-    db.session.add(ExamItem(session_id=0, position=0, word_id=wrong_word, direction="en_ko",
+    db.session.add(ExamItem(session_id=_real_session_id(), position=0, word_id=wrong_word, direction="en_ko",
                             fmt="short", prompt="x", expected="y", is_correct=False))
     db.session.commit()
 

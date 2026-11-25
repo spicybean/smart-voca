@@ -93,3 +93,20 @@ def test_bundled_sample_csv_imports_without_errors(ctx):
     assert report.invalid == []
     assert report.duplicates == []
     assert report.added == 1999
+
+
+def test_deleting_word_removes_its_study_and_exam_records(seeded):
+    """이슈 #8: 단어를 지우면 암기 기록과 시험 문항이 함께 지워져야 한다."""
+    from app import exam_service, study_service
+    from app.models import ExamItem, StudyLog
+
+    study_service.set_daily_amount(5)
+    word = db.session.scalar(db.select(Word).where(Word.english == "apple"))
+    study_service.record_card(word.id, 1, "known")
+    session = exam_service.create_session(5, "en_ko", ["short"])
+    assert any(item.word_id == word.id for item in session.items)
+
+    word_service.delete_word(word.id)
+
+    assert db.session.scalar(db.select(StudyLog).where(StudyLog.word_id == word.id)) is None
+    assert db.session.scalar(db.select(ExamItem).where(ExamItem.word_id == word.id)) is None

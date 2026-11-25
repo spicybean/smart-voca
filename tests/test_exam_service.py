@@ -14,6 +14,16 @@ from app.exam_service import ExamError
 from app.models import ExamItem, Word, db
 
 
+def _real_session_id():
+    """외래키가 켜져 있으므로 실제로 존재하는 시험 회차 id를 만든다."""
+    from app.models import ExamSession
+
+    session = ExamSession(question_count=1, direction_mode="en_ko", formats="short", position=1, status="done")
+    db.session.add(session)
+    db.session.commit()
+    return session.id
+
+
 def test_short_answer_accepts_any_meaning_part():
     assert exam_service.is_short_answer_correct("ko_en", "사과", "사과")
     assert exam_service.is_short_answer_correct("ko_en", "물체 / 반대하다", "반대하다")
@@ -93,7 +103,7 @@ def test_never_tested_words_are_picked_more_often(seeded):
     now = datetime.now()
     words = list(db.session.scalars(db.select(Word).order_by(Word.id)))
     for word in words[:3]:
-        db.session.add(ExamItem(session_id=0, position=0, word_id=word.id, direction="en_ko",
+        db.session.add(ExamItem(session_id=_real_session_id(), position=0, word_id=word.id, direction="en_ko",
                                 fmt="short", prompt="x", expected="y", is_correct=True,
                                 answered_at=now - timedelta(days=1)))
     db.session.commit()
@@ -111,9 +121,9 @@ def test_frequently_wrong_words_get_more_weight(seeded):
     words = list(db.session.scalars(db.select(Word).order_by(Word.id)))
     old = now - timedelta(days=3)
     for word in words:
-        db.session.add(ExamItem(session_id=0, position=0, word_id=word.id, direction="en_ko",
+        db.session.add(ExamItem(session_id=_real_session_id(), position=0, word_id=word.id, direction="en_ko",
                                 fmt="short", prompt="x", expected="y", is_correct=True, answered_at=old))
-    db.session.add(ExamItem(session_id=0, position=0, word_id=words[-1].id, direction="en_ko",
+    db.session.add(ExamItem(session_id=_real_session_id(), position=0, word_id=words[-1].id, direction="en_ko",
                             fmt="short", prompt="x", expected="y", is_correct=False, answered_at=old))
     db.session.commit()
 

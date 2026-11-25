@@ -7,10 +7,23 @@
 
 from pathlib import Path
 
+import sqlite3
+
 from flask import Flask, render_template
+from sqlalchemy import event
+from sqlalchemy.engine import Engine
 
 from app.config import MAX_UPLOAD_BYTES, get_db_path, get_secret_key
 from app.models import db
+
+
+@event.listens_for(Engine, "connect")
+def _enable_sqlite_foreign_keys(dbapi_connection, _connection_record) -> None:
+    """SQLite는 외래키를 기본으로 끈다. 켜야 단어 삭제 때 기록이 ON DELETE CASCADE로 함께 지워진다 (이슈 #8)."""
+    if isinstance(dbapi_connection, sqlite3.Connection):
+        cursor = dbapi_connection.cursor()
+        cursor.execute("PRAGMA foreign_keys=ON")
+        cursor.close()
 
 
 def create_app(test_config: dict | None = None) -> Flask:
