@@ -26,4 +26,5 @@ EXPOSE 8080
 USER 10001:10001
 
 # 운영용 서버, exec 형식 (R-14, R-15)
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--workers", "2", "wsgi:app"]
+# --preload: 앱(테이블 생성, 단어 등록)을 워커 띄우기 전에 한 번만 만든다. 워커 2개가 동시에 만들면 충돌한다.
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--workers", "2", "--preload", "wsgi:app"]
