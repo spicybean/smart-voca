@@ -93,8 +93,9 @@ class QuizSessionView:
 @dataclass(frozen=True)
 class AnswerResult:
     is_correct: bool
-    correct_index: int
+    correct_index: int | None
     finished: bool
+    skipped: bool = False  # 세션 중 단어가 삭제되어 답을 저장하지 않고 넘어간 경우 (FR-3.6)
 
 
 @dataclass(frozen=True)
@@ -265,24 +266,30 @@ def start_session(today: date | None = None, rng: random.Random | None = None) -
         return _to_view(row, items, requested)
 
 
+def _drop_deleted_items(session: Session, row: QuizSession, items: list[dict]) -> list[dict]:
+    """지워진 단어의 문항을 세션에서 뺀다. 바뀌면 행을 갱신하고 남은 문항을 돌려준다 (데이터 설계서 2.5절)."""
+    existing_ids = set(session.scalars(select(Word.id)).all())
+    kept = [item for item in items if item["word_id"] in existing_ids]
+    if len(kept) == len(items):
+        return items
+    log.info("세션 중 삭제된 단어 %d문항 제외", len(items) - len(kept))
+    first_unanswered = next(
+        (index for index, item in enumerate(kept) if item["selected_index"] is None),
+        len(kept),
+    )
+    row.items_json = json.dumps(kept, ensure_ascii=False)
+    row.total_count = len(kept)
+    row.current_index = first_unanswered
+    return kept
+
+
 def resume_session() -> QuizSessionView | None:
     """저장된 세션을 돌려준다. 이미 지워진 단어의 문항은 건너뛴다 (데이터 설계서 2.5절)."""
     with session_scope() as session:
         row = session.get(QuizSession, SESSION_ID)
         if row is None:
             return None
-        items = json.loads(row.items_json)
-        existing_ids = set(session.scalars(select(Word.id)).all())
-        kept = [item for item in items if item["word_id"] in existing_ids]
-        if len(kept) != len(items):
-            log.info("재개 중 삭제된 단어 %d문항 제외", len(items) - len(kept))
-            first_unanswered = next(
-                (index for index, item in enumerate(kept) if item["selected_index"] is None),
-                len(kept),
-            )
-            row.items_json = json.dumps(kept, ensure_ascii=False)
-            row.total_count = len(kept)
-            row.current_index = first_unanswered
+        kept = _drop_deleted_items(session, row, json.loads(row.items_json))
         return _to_view(row, kept, requested_count=len(kept))
 
 
@@ -294,6 +301,20 @@ def submit_answer(session_id: int, item_index: int, selected_index: int) -> Answ
         if row is None:
             raise QuizSessionNotFoundError("진행 중인 퀴즈 세션이 없습니다.")
         items = json.loads(row.items_json)
+        if not 0 <= item_index < len(items):
+            raise ValueError("이미 답한 문항이거나 순서가 맞지 않습니다.")
+        target = items[item_index]
+        items = _drop_deleted_items(session, row, items)
+        if not any(item is target for item in items):
+            # 답하려던 문항의 단어가 지워졌다. 답은 저장하지 않고 다음 문항으로 넘어간다
+            log.info("삭제된 단어의 문항을 건너뜀: word_id=%s", target["word_id"])
+            return AnswerResult(
+                is_correct=False,
+                correct_index=None,
+                finished=row.current_index >= len(items),
+                skipped=True,
+            )
+        item_index = next(index for index, item in enumerate(items) if item is target)
         if item_index != row.current_index:
             raise ValueError("이미 답한 문항이거나 순서가 맞지 않습니다.")
         item = items[item_index]

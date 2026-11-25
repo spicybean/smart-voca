@@ -329,6 +329,10 @@ class QuizWidget(QWidget):
         if self._view is None or self._last_finished:
             return
         result = quiz_service.submit_answer(self._view.session_id, self._view.current_index, index)
+        if result.skipped:
+            self._show_question()
+            self.play_result.setText("삭제된 단어의 문항은 건너뛰었습니다.")
+            return
         for button_index, button in enumerate(self.option_buttons):
             button.setEnabled(False)
             if button_index == result.correct_index:

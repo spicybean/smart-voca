@@ -282,3 +282,20 @@ def test_can_start_quiz_reports_no_words_for_empty_category(db_engine):
     assert business.candidate_count == 0
     assert daily.available is True
     assert daily.candidate_count == 6
+
+
+def test_answer_for_deleted_current_word_is_skipped_without_quiz_row(db_engine):
+    seed(daily=5)
+    view = start_session(rng=random.Random(13))
+    current = view.items[view.current_index]
+    delete_word(current.word_id)
+    rows_before = quiz_row_count()
+
+    result = submit_answer(view.session_id, view.current_index, 0)
+
+    assert result.skipped is True
+    assert quiz_row_count() == rows_before
+    resumed = resume_session()
+    assert resumed.total_count == 4
+    assert resumed.current_index == view.current_index
+    assert all(item.word_id != current.word_id for item in resumed.items)
