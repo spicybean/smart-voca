@@ -1,0 +1,40 @@
+/* 2026-11-25 - 스마트보카 - 화면 스타일 (밝은 배경, 파란 주색) */
+/* 파일 위치: app/static/style.css */
+:root { --main: #1976d2; --danger: #c62828; --ok: #2e7d32; --line: #dde3ea; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; color: #1f2933; background: #fff; font-size: 16px; }
+.top { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; border-bottom: 1px solid var(--line); }
+.top nav a { margin-left: 16px; color: #1f2933; text-decoration: none; }
+.brand { font-weight: bold; color: var(--main); text-decoration: none; font-size: 20px; }
+main { max-width: 880px; margin: 24px auto; padding: 0 16px; }
+h1 { font-size: 26px; }
+h2 { font-size: 19px; margin-top: 28px; }
+a { color: var(--main); }
+input[type=text], input[type=search], input[type=number], input[type=file] { padding: 8px 10px; border: 1px solid #b8c2cc; border-radius: 6px; font-size: 16px; }
+input[type=text], input[type=search] { min-width: 220px; }
+button, .button { padding: 9px 16px; border: 1px solid #b8c2cc; border-radius: 6px; background: #fff; color: #1f2933; cursor: pointer; font-size: 15px; text-decoration: none; display: inline-block; }
+button.primary, .button.primary { background: var(--main); border-color: var(--main); color: #fff; }
+button.danger { color: var(--danger); border-color: var(--danger); }
+.stack { display: flex; flex-direction: column; gap: 12px; max-width: 480px; margin: 12px 0; }
+.inline { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 8px 0; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+.cards { display: flex; gap: 16px; flex-wrap: wrap; }
+.card { flex: 1; min-width: 220px; border: 1px solid var(--line); border-radius: 10px; padding: 18px; background: #f7fafd; }
+.flashcard { text-align: center; padding: 36px 18px; }
+.flashcard .english { font-size: 36px; font-weight: bold; margin: 8px 0; }
+.flashcard .meaning { font-size: 24px; color: var(--main); margin: 8px 0 20px; }
+.big { font-size: 30px; font-weight: bold; margin: 4px 0; }
+.hint { color: #6b7785; font-size: 14px; }
+.progress { color: #6b7785; }
+.choices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.choices button { padding: 16px; font-size: 17px; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { border-bottom: 1px solid var(--line); padding: 9px 8px; text-align: left; vertical-align: middle; }
+.row-actions { display: flex; gap: 10px; align-items: center; }
+.row-actions form { margin: 0; }
+.flash { padding: 10px 14px; border-radius: 6px; margin: 8px 0; }
+.flash.ok { background: #e8f5e9; color: var(--ok); }
+.flash.error { background: #ffebee; color: var(--danger); }
+.day-nav { display: flex; gap: 16px; }
+fieldset { border: 1px solid var(--line); border-radius: 8px; margin: 8px 0; }
+details summary { cursor: pointer; color: var(--main); margin: 12px 0; }

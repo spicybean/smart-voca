@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ day_no }}일차 끝</h1>
+<p>이번 일차 카드 {{ count }}장을 모두 봤습니다.</p>
+<div class="actions">
+  {% if day_no < last_day %}<a class="button primary" href="/memorize?day={{ day_no + 1 }}">다음 일차</a>{% endif %}
+  <a class="button" href="/memorize?day={{ day_no }}">처음부터 다시</a>
+  <a class="button" href="/exam">시험 보기</a>
+</div>
+{% endblock %}

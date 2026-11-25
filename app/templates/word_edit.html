@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>단어 수정</h1>
+<form class="stack" method="post" action="/words/{{ word.id }}/edit">
+  <label>영단어 <input type="text" name="english" value="{{ word.english }}" maxlength="64" required></label>
+  <label>뜻 <input type="text" name="meaning" value="{{ word.meaning }}" maxlength="200" required></label>
+  <button type="submit" class="primary">저장</button>
+  <a href="/words">취소</a>
+</form>
+{% endblock %}

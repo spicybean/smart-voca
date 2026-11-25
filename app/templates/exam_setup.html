@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>시험</h1>
+{% if word_total < 4 %}
+  <p>단어가 4개 이상 있어야 시험을 볼 수 있습니다. 현재 {{ word_total }}개입니다.</p>
+{% else %}
+<form class="stack" method="post" action="/exam/start">
+  <label>문제 수
+    <input type="number" name="count" value="10" min="1" max="{{ max_questions }}" required>
+  </label>
+  <fieldset>
+    <legend>방향</legend>
+    {% for value, label in directions.items() %}
+      <label><input type="radio" name="direction" value="{{ value }}" {% if value == 'en_ko' %}checked{% endif %}> {{ label }}</label>
+    {% endfor %}
+  </fieldset>
+  <fieldset>
+    <legend>형식 (하나 이상)</legend>
+    {% for value, label in formats.items() %}
+      <label><input type="checkbox" name="formats" value="{{ value }}" checked> {{ label }}</label>
+    {% endfor %}
+  </fieldset>
+  <button type="submit" class="primary">시험 시작</button>
+</form>
+<p class="hint">한 번도 안 본 단어와 자주 틀린 단어가 더 많이 나옵니다.</p>
+{% endif %}
+{% endblock %}

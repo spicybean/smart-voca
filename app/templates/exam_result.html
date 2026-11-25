@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>시험 결과</h1>
+<p class="big">{{ correct }} / {{ total }} ({{ rate }}%)</p>
+{% if wrong %}
+<h2>틀린 문항</h2>
+<table>
+  <thead><tr><th>문제</th><th>내 답</th><th>정답</th></tr></thead>
+  <tbody>
+  {% for item in wrong %}
+    <tr>
+      <td>{{ item.prompt }}</td>
+      <td>{{ item.given or "(빈칸)" }}</td>
+      <td>{{ item.expected }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>모두 맞혔습니다.</p>
+{% endif %}
+<div class="actions">
+  <a class="button primary" href="/exam">다시 시험 보기</a>
+  <a class="button" href="/stats">통계 보기</a>
+</div>
+{% endblock %}

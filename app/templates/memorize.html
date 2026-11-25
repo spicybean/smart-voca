@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>암기 — {{ day_no }}일차</h1>
+{% if empty %}
+  <p>등록된 단어가 없습니다. <a href="/words">단어를 먼저 등록해 주세요.</a></p>
+{% else %}
+  <p>하루 학습량 {{ daily }}개</p>
+  <div class="day-nav">
+    {% if day_no > 1 %}<a href="/memorize?day={{ day_no - 1 }}">이전 일차</a>{% endif %}
+    {% if day_no < last_day %}<a href="/memorize?day={{ day_no + 1 }}">다음 일차</a>{% endif %}
+  </div>
+  <p class="progress">{{ index + 1 }} / {{ total }}</p>
+  <div class="card flashcard">
+    <p class="english">{{ word.english }}</p>
+    {% if reveal %}
+      <p class="meaning">{{ word.meaning }}</p>
+      <form class="inline" method="post" action="/memorize/answer">
+        <input type="hidden" name="word_id" value="{{ word.id }}">
+        <input type="hidden" name="day" value="{{ day_no }}">
+        <input type="hidden" name="i" value="{{ index }}">
+        <button type="submit" name="action" value="known" class="primary">외웠어요</button>
+        <button type="submit" name="action" value="again">아직이에요</button>
+      </form>
+    {% else %}
+      <a class="button" href="/memorize?day={{ day_no }}&amp;i={{ index }}&amp;reveal=1">뜻 보기</a>
+    {% endif %}
+  </div>
+  <form class="inline" method="post" action="/memorize/daily">
+    <label>하루 학습량
+      <input type="number" name="daily_amount" value="{{ daily }}" min="{{ min_daily }}" max="{{ max_daily }}">
+    </label>
+    <button type="submit">바꾸기</button>
+  </form>
+  <p class="hint">하루 학습량을 바꾸면 일차 구성이 바뀝니다.</p>
+{% endif %}
+{% endblock %}

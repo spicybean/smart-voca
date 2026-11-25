@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>등록 결과</h1>
+<p>{{ report.summary }}</p>
+{% if report.duplicates %}
+<h2>중복으로 건너뛴 단어</h2>
+<ul>{% for word in report.duplicates[:100] %}<li>{{ word }}</li>{% endfor %}</ul>
+{% if report.duplicates|length > 100 %}<p>외 {{ report.duplicates|length - 100 }}개</p>{% endif %}
+{% endif %}
+{% if report.invalid %}
+<h2>형식이 맞지 않아 건너뛴 줄</h2>
+<ul>{% for line in report.invalid[:100] %}<li>{{ line }}</li>{% endfor %}</ul>
+{% endif %}
+<p><a href="/words">단어 목록으로</a></p>
+{% endblock %}

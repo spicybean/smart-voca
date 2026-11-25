@@ -1,14 +1,6 @@
-# 스마트보카 의존성 (Python 3.11+)
-# 설치: python -m pip install -r requirements.txt  (venv 활성화 후)
-
-# GUI (설계서 ADR-01)
-PyQt6==6.12.0
-
-# DB (설계서 ADR, 데이터 설계서)
+# 스마트보카 실행 의존성 (서버 이미지에 설치된다). 실제로 import하는 패키지만 버전 고정한다.
+# 설치 (venv 활성화 후): python -m pip install -r requirements.txt
+Flask==3.1.2
+Flask-SQLAlchemy==3.1.1
 SQLAlchemy==2.1.8
-
-# 테스트 (설계서 8장)
-pytest==9.2.0
-
-# 배포 빌드 (Windows exe, 설계서 10장)
-pyinstaller==6.22.3
+gunicorn==23.0.0

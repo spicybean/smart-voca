@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>학습 통계</h1>
+<section class="cards">
+  <div class="card"><h2>현재 일차</h2><p class="big">{{ progress.current_day }} / {{ progress.total_days }}</p></div>
+  <div class="card"><h2>암기한 단어</h2><p class="big">{{ progress.memorized }} / {{ progress.total_words }}</p></div>
+</section>
+
+<h2>날짜별 정답률</h2>
+{% if trend %}
+<table>
+  <thead><tr><th>날짜</th><th>문항</th><th>정답</th><th>정답률</th></tr></thead>
+  <tbody>{% for row in trend %}<tr><td>{{ row.day }}</td><td>{{ row.total }}</td><td>{{ row.correct }}</td><td>{{ row.rate }}%</td></tr>{% endfor %}</tbody>
+</table>
+{% else %}<p>아직 시험 기록이 없습니다.</p>{% endif %}
+
+<h2>회차별 점수</h2>
+{% if history %}
+<table>
+  <thead><tr><th>회차</th><th>끝낸 시각</th><th>점수</th><th>정답률</th></tr></thead>
+  <tbody>{% for row in history %}<tr><td>{{ row.number }}</td><td>{{ row.finished_at.strftime('%Y-%m-%d %H:%M') if row.finished_at else '' }}</td><td>{{ row.correct }} / {{ row.total }}</td><td>{{ row.rate }}%</td></tr>{% endfor %}</tbody>
+</table>
+{% else %}<p>끝낸 시험이 없습니다.</p>{% endif %}
+
+<h2>자주 틀리는 단어 (상위 10개)</h2>
+{% if frequent %}
+<table>
+  <thead><tr><th>영단어</th><th>뜻</th><th>틀린 횟수</th></tr></thead>
+  <tbody>{% for row in frequent %}<tr><td>{{ row.english }}</td><td>{{ row.meaning }}</td><td>{{ row.wrong }}</td></tr>{% endfor %}</tbody>
+</table>
+{% else %}<p>틀린 기록이 없습니다.</p>{% endif %}
+{% endblock %}

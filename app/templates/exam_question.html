@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>문제 {{ number }} / {{ session.question_count }}</h1>
+<p class="hint">{{ direction_label }} · {{ format_label }}</p>
+<div class="card flashcard">
+  {% if item.fmt == 'short' %}
+    <p class="english">{{ item.prompt }}</p>
+    <form class="stack" method="post" action="/exam/{{ session.id }}/answer">
+      <label>답 <input type="text" name="answer" autocomplete="off" autofocus required></label>
+      <button type="submit" class="primary">답하기</button>
+    </form>
+  {% elif item.fmt == 'mc' %}
+    <p class="english">{{ item.prompt }}</p>
+    <form class="choices" method="post" action="/exam/{{ session.id }}/answer">
+      {% for choice in choices %}
+        <button type="submit" name="answer" value="{{ choice }}">{{ choice }}</button>
+      {% endfor %}
+    </form>
+  {% else %}
+    <p class="english">{{ item.prompt }}</p>
+    <p class="meaning">{{ choices[0] }}</p>
+    <form class="inline" method="post" action="/exam/{{ session.id }}/answer">
+      <button type="submit" name="answer" value="O" class="primary">O (맞아요)</button>
+      <button type="submit" name="answer" value="X">X (틀려요)</button>
+    </form>
+  {% endif %}
+</div>
+{% endblock %}

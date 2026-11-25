@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>오늘의 학습</h1>
+<section class="cards">
+  <div class="card">
+    <h2>현재 일차</h2>
+    <p class="big">{{ progress.current_day }} / {{ progress.total_days }}</p>
+  </div>
+  <div class="card">
+    <h2>암기한 단어</h2>
+    <p class="big">{{ progress.memorized }} / {{ progress.total_words }}</p>
+  </div>
+</section>
+<div class="actions">
+  <a class="button primary" href="/memorize">암기 시작</a>
+  <a class="button" href="/exam">시험 보기</a>
+  <a class="button" href="/stats">통계 보기</a>
+</div>
+{% endblock %}
