@@ -23,6 +23,10 @@ MAX_SENTENCE_LENGTH = 500
 SOURCE_USER = "user"
 
 
+class DuplicateExampleError(ValueError):
+    """같은 단어에 같은 문장이 이미 있을 때 (FR-1.6)."""
+
+
 class ExampleNotFoundError(LookupError):
     pass
 
@@ -59,7 +63,7 @@ def needs_more_examples(word_id: int) -> bool:
 
 
 def add_user_example(word_id: int, sentence: str) -> ExampleInfo:
-    """학생 예문을 추가한다. 같은 문장이 이미 있으면 새로 넣지 않고 기존 행을 돌려준다.
+    """학생 예문을 추가한다. 같은 문장이 이미 있으면 DuplicateExampleError.
 
     빈 문장이나 공백만 있는 문장은 ValueError.
     """
@@ -76,7 +80,7 @@ def add_user_example(word_id: int, sentence: str) -> ExampleInfo:
             select(Example).where(Example.word_id == word_id, Example.sentence == cleaned)
         ).first()
         if existing is not None:
-            return _to_info(existing)
+            raise DuplicateExampleError("같은 문장이 이미 등록되어 있습니다.")
         example = Example(word_id=word_id, sentence=cleaned, source=SOURCE_USER)
         session.add(example)
         session.flush()

@@ -17,6 +17,7 @@ from PyQt6.QtWidgets import (
 
 from services import word_service
 from services.example_service import (
+    DuplicateExampleError,
     add_user_example,
     delete_user_example,
     get_examples,
@@ -114,7 +115,11 @@ class WordDetailDialog(QDialog):
     # 동작 ------------------------------------------------------------
 
     def _add_example(self) -> None:
-        add_user_example(self.word_id, self.example_input.text())
+        try:
+            add_user_example(self.word_id, self.example_input.text())
+        except DuplicateExampleError:
+            message_boxes.warn_duplicate_example(self)
+            return
         self.example_input.clear()
         self.changed = True
         self.refresh()

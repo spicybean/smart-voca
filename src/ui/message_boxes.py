@@ -37,6 +37,10 @@ def warn_duplicate_word(parent: QWidget | None, english: str) -> None:
     _notice(parent, "중복된 단어", f"이미 등록된 단어입니다: {english}")
 
 
+def warn_duplicate_example(parent: QWidget | None) -> None:
+    _notice(parent, "중복된 예문", "같은 문장이 이미 등록되어 있습니다.")
+
+
 def confirm_restore(parent: QWidget | None) -> bool:
     return _ask(
         parent,

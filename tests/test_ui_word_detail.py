@@ -120,3 +120,17 @@ def test_delete_after_confirmation_marks_deleted(db_engine, qapp, monkeypatch):
 
     assert dialog.deleted is True
     assert word_service.list_words().items == []
+
+
+def test_duplicate_user_example_shows_warning_and_is_not_saved(db_engine, qapp, monkeypatch):
+    word = add_word("kite", "연", "일상", 1)
+    warnings: list[object] = []
+    monkeypatch.setattr(message_boxes, "warn_duplicate_example", lambda parent: warnings.append(parent))
+    dialog = WordDetailDialog(None, word.id)
+    dialog.example_input.setText("A kite flies.")
+    dialog.add_button.click()
+    dialog.example_input.setText("A kite flies.")
+    dialog.add_button.click()
+
+    assert len(warnings) == 1
+    assert [e.sentence for e in get_examples(word.id)] == ["A kite flies."]

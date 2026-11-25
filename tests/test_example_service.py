@@ -9,6 +9,7 @@ from sqlalchemy import select
 from database import session_scope
 from models import Example
 from services.example_service import (
+    DuplicateExampleError,
     ExampleNotFoundError,
     add_user_example,
     delete_user_example,
@@ -74,13 +75,13 @@ def test_too_long_sentence_is_rejected(db_engine):
         add_user_example(word.id, "a" * 501)
 
 
-def test_duplicate_sentence_returns_existing_row(db_engine):
+def test_duplicate_sentence_is_rejected_and_not_saved(db_engine):
     word = add_word("kite", "연")
-    first = add_user_example(word.id, "A kite flies.")
+    add_user_example(word.id, "A kite flies.")
 
-    again = add_user_example(word.id, "A kite flies.")
+    with pytest.raises(DuplicateExampleError):
+        add_user_example(word.id, "A kite flies.")
 
-    assert again.id == first.id
     assert len(get_examples(word.id)) == 1
 
 
