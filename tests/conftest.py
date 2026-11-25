@@ -14,7 +14,8 @@ def app(tmp_path, monkeypatch):
     """테스트마다 새 임시 DB 를 쓴다. 실제 data/ 는 건드리지 않는다."""
     monkeypatch.setenv("DB_PATH", str(tmp_path / "test.db"))
     monkeypatch.setenv("SECRET_KEY", "test-secret")
-    application = create_app({"TESTING": True})
+    # 화면 흐름 테스트는 CSRF를 끈다. CSRF 자체는 test_csrf.py 에서 켜서 확인한다.
+    application = create_app({"TESTING": True, "CSRF_ENABLED": False})
     yield application
     with application.app_context():
         db.session.remove()

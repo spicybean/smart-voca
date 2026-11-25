@@ -5,11 +5,12 @@
 
 """앱 팩토리. 서버는 wsgi.py 의 app 객체를 gunicorn 으로 띄운다."""
 
+import hmac
+import secrets
+import sqlite3
 from pathlib import Path
 
-import sqlite3
-
-from flask import Flask, render_template
+from flask import Flask, render_template, request, session
 from sqlalchemy import event
 from sqlalchemy.engine import Engine
 
@@ -24,6 +25,13 @@ def _enable_sqlite_foreign_keys(dbapi_connection, _connection_record) -> None:
         cursor = dbapi_connection.cursor()
         cursor.execute("PRAGMA foreign_keys=ON")
         cursor.close()
+
+
+def _csrf_token() -> str:
+    """세션마다 토큰 하나를 만들어 폼에 넣는다 (외부 패키지 없이 구현)."""
+    if "csrf_token" not in session:
+        session["csrf_token"] = secrets.token_urlsafe(32)
+    return session["csrf_token"]
 
 
 def create_app(test_config: dict | None = None) -> Flask:
@@ -45,6 +53,22 @@ def create_app(test_config: dict | None = None) -> Flask:
 
     from app.views import bp
     app.register_blueprint(bp)
+    app.config.setdefault("CSRF_ENABLED", True)
+
+    @app.context_processor
+    def inject_csrf_token():
+        return {"csrf_token": _csrf_token}
+
+    @app.before_request
+    def check_csrf():
+        """POST 요청은 세션의 토큰과 폼의 csrf_token 이 같을 때만 처리한다 (이슈 #14)."""
+        if not app.config["CSRF_ENABLED"] or request.method != "POST":
+            return None
+        expected = session.get("csrf_token")
+        sent = request.form.get("csrf_token", "")
+        if not expected or not sent or not hmac.compare_digest(expected, sent):
+            return render_template("error.html", message="요청을 확인할 수 없습니다. 페이지를 새로고침한 뒤 다시 시도해 주세요."), 400
+        return None
 
     @app.errorhandler(404)
     def not_found(_error):

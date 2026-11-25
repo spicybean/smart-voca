@@ -6,12 +6,14 @@
   {% if item.fmt == 'short' %}
     <p class="english">{{ item.prompt }}</p>
     <form class="stack" method="post" action="/exam/{{ session.id }}/answer">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
       <label>답 <input type="text" name="answer" autocomplete="off" autofocus required></label>
       <button type="submit" class="primary">답하기</button>
     </form>
   {% elif item.fmt == 'mc' %}
     <p class="english">{{ item.prompt }}</p>
     <form class="choices" method="post" action="/exam/{{ session.id }}/answer">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
       {% for choice in choices %}
         <button type="submit" name="answer" value="{{ choice }}">{{ choice }}</button>
       {% endfor %}
@@ -20,6 +22,7 @@
     <p class="english">{{ item.prompt }}</p>
     <p class="meaning">{{ choices[0] }}</p>
     <form class="inline" method="post" action="/exam/{{ session.id }}/answer">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
       <button type="submit" name="answer" value="O" class="primary">O (맞아요)</button>
       <button type="submit" name="answer" value="X">X (틀려요)</button>
     </form>

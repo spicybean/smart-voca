@@ -2,12 +2,14 @@
 {% block content %}
 <h1>단어 ({{ total }}개)</h1>
 <form class="inline" method="get" action="/words">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
   <input type="search" name="q" value="{{ query }}" placeholder="영단어 또는 뜻 검색">
   <button type="submit">검색</button>
 </form>
 <details open>
   <summary>단어 추가</summary>
   <form class="stack" method="post" action="/words">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <label>영단어 <input type="text" name="english" maxlength="64" required></label>
     <label>뜻 <input type="text" name="meaning" maxlength="200" required></label>
     <button type="submit" class="primary">추가</button>
@@ -24,6 +26,7 @@
       <td class="row-actions">
         <a href="/words/{{ word.id }}/edit">수정</a>
         <form method="post" action="/words/{{ word.id }}/delete" onsubmit="return confirm('이 단어를 삭제할까요?');">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
           <button type="submit" class="danger">삭제</button>
         </form>
       </td>
