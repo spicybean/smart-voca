@@ -29,6 +29,9 @@
     {% endfor %}
   </fieldset>
 
+  <h2>공개</h2>
+  <label><input type="checkbox" name="stats_public" value="1" {% if stats_public %}checked{% endif %}> 내 학습 통계를 다른 사용자에게 공개 (읽기 전용)</label>
+
   <button type="submit" class="primary">저장</button>
 </form>
 {% endblock %}

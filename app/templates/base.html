@@ -15,6 +15,17 @@
       <a href="/words">단어</a>
       <a href="/stats">통계</a>
       <a href="/settings">설정</a>
+      {% if me %}
+      <a href="/users">공개 통계</a>
+      <span class="who">{{ me.username }} 님</span>
+      <form class="inline logout" method="post" action="/logout">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit">로그아웃</button>
+      </form>
+      {% else %}
+      <a href="/login">로그인</a>
+      <a href="/signup">회원가입</a>
+      {% endif %}
     </nav>
   </header>
   <main>

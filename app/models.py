@@ -15,6 +15,19 @@ db = SQLAlchemy()
 DEFAULT_USER_ID = 1
 
 
+class User(db.Model):
+    """계정 (VOCA-FR-041~043). 암기·시험 기록은 user_id 로 계정별로 나뉜다."""
+
+    __tablename__ = "voca_user"
+
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(32), nullable=False, unique=True)
+    password_hash = db.Column(db.String(255), nullable=False)
+    # 다른 계정에 학습 통계를 보여 줄지 (VOCA-FR-052: 공개 여부는 본인이 정함)
+    stats_public = db.Column(db.Boolean, nullable=False, default=False)
+    created_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
+
+
 class Word(db.Model):
     """영단어와 뜻 (VOCA-FR-001~004)."""
 

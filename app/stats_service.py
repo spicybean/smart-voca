@@ -1,27 +1,27 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# 2026-11-25 - 스마트보카 - 학습 진척 통계 (VOCA-FR-031~034), DB 이력으로 계산
+# 2026-11-25 - 스마트보카 - 학습 진척 통계 (VOCA-FR-031~034), 계정별 DB 이력으로 계산
 # 파일 위치: app/stats_service.py
 
-"""통계는 화면 값을 받지 않고 DB 이력에서만 계산한다 (VOCA-FR-034)."""
+"""통계는 화면 값을 받지 않고 DB 이력에서만 계산한다 (VOCA-FR-034). 계정마다 따로 계산한다."""
 
 from sqlalchemy import func
 
-from app.models import ExamItem, ExamSession, Word, db
+from app.models import DEFAULT_USER_ID, ExamItem, ExamSession, Word, db
 from app.study_service import current_day, memorized_word_count, total_days
 
 
-def progress_summary() -> dict:
+def progress_summary(user_id: int = DEFAULT_USER_ID) -> dict:
     total_words = db.session.scalar(db.select(func.count(Word.id))) or 0
     return {
-        "current_day": current_day(),
+        "current_day": current_day(user_id),
         "total_days": total_days(),
-        "memorized": memorized_word_count(),
+        "memorized": memorized_word_count(user_id),
         "total_words": total_words,
     }
 
 
-def daily_accuracy_trend() -> list[dict]:
+def daily_accuracy_trend(user_id: int = DEFAULT_USER_ID) -> list[dict]:
     """날짜별 정답률 (VOCA-FR-032). 답한 문항이 있는 날만 나온다."""
     day = func.date(ExamItem.answered_at).label("day")
     stmt = (
@@ -30,7 +30,8 @@ def daily_accuracy_trend() -> list[dict]:
             func.count(ExamItem.id).label("total"),
             func.sum(db.case((ExamItem.is_correct == True, 1), else_=0)).label("correct"),  # noqa: E712
         )
-        .where(ExamItem.answered_at.is_not(None))
+        .join(ExamSession, ExamSession.id == ExamItem.session_id)
+        .where(ExamSession.user_id == user_id, ExamItem.answered_at.is_not(None))
         .group_by(day)
         .order_by(day)
     )
@@ -42,10 +43,12 @@ def daily_accuracy_trend() -> list[dict]:
     return rows
 
 
-def session_history() -> list[dict]:
+def session_history(user_id: int = DEFAULT_USER_ID) -> list[dict]:
     """회차별 점수 (VOCA-FR-032 회차별 추이)."""
     sessions = db.session.scalars(
-        db.select(ExamSession).where(ExamSession.status == "done").order_by(ExamSession.id)
+        db.select(ExamSession)
+        .where(ExamSession.user_id == user_id, ExamSession.status == "done")
+        .order_by(ExamSession.id)
     )
     history = []
     for number, session in enumerate(sessions, start=1):
@@ -61,13 +64,14 @@ def session_history() -> list[dict]:
     return history
 
 
-def frequent_wrong_words(limit: int = 10) -> list[dict]:
+def frequent_wrong_words(limit: int = 10, user_id: int = DEFAULT_USER_ID) -> list[dict]:
     """자주 틀리는 단어 상위 N개 (VOCA-FR-033)."""
     wrong = func.count(ExamItem.id).label("wrong")
     stmt = (
         db.select(Word.english, Word.meaning, wrong)
         .join(ExamItem, ExamItem.word_id == Word.id)
-        .where(ExamItem.is_correct == False)  # noqa: E712
+        .join(ExamSession, ExamSession.id == ExamItem.session_id)
+        .where(ExamSession.user_id == user_id, ExamItem.is_correct == False)  # noqa: E712
         .group_by(Word.id)
         .order_by(wrong.desc(), Word.english)
         .limit(limit)

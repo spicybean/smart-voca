@@ -22,9 +22,15 @@ def app(tmp_path, monkeypatch):
         db.engine.dispose()
 
 
+def sign_up(client, username="tester", password="password123"):
+    """테스트 클라이언트를 새 계정으로 로그인시킨다 (CSRF는 이 fixture에서 꺼져 있음)."""
+    client.post("/signup", data={"username": username, "password": password, "confirm": password})
+    return client
+
+
 @pytest.fixture
 def client(app):
-    return app.test_client()
+    return sign_up(app.test_client())
 
 
 @pytest.fixture

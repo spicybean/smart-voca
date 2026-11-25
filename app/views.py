@@ -10,14 +10,38 @@ import json
 from flask import Blueprint, abort, flash, redirect, render_template, request
 
 from app import exam_service, settings_service, stats_service, study_service, word_service
-from app.models import ExamSession, Word, db
+from app.auth import current_user, current_user_id
+from app.models import ExamSession, User, Word, db
 
 bp = Blueprint("voca", __name__)
+
+# 로그인 없이 볼 수 있는 화면 (처음 화면은 로그인 안내를 보여 준다)
+PUBLIC_ENDPOINTS = {"voca.index"}
+
+
+@bp.before_request
+def require_login():
+    if request.endpoint in PUBLIC_ENDPOINTS:
+        return None
+    if current_user_id() is None:
+        flash("로그인한 뒤 이용할 수 있습니다.", "error")
+        return redirect("/login")
+    return None
+
+
+def _own_session(session_id: int) -> ExamSession:
+    """다른 계정의 시험 회차는 찾을 수 없는 것으로 보여 준다."""
+    session = db.get_or_404(ExamSession, session_id)
+    if session.user_id != current_user_id():
+        abort(404)
+    return session
 
 
 @bp.route("/")
 def index():
-    return render_template("index.html", progress=stats_service.progress_summary())
+    if current_user_id() is None:
+        return render_template("index.html", progress=None)
+    return render_template("index.html", progress=stats_service.progress_summary(current_user_id()))
 
 
 # 단어 (VOCA-FR-001~004) ------------------------------------------------
@@ -90,7 +114,7 @@ def import_words():
 
 @bp.route("/memorize")
 def memorize():
-    today = study_service.current_day()
+    today = study_service.current_day(current_user_id())
     day_no = request.args.get("day", type=int) or today
     last_day = study_service.total_days()
     if last_day == 0:
@@ -98,7 +122,7 @@ def memorize():
     if not 1 <= day_no <= last_day:
         abort(404)
 
-    card_ids = study_service.day_word_ids(day_no)
+    card_ids = study_service.day_word_ids(day_no, current_user_id())
     index = request.args.get("i", default=0, type=int)
     if index >= len(card_ids):
         return render_template("memorize_done.html", day_no=day_no, last_day=last_day, count=len(card_ids))
@@ -126,7 +150,7 @@ def memorize_answer():
     action = request.form.get("action", "")
     if word_id is None or day_no is None or index is None:
         abort(400)
-    study_service.record_card(word_id, day_no, action)
+    study_service.record_card(word_id, day_no, action, current_user_id())
     return redirect(f"/memorize?day={day_no}&i={index + 1}")
 
 
@@ -162,6 +186,7 @@ def exam_start():
             count=request.form.get("count", type=int) or 0,
             direction_mode=request.form.get("direction", ""),
             formats=formats,
+            user_id=current_user_id(),
         )
     except exam_service.ExamError as error:
         flash(str(error), "error")
@@ -171,7 +196,7 @@ def exam_start():
 
 @bp.route("/exam/<int:session_id>")
 def exam_question(session_id: int):
-    session = db.get_or_404(ExamSession, session_id)
+    session = _own_session(session_id)
     item = exam_service.current_item(session)
     if item is None:
         return redirect(f"/exam/{session_id}/result")
@@ -190,7 +215,7 @@ def exam_question(session_id: int):
 
 @bp.route("/exam/<int:session_id>/answer", methods=["POST"])
 def exam_answer(session_id: int):
-    session = db.get_or_404(ExamSession, session_id)
+    session = _own_session(session_id)
     given = request.form.get("answer", "")
     try:
         exam_service.answer_item(session, given)
@@ -203,7 +228,7 @@ def exam_answer(session_id: int):
 
 @bp.route("/exam/<int:session_id>/result")
 def exam_result(session_id: int):
-    session = db.get_or_404(ExamSession, session_id)
+    session = _own_session(session_id)
     if session.status != "done":
         return redirect(f"/exam/{session_id}")
     correct, total = exam_service.score(session)
@@ -223,10 +248,35 @@ def exam_result(session_id: int):
 def stats():
     return render_template(
         "stats.html",
-        progress=stats_service.progress_summary(),
-        trend=stats_service.daily_accuracy_trend(),
-        history=stats_service.session_history(),
-        frequent=stats_service.frequent_wrong_words(10),
+        title="내 학습 통계",
+        progress=stats_service.progress_summary(current_user_id()),
+        trend=stats_service.daily_accuracy_trend(current_user_id()),
+        history=stats_service.session_history(current_user_id()),
+        frequent=stats_service.frequent_wrong_words(10, current_user_id()),
+    )
+
+
+@bp.route("/users")
+def users():
+    """통계를 공개한 계정 목록 (VOCA-FR-051). 읽기 전용."""
+    public = db.session.scalars(db.select(User).where(User.stats_public == True).order_by(User.username))  # noqa: E712
+    return render_template("users.html", users=list(public))
+
+
+@bp.route("/users/<int:user_id>/stats")
+def user_stats(user_id: int):
+    """다른 계정의 통계는 공개한 계정만 본다. 읽기 전용 (VOCA-FR-051~053)."""
+    owner = db.get_or_404(User, user_id)
+    me = current_user()
+    if not owner.stats_public and owner.id != me.id:
+        abort(404)
+    return render_template(
+        "stats.html",
+        title=f"{owner.username} 님의 학습 통계",
+        progress=stats_service.progress_summary(owner.id),
+        trend=stats_service.daily_accuracy_trend(owner.id),
+        history=stats_service.session_history(owner.id),
+        frequent=stats_service.frequent_wrong_words(10, owner.id),
     )
 
 
@@ -243,6 +293,7 @@ def settings_page():
         min_review=settings_service.MIN_REVIEW_PERCENT,
         max_review=settings_service.MAX_REVIEW_PERCENT,
         exam=settings_service.get_exam_defaults(),
+        stats_public=current_user().stats_public,
         formats=exam_service.FORMAT_LABELS,
         directions=exam_service.DIRECTION_LABELS,
         max_questions=exam_service.MAX_QUESTIONS,
@@ -254,6 +305,8 @@ def save_settings():
     try:
         study_service.set_daily_amount(request.form.get("daily_amount", type=int) or 0)
         settings_service.set_review_percent(request.form.get("review_percent", type=int) or 0)
+        me = current_user()
+        me.stats_public = request.form.get("stats_public") == "1"
         settings_service.set_exam_defaults(
             count=request.form.get("exam_count", type=int) or 0,
             direction=request.form.get("exam_direction", ""),

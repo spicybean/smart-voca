@@ -51,13 +51,17 @@ def create_app(test_config: dict | None = None) -> Flask:
     with app.app_context():
         db.create_all()
 
+    from app.auth import bp as auth_bp
     from app.views import bp
     app.register_blueprint(bp)
+    app.register_blueprint(auth_bp)
     app.config.setdefault("CSRF_ENABLED", True)
 
     @app.context_processor
-    def inject_csrf_token():
-        return {"csrf_token": _csrf_token}
+    def inject_common():
+        from app.auth import current_user
+
+        return {"csrf_token": _csrf_token, "me": current_user()}
 
     @app.before_request
     def check_csrf():

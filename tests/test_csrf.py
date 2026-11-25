@@ -23,12 +23,20 @@ def secured(tmp_path, monkeypatch):
 
 
 def _token_from(client) -> str:
-    html = client.get("/words").get_data(as_text=True)
+    html = client.get("/signup").get_data(as_text=True)
     return re.search(r'name="csrf_token" value="([^"]+)"', html).group(1)
 
 
+def _signed_in(app):
+    client = app.test_client()
+    token = _token_from(client)
+    client.post("/signup", data={"username": "csrfuser", "password": "password123",
+                                 "confirm": "password123", "csrf_token": token})
+    return client
+
+
 def test_post_without_token_is_rejected(secured):
-    client = secured.test_client()
+    client = _signed_in(secured)
 
     response = client.post("/words", data={"english": "apple", "meaning": "사과"})
 
@@ -38,8 +46,7 @@ def test_post_without_token_is_rejected(secured):
 
 
 def test_post_with_wrong_token_is_rejected(secured):
-    client = secured.test_client()
-    _token_from(client)
+    client = _signed_in(secured)
 
     response = client.post("/words", data={"english": "apple", "meaning": "사과", "csrf_token": "forged"})
 
@@ -47,7 +54,7 @@ def test_post_with_wrong_token_is_rejected(secured):
 
 
 def test_post_with_session_token_is_accepted(secured):
-    client = secured.test_client()
+    client = _signed_in(secured)
     token = _token_from(client)
 
     response = client.post("/words", data={"english": "apple", "meaning": "사과", "csrf_token": token})

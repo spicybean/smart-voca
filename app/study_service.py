@@ -18,7 +18,7 @@ from datetime import datetime
 from sqlalchemy import func
 
 from app import settings_service
-from app.models import DEFAULT_USER_ID, ExamItem, Setting, StudyLog, Word, db
+from app.models import DEFAULT_USER_ID, ExamItem, ExamSession, Setting, StudyLog, Word, db
 
 DEFAULT_DAILY_AMOUNT = 20
 MIN_DAILY_AMOUNT = 5
@@ -54,9 +54,11 @@ def _word_ids_in_order() -> list[int]:
     return list(db.session.scalars(db.select(Word.id).order_by(Word.id)))
 
 
-def _frequent_wrong_ids(limit: int) -> list[int]:
+def _frequent_wrong_ids(limit: int, user_id: int) -> list[int]:
     stmt = (
         db.select(ExamItem.word_id, func.count(ExamItem.id).label("wrong"))
+        .join(ExamSession, ExamSession.id == ExamItem.session_id)
+        .where(ExamSession.user_id == user_id)
         .where(ExamItem.is_correct == False)  # noqa: E712
         .group_by(ExamItem.word_id)
         .order_by(func.count(ExamItem.id).desc(), ExamItem.word_id)
@@ -65,7 +67,7 @@ def _frequent_wrong_ids(limit: int) -> list[int]:
     return [row.word_id for row in db.session.execute(stmt)]
 
 
-def day_word_ids(day_no: int) -> list[int]:
+def day_word_ids(day_no: int, user_id: int = DEFAULT_USER_ID) -> list[int]:
     """일차 카드 목록 (단어 id 순서). 복습과 자주 틀린 단어를 포함한다."""
     daily = get_daily_amount()
     ordered = _word_ids_in_order()
@@ -82,7 +84,7 @@ def day_word_ids(day_no: int) -> list[int]:
     if earlier and review_count:
         chosen += rng.sample(earlier, min(review_count, len(earlier)))
 
-    for word_id in _frequent_wrong_ids(FREQUENT_WRONG_COUNT):
+    for word_id in _frequent_wrong_ids(FREQUENT_WRONG_COUNT, user_id):
         if word_id not in chosen and word_id in ordered:
             chosen.append(word_id)
 
@@ -90,13 +92,13 @@ def day_word_ids(day_no: int) -> list[int]:
     return chosen
 
 
-def record_card(word_id: int, day_no: int, action: str) -> StudyLog:
+def record_card(word_id: int, day_no: int, action: str, user_id: int = DEFAULT_USER_ID) -> StudyLog:
     if action not in ("known", "again"):
         raise ValueError("알 수 없는 응답입니다.")
     if db.session.get(Word, word_id) is None:
         raise ValueError("단어를 찾을 수 없습니다.")
     log = StudyLog(
-        user_id=DEFAULT_USER_ID,
+        user_id=user_id,
         word_id=word_id,
         day_no=day_no,
         action=action,
@@ -107,12 +109,15 @@ def record_card(word_id: int, day_no: int, action: str) -> StudyLog:
     return log
 
 
-def memorized_word_count() -> int:
-    stmt = db.select(func.count(func.distinct(StudyLog.word_id))).where(StudyLog.action == "known")
+def memorized_word_count(user_id: int = DEFAULT_USER_ID) -> int:
+    stmt = (
+        db.select(func.count(func.distinct(StudyLog.word_id)))
+        .where(StudyLog.user_id == user_id, StudyLog.action == "known")
+    )
     return db.session.scalar(stmt) or 0
 
 
-def current_day() -> int:
-    """지금까지 카드를 본 가장 큰 일차. 기록이 없으면 1일차."""
-    latest = db.session.scalar(db.select(func.max(StudyLog.day_no)))
+def current_day(user_id: int = DEFAULT_USER_ID) -> int:
+    """이 계정이 카드를 본 가장 큰 일차. 기록이 없으면 1일차."""
+    latest = db.session.scalar(db.select(func.max(StudyLog.day_no)).where(StudyLog.user_id == user_id))
     return latest or 1

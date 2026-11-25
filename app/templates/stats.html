@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>학습 통계</h1>
+<h1>{{ title or '학습 통계' }}</h1>
 <section class="cards">
   <div class="card"><h2>현재 일차</h2><p class="big">{{ progress.current_day }} / {{ progress.total_days }}</p></div>
   <div class="card"><h2>암기한 단어</h2><p class="big">{{ progress.memorized }} / {{ progress.total_words }}</p></div>

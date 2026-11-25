@@ -38,3 +38,6 @@ th, td { border-bottom: 1px solid var(--line); padding: 9px 8px; text-align: lef
 .day-nav { display: flex; gap: 16px; }
 fieldset { border: 1px solid var(--line); border-radius: 8px; margin: 8px 0; }
 details summary { cursor: pointer; color: var(--main); margin: 12px 0; }
+.who { color: #6b7785; font-size: 14px; }
+.logout { display: inline; margin-left: 12px; }
+.logout button { padding: 4px 10px; font-size: 13px; }

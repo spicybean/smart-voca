@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>공개 통계</h1>
+<p class="hint">통계를 공개한 계정만 보입니다. 다른 계정의 통계는 읽기만 할 수 있습니다.</p>
+{% if users %}
+<table>
+  <thead><tr><th>아이디</th><th></th></tr></thead>
+  <tbody>
+  {% for user in users %}
+    <tr>
+      <td>{{ user.username }}</td>
+      <td><a href="/users/{{ user.id }}/stats">통계 보기</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>아직 통계를 공개한 계정이 없습니다.</p>
+{% endif %}
+{% endblock %}

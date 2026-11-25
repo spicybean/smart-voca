@@ -53,19 +53,21 @@ def is_short_answer_correct(direction: str, expected: str, given: str) -> bool:
     return any(answer == normalize_answer(part) for part in parts if part.strip())
 
 
-def _last_answered_map() -> dict[int, datetime]:
+def _last_answered_map(user_id: int) -> dict[int, datetime]:
     stmt = (
         db.select(ExamItem.word_id, func.max(ExamItem.answered_at))
-        .where(ExamItem.answered_at.is_not(None))
+        .join(ExamSession, ExamSession.id == ExamItem.session_id)
+        .where(ExamSession.user_id == user_id, ExamItem.answered_at.is_not(None))
         .group_by(ExamItem.word_id)
     )
     return {word_id: when for word_id, when in db.session.execute(stmt)}
 
 
-def _wrong_count_map() -> dict[int, int]:
+def _wrong_count_map(user_id: int) -> dict[int, int]:
     stmt = (
         db.select(ExamItem.word_id, func.count(ExamItem.id))
-        .where(ExamItem.is_correct == False)  # noqa: E712
+        .join(ExamSession, ExamSession.id == ExamItem.session_id)
+        .where(ExamSession.user_id == user_id, ExamItem.is_correct == False)  # noqa: E712
         .group_by(ExamItem.word_id)
     )
     return {word_id: count for word_id, count in db.session.execute(stmt)}
@@ -78,10 +80,11 @@ def _weight(last: datetime | None, wrong: int, now: datetime) -> float:
     return 1.0 + days / 7 + 0.5 * min(wrong, 5)
 
 
-def pick_words(words: list[Word], count: int, rng: random.Random, now: datetime) -> list[Word]:
+def pick_words(words: list[Word], count: int, rng: random.Random, now: datetime,
+               user_id: int = DEFAULT_USER_ID) -> list[Word]:
     """가중치 순서대로 count 개를 고른다 (Efraimidis-Spirakis 방식, 중복 없음)."""
-    last = _last_answered_map()
-    wrong = _wrong_count_map()
+    last = _last_answered_map(user_id)
+    wrong = _wrong_count_map(user_id)
     keyed = []
     for word in words:
         weight = _weight(last.get(word.id), wrong.get(word.id, 0), now)
@@ -144,7 +147,7 @@ def _build_item(word: Word, position: int, direction: str, fmt: str, all_words: 
     )
 
 
-def create_session(count: int, direction_mode: str, formats: list[str]) -> ExamSession:
+def create_session(count: int, direction_mode: str, formats: list[str], user_id: int = DEFAULT_USER_ID) -> ExamSession:
     if not 1 <= count <= MAX_QUESTIONS:
         raise ExamError(f"문제 수는 1~{MAX_QUESTIONS}개 사이로 정해 주세요.")
     if direction_mode not in DIRECTION_LABELS:
@@ -159,10 +162,10 @@ def create_session(count: int, direction_mode: str, formats: list[str]) -> ExamS
 
     now = datetime.now()
     rng = random.Random(f"exam-{now.isoformat()}")
-    chosen = pick_words(words, min(count, len(words)), rng, now)
+    chosen = pick_words(words, min(count, len(words)), rng, now, user_id)
 
     session = ExamSession(
-        user_id=DEFAULT_USER_ID,
+        user_id=user_id,
         question_count=len(chosen),
         direction_mode=direction_mode,
         formats=",".join(formats),
