@@ -9,7 +9,7 @@ import json
 
 from flask import Blueprint, abort, flash, redirect, render_template, request
 
-from app import exam_service, stats_service, study_service, word_service
+from app import exam_service, settings_service, stats_service, study_service, word_service
 from app.models import ExamSession, Word, db
 
 bp = Blueprint("voca", __name__)
@@ -150,6 +150,7 @@ def exam_setup():
         directions=exam_service.DIRECTION_LABELS,
         max_questions=exam_service.MAX_QUESTIONS,
         word_total=word_service.count_words(),
+        defaults=settings_service.get_exam_defaults(),
     )
 
 
@@ -227,3 +228,41 @@ def stats():
         history=stats_service.session_history(),
         frequent=stats_service.frequent_wrong_words(10),
     )
+
+
+# 설정 (VOCA-FR-061~062) -------------------------------------------------
+
+@bp.route("/settings")
+def settings_page():
+    return render_template(
+        "settings.html",
+        daily=study_service.get_daily_amount(),
+        min_daily=study_service.MIN_DAILY_AMOUNT,
+        max_daily=study_service.MAX_DAILY_AMOUNT,
+        review_percent=settings_service.get_review_percent(),
+        min_review=settings_service.MIN_REVIEW_PERCENT,
+        max_review=settings_service.MAX_REVIEW_PERCENT,
+        exam=settings_service.get_exam_defaults(),
+        formats=exam_service.FORMAT_LABELS,
+        directions=exam_service.DIRECTION_LABELS,
+        max_questions=exam_service.MAX_QUESTIONS,
+    )
+
+
+@bp.route("/settings", methods=["POST"])
+def save_settings():
+    try:
+        study_service.set_daily_amount(request.form.get("daily_amount", type=int) or 0)
+        settings_service.set_review_percent(request.form.get("review_percent", type=int) or 0)
+        settings_service.set_exam_defaults(
+            count=request.form.get("exam_count", type=int) or 0,
+            direction=request.form.get("exam_direction", ""),
+            formats=request.form.getlist("exam_formats"),
+            allowed_directions=exam_service.DIRECTION_LABELS,
+            allowed_formats=exam_service.FORMAT_LABELS,
+            max_count=exam_service.MAX_QUESTIONS,
+        )
+        flash("설정을 저장했습니다.", "ok")
+    except ValueError as error:
+        flash(str(error), "error")
+    return redirect("/settings")

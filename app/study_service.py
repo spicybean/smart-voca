@@ -17,12 +17,12 @@ from datetime import datetime
 
 from sqlalchemy import func
 
+from app import settings_service
 from app.models import DEFAULT_USER_ID, ExamItem, Setting, StudyLog, Word, db
 
 DEFAULT_DAILY_AMOUNT = 20
 MIN_DAILY_AMOUNT = 5
 MAX_DAILY_AMOUNT = 50
-REVIEW_RATIO = 0.2
 FREQUENT_WRONG_COUNT = 3
 
 
@@ -77,7 +77,8 @@ def day_word_ids(day_no: int) -> list[int]:
     rng = random.Random(f"day-{day_no}")
     chosen = list(base)
     earlier = ordered[:start]
-    review_count = max(1, round(daily * REVIEW_RATIO)) if earlier else 0
+    percent = settings_service.get_review_percent()
+    review_count = max(1, round(daily * percent / 100)) if earlier and percent > 0 else 0
     if earlier and review_count:
         chosen += rng.sample(earlier, min(review_count, len(earlier)))
 

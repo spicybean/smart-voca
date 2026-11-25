@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>설정</h1>
+<form class="stack" method="post" action="/settings">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+  <h2>암기</h2>
+  <label>하루 학습량 ({{ min_daily }}~{{ max_daily }}개)
+    <input type="number" name="daily_amount" value="{{ daily }}" min="{{ min_daily }}" max="{{ max_daily }}" required>
+  </label>
+  <label>복습 비율 ({{ min_review }}~{{ max_review }}%, 이전 일차 단어에서 뽑는 비율)
+    <input type="number" name="review_percent" value="{{ review_percent }}" min="{{ min_review }}" max="{{ max_review }}" required>
+  </label>
+
+  <h2>시험 기본값</h2>
+  <label>문제 수 (1~{{ max_questions }})
+    <input type="number" name="exam_count" value="{{ exam.count }}" min="1" max="{{ max_questions }}" required>
+  </label>
+  <fieldset>
+    <legend>방향</legend>
+    {% for value, label in directions.items() %}
+      <label><input type="radio" name="exam_direction" value="{{ value }}" {% if value == exam.direction %}checked{% endif %}> {{ label }}</label>
+    {% endfor %}
+  </fieldset>
+  <fieldset>
+    <legend>형식 (하나 이상)</legend>
+    {% for value, label in formats.items() %}
+      <label><input type="checkbox" name="exam_formats" value="{{ value }}" {% if value in exam.formats %}checked{% endif %}> {{ label }}</label>
+    {% endfor %}
+  </fieldset>
+
+  <button type="submit" class="primary">저장</button>
+</form>
+{% endblock %}

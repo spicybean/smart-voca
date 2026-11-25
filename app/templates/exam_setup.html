@@ -7,18 +7,18 @@
 <form class="stack" method="post" action="/exam/start">
   <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
   <label>문제 수
-    <input type="number" name="count" value="10" min="1" max="{{ max_questions }}" required>
+    <input type="number" name="count" value="{{ defaults.count }}" min="1" max="{{ max_questions }}" required>
   </label>
   <fieldset>
     <legend>방향</legend>
     {% for value, label in directions.items() %}
-      <label><input type="radio" name="direction" value="{{ value }}" {% if value == 'en_ko' %}checked{% endif %}> {{ label }}</label>
+      <label><input type="radio" name="direction" value="{{ value }}" {% if value == defaults.direction %}checked{% endif %}> {{ label }}</label>
     {% endfor %}
   </fieldset>
   <fieldset>
     <legend>형식 (하나 이상)</legend>
     {% for value, label in formats.items() %}
-      <label><input type="checkbox" name="formats" value="{{ value }}" checked> {{ label }}</label>
+      <label><input type="checkbox" name="formats" value="{{ value }}" {% if value in defaults.formats %}checked{% endif %}> {{ label }}</label>
     {% endfor %}
   </fieldset>
   <button type="submit" class="primary">시험 시작</button>
