@@ -4,7 +4,7 @@
 
 - **프로젝트명**: 스마트보카 / **시스템명**: Smart-Voca
 - **한 줄 설명**: 간격 반복 학습과 사전 API를 활용한 영단어 개인 학습 시스템
-- **작성자**: 260312 박중희
+- **작성자**: 학생 (실명·학번은 과제 제출 규칙에 따라 적지 않음)
 - **리포지토리**: `-` (미정)
 - **상태**: 기획 단계 (2026-10-21 시작)
 
@@ -12,13 +12,13 @@
 
 | 레이어 | 기술 |
 |--------|------|
-| 언어 | Python 3.11+ |
-| GUI 프레임워크 | PyQt5 또는 PyQt6 |
-| 주요 라이브러리 | SQLAlchemy, requests, pandas |
-| 프론트엔드 | PyQt (Python 기반) |
-| DB | SQLite |
-| 배포 | PyInstaller (.exe / .app) |
-| 실행 환경 | 데스크톱 애플리케이션 (설치 후 실행) |
+| 언어 | Python 3.13 |
+| 웹 프레임워크 | Flask 3.1 (서버 템플릿 + 폼, 자바스크립트 없이 동작) |
+| 주요 라이브러리 | Flask-SQLAlchemy, SQLAlchemy 2.1, gunicorn |
+| 프론트엔드 | Jinja2 서버 템플릿 (`app/templates/`) |
+| DB | SQLite (`DB_PATH`, 서버는 `/data/voca.db`) |
+| 배포 | Dockerfile, 학교 서버 (0.0.0.0:8080, UID 10001, 인터넷 없이 실행) |
+| 실행 환경 | 웹 앱 (PC 크롬에서 동작) |
 
 ## 상위 정책 참조
 
@@ -41,7 +41,9 @@ smart-voca/
 │   │   └── yymmdd_주제/           # 주제별 작업 묶음 (문서 + src/ + script/)
 │   ├── uploads/                  # 외부 참고자료 (강의자료, 논문, 레퍼런스)
 │   └── scripts/                  # 프로젝트 전용 스크립트
-├── src/                          # 소스 코드
+├── app/                          # Flask 웹 앱 (설정, 모델, 서비스, 라우트, 템플릿)
+├── wsgi.py                       # 서버 진입점 (gunicorn wsgi:app)
+├── Dockerfile                    # 서버 이미지 (과제 규칙 R-01~R-16)
 └── data/                         # 데이터 (용량 큰 원본은 커밋하지 않음)
 ```
 
@@ -85,17 +87,15 @@ smart-voca/
 ## 테스트 및 배포
 
 ### 개발 중
-- **테스트 실행**: `pytest tests/ -v` (단위 테스트)
-- **앱 실행**: `python src/main.py` (PyQt 윈도우 창 열림)
-- **주의사항**: 처음 실행 시 SQLite DB 자동 생성됨
+- **테스트 실행**: `venv\Scripts\python.exe -m pytest -q` (임시 DB 사용, `data/`를 건드리지 않음)
+- **앱 실행 (개발용)**: `venv\Scripts\python.exe -m flask --app wsgi run --port 8080`
+- **주의사항**: 처음 실행 시 SQLite 테이블 자동 생성됨. 서버 실행 명령(`flask run`, `--reload`, `debug`)은 서버 이미지에 쓰지 않는다 (과제 규칙 R-14)
 
-### 배포 (빌드)
-- **Windows**: `pyinstaller --onefile --windowed --add-data "data/words_common.csv;data" --add-data "data/words_business.csv;data" --name "SmartVoca" src/main.py`
-  - 결과: `dist/SmartVoca.exe`
-  - `--add-data`는 CSV만 지정한다. `data/` 전체를 넣으면 개발용 `smart_voca.db`가 exe에 묶인다 (설계서 ADR-03)
-- **Mac**: `pyinstaller --onefile --windowed --add-data "data/words_common.csv:data" --add-data "data/words_business.csv:data" --osx-bundle-identifier=com.smartvoca --name "SmartVoca" src/main.py`
-  - 결과: `dist/SmartVoca.app`
-- **최종 사용자**: exe/app 파일 실행 (Python 설치 불필요)
+### 배포 (서버 이미지)
+- **이미지 빌드**: 리포 루트에서 `docker build -t voca-app .`
+- **실행**: `docker run --rm -p 8080:8080 -e SECRET_KEY=... -v voca-data:/data voca-app`
+- **점검**: `.github/workflows/docker-check.yml`은 수정하지 않는다 (과제 규칙 R-09). 제출 커밋에서 초록(통과)이어야 한다
+- **규칙 문서**: 과제 Dockerfile 구성 문서 R-01~R-16 (원본은 `ai-agent/uploads/과제원본/`)
 
 ## 코드 작성 규칙
 
