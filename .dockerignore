@@ -1,0 +1,21 @@
+# 이미지에 넣지 않을 것 (R-11)
+.git
+.github
+.venv
+venv
+node_modules
+__pycache__
+*.pyc
+*.db
+.env
+.idea
+.vscode
+data
+logs
+backups
+dist
+build
+tests
+docs
+ai-agent
+requirements-dev.txt
