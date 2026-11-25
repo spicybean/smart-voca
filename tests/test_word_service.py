@@ -87,7 +87,7 @@ def test_bundled_sample_csv_imports_without_errors(ctx):
     """저장소의 단어사전_샘플.csv 는 중복과 형식 오류 없이 모두 등록되어야 한다 (2026-11-25 원본 수정 기준)."""
     from pathlib import Path
 
-    sample = Path(__file__).resolve().parent.parent / "단어사전_샘플.csv"
+    sample = Path(__file__).resolve().parent.parent / "app" / "seed" / "단어사전_샘플.csv"
     report = word_service.import_csv(sample.read_bytes())
 
     assert report.invalid == []
@@ -103,7 +103,7 @@ def test_deleting_word_removes_its_study_and_exam_records(seeded):
     study_service.set_daily_amount(5)
     word = db.session.scalar(db.select(Word).where(Word.english == "apple"))
     study_service.record_card(word.id, 1, "known")
-    session = exam_service.create_session(5, "en_ko", ["short"])
+    session = exam_service.create_session(6, "en_ko", ["short"])  # 6개 전부 출제해서 이 단어가 반드시 포함되게
     assert any(item.word_id == word.id for item in session.items)
 
     word_service.delete_word(word.id)

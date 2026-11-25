@@ -15,7 +15,7 @@ def app(tmp_path, monkeypatch):
     monkeypatch.setenv("DB_PATH", str(tmp_path / "test.db"))
     monkeypatch.setenv("SECRET_KEY", "test-secret")
     # 화면 흐름 테스트는 CSRF를 끈다. CSRF 자체는 test_csrf.py 에서 켜서 확인한다.
-    application = create_app({"TESTING": True, "CSRF_ENABLED": False})
+    application = create_app({"TESTING": True, "CSRF_ENABLED": False, "SEED_WORDS": False})
     yield application
     with application.app_context():
         db.session.remove()

@@ -14,6 +14,9 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 # 서버에서는 DB_PATH=/data/voca.db 로 준다. 개발 PC에서는 프로젝트의 data/voca.db 를 쓴다.
 DEFAULT_DB_PATH = PROJECT_ROOT / "data" / "voca.db"
 
+# 처음 실행할 때 자동으로 넣는 단어 CSV (영단어,뜻). 이미지에도 함께 들어간다.
+SEED_CSV_PATH = Path(__file__).resolve().parent / "seed" / "단어사전_샘플.csv"
+
 # 업로드 제한: 서버가 20MB까지 받는다 (과제 기술 요건)
 MAX_UPLOAD_BYTES = 20 * 1024 * 1024
 

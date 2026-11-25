@@ -16,7 +16,7 @@ def test_home_page_loads(client):
     response = client.get("/")
 
     assert response.status_code == 200
-    assert "오늘의 학습".encode() in response.data
+    assert "좋은 하루예요".encode() in response.data
 
 
 def test_add_word_through_form(client, ctx):

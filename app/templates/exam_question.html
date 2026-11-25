@@ -1,30 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>문제 {{ number }} / {{ total }}</h1>
+<h1>시험 · 문제 {{ number }} / {{ total }}</h1>
 <p class="hint">{{ direction_label }} · {{ format_label }}</p>
+<div class="track"><span style="width: {{ ((number - 1) * 100 // total) }}%;"></span></div>
 <div class="card flashcard">
   {% if item.fmt == 'short' %}
     <p class="english">{{ item.prompt }}</p>
-    <form class="stack" method="post" action="/exam/{{ session.id }}/answer">
+    <form class="stack" method="post" action="/exam/{{ session.id }}/answer" style="margin: 18px auto 0;">
       <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
       <label>답 <input type="text" name="answer" autocomplete="off" autofocus required></label>
       <button type="submit" class="primary">답하기</button>
     </form>
   {% elif item.fmt == 'mc' %}
     <p class="english">{{ item.prompt }}</p>
-    <form class="choices" method="post" action="/exam/{{ session.id }}/answer">
+    <form class="options" method="post" action="/exam/{{ session.id }}/answer">
       <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
       {% for choice in choices %}
-        <button type="submit" name="answer" value="{{ choice }}">{{ choice }}</button>
+        <button type="submit" name="answer" value="{{ choice }}" class="option">
+          <span class="badge">{{ ['A', 'B', 'C', 'D'][loop.index0] }}</span>{{ choice }}
+        </button>
       {% endfor %}
     </form>
   {% else %}
     <p class="english">{{ item.prompt }}</p>
     <p class="meaning">{{ choices[0] }}</p>
-    <form class="inline" method="post" action="/exam/{{ session.id }}/answer">
+    <form class="inline" method="post" action="/exam/{{ session.id }}/answer" style="justify-content:center;">
       <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-      <button type="submit" name="answer" value="O" class="primary">O (맞아요)</button>
-      <button type="submit" name="answer" value="X">X (틀려요)</button>
+      <button type="submit" name="answer" value="O" class="primary">O 맞아요</button>
+      <button type="submit" name="answer" value="X" class="ghost">X 틀려요</button>
     </form>
   {% endif %}
 </div>

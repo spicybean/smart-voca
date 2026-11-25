@@ -15,7 +15,7 @@ from app.models import Word, db
 def secured(tmp_path, monkeypatch):
     monkeypatch.setenv("DB_PATH", str(tmp_path / "csrf.db"))
     monkeypatch.setenv("SECRET_KEY", "test-secret")
-    application = create_app({"TESTING": True, "CSRF_ENABLED": True})
+    application = create_app({"TESTING": True, "CSRF_ENABLED": True, "SEED_WORDS": False})
     yield application
     with application.app_context():
         db.session.remove()

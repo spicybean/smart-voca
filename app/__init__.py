@@ -14,8 +14,12 @@ from flask import Flask, render_template, request, session
 from sqlalchemy import event
 from sqlalchemy.engine import Engine
 
-from app.config import MAX_UPLOAD_BYTES, get_db_path, get_secret_key
+import logging
+
+from app.config import MAX_UPLOAD_BYTES, SEED_CSV_PATH, get_db_path, get_secret_key
 from app.models import db
+
+log = logging.getLogger(__name__)
 
 
 @event.listens_for(Engine, "connect")
@@ -34,6 +38,20 @@ def _csrf_token() -> str:
     return session["csrf_token"]
 
 
+def _seed_words_once() -> None:
+    """처음 실행할 때 단어 CSV를 한 번 넣는다. 이미 넣었으면 다시 넣지 않는다 (삭제한 단어가 되살아나지 않게)."""
+    from app.models import Setting
+    from app.word_service import count_words, import_csv
+
+    if db.session.get(Setting, "seeded") is not None:
+        return
+    if count_words() == 0:
+        report = import_csv(SEED_CSV_PATH.read_bytes())
+        log.info("처음 실행: 단어 %d개 등록", report.added)
+    db.session.add(Setting(key="seeded", value="1"))
+    db.session.commit()
+
+
 def create_app(test_config: dict | None = None) -> Flask:
     app = Flask(__name__)
     app.config["SECRET_KEY"] = get_secret_key()
@@ -50,6 +68,10 @@ def create_app(test_config: dict | None = None) -> Flask:
     db.init_app(app)
     with app.app_context():
         db.create_all()
+
+    if app.config.get("SEED_WORDS", True):
+        with app.app_context():
+            _seed_words_once()
 
     from app.auth import bp as auth_bp
     from app.views import bp
