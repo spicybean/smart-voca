@@ -31,14 +31,16 @@ from ui.word_widget import WordWidget
 log = logging.getLogger(LOGGER_NAME)
 
 
-def prepare_database() -> None:
-    """폴더를 만들고, DB가 없거나 비어 있으면 CSV로 만든 뒤 연결한다."""
+def prepare_database() -> bool:
+    """폴더를 만들고, DB가 없거나 비어 있으면 CSV로 만든 뒤 연결한다. 이번에 새로 만들었으면 True."""
     config.ensure_runtime_dirs()
     db_path = config.get_db_path()
-    if needs_initialization(db_path):
+    created = needs_initialization(db_path)
+    if created:
         log.info("DB가 없어 초기 데이터로 만듭니다")
         initialize_database(db_path, default_csv_paths())
     init_engine(db_path)
+    return created
 
 
 def close_app() -> None:
@@ -50,7 +52,7 @@ def close_app() -> None:
         log.exception("종료 처리 중 오류")
 
 
-def create_main_window(on_close: Callable[[], None] | None = None) -> MainWindow:
+def create_main_window(on_close: Callable[[], None] | None = None, first_run: bool = False) -> MainWindow:
     home = HomeWidget()
     quiz = QuizWidget()
     words = WordWidget()
@@ -76,6 +78,8 @@ def create_main_window(on_close: Callable[[], None] | None = None) -> MainWindow
     quiz.go_home_requested.connect(lambda: (home.refresh(), show_tab(home)))
     quiz.go_words_requested.connect(lambda: show_tab(words))
     settings.data_changed.connect(refresh_data_views)
+    settings.first_run_completed.connect(lambda: show_tab(home))
+    settings.set_first_run(first_run)
     words.word_selected.connect(lambda _word_id: home.refresh())
 
     def on_tab_changed(index: int) -> None:
@@ -88,6 +92,8 @@ def create_main_window(on_close: Callable[[], None] | None = None) -> MainWindow
             settings.load()
 
     window.tabs.currentChanged.connect(on_tab_changed)
+    if first_run:
+        show_tab(settings)
     return window
 
 
@@ -96,12 +102,12 @@ def main() -> int:
     app = QApplication(sys.argv)
     app.setStyleSheet(APP_STYLESHEET)
     try:
-        prepare_database()
+        first_run = prepare_database()
     except Exception:
         log.exception("DB 준비 실패")
         message_boxes.warn_database_error(None)
         return 1
-    window = create_main_window(on_close=close_app)
+    window = create_main_window(on_close=close_app, first_run=first_run)
     window.show()
     return app.exec()
 

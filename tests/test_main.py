@@ -65,8 +65,9 @@ def test_prepare_database_creates_db_when_missing(tmp_path, monkeypatch):
         writer.writerow(["apple", "사과", "일상", "1", "An apple.", "", ""])
     monkeypatch.setattr(main, "default_csv_paths", lambda: [seed])
 
-    main.prepare_database()
+    created = main.prepare_database()
     try:
+        assert created is True
         with session_scope() as session:
             assert [w.english for w in session.scalars(select(Word)).all()] == ["apple"]
     finally:

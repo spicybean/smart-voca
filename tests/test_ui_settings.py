@@ -115,3 +115,28 @@ def test_reset_is_skipped_when_cancelled(db_engine, qapp, monkeypatch):
 
     from services.word_service import list_words
     assert len(list_words().items) == 1
+
+
+def test_first_run_allows_saving_without_changes_then_signals_home(db_engine, qapp):
+    widget = SettingsWidget()
+    widget.set_first_run(True)
+    widget.load()
+    completed: list[bool] = []
+    widget.first_run_completed.connect(lambda: completed.append(True))
+
+    assert widget.save_button.isEnabled()
+    widget.save_button.click()
+
+    assert completed == [True]
+    assert not widget.save_button.isEnabled()
+
+
+def test_after_first_run_save_button_needs_change_again(db_engine, qapp):
+    widget = SettingsWidget()
+    widget.set_first_run(True)
+    widget.load()
+    widget.save_button.click()
+
+    widget.load()
+
+    assert not widget.save_button.isEnabled()

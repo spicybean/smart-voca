@@ -48,9 +48,11 @@ DB_FILE_NAME = config.DB_FILE_NAME
 
 class SettingsWidget(QWidget):
     data_changed = pyqtSignal()
+    first_run_completed = pyqtSignal()  # 첫 실행 저장 후 홈으로 이동하라는 신호 (UI 3.1)
 
     def __init__(self, parent: QWidget | None = None):
         super().__init__(parent)
+        self._first_run = False
         self.category_group = QButtonGroup(self)
         self.category_buttons: dict[str, QRadioButton] = {}
         category_row = QHBoxLayout()
@@ -140,6 +142,11 @@ class SettingsWidget(QWidget):
 
     # 표시와 저장 -----------------------------------------------------
 
+    def set_first_run(self, enabled: bool) -> None:
+        """첫 실행이면 변경이 없어도 [저장]을 활성화한다 (UI 2.5, 3.1)."""
+        self._first_run = enabled
+        self._set_dirty(self._dirty)
+
     def load(self) -> None:
         """저장된 설정을 화면에 채운다."""
         settings = get_settings()
@@ -188,12 +195,16 @@ class SettingsWidget(QWidget):
 
     def _set_dirty(self, dirty: bool) -> None:
         self._dirty = dirty
-        self.save_button.setEnabled(dirty)
+        self.save_button.setEnabled(dirty or self._first_run)
 
     def _save(self) -> None:
+        was_first_run = self._first_run
         save_settings(self._selected_category(), self._selected_count())
+        self._first_run = False
         self._set_dirty(False)
         self.data_changed.emit()
+        if was_first_run:
+            self.first_run_completed.emit()
 
     # 데이터 관리 -----------------------------------------------------
 
