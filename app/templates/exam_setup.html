@@ -1,11 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>시험</h1>
-{% if word_total < 4 %}
-  <p>단어가 4개 이상 있어야 시험을 볼 수 있습니다. 현재 {{ word_total }}개입니다.</p>
+{% if learned < 4 %}
+  <p>외운 단어가 4개 이상 있어야 시험을 볼 수 있습니다. 현재 {{ learned }}개입니다. 암기 카드에서 '외웠어요'를 눌러 주세요.</p>
+  <p><a href="/memorize">암기하러 가기</a></p>
 {% else %}
+<p class="hint">외운 단어 {{ learned }}개 중에서 냅니다.</p>
 <form class="stack" method="post" action="/exam/start">
   <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+  <label>일차 범위 (외운 단어 중 이 일차 안에서만)
+    <span class="inline">
+      <input type="number" name="day_from" value="1" min="1" max="{{ today }}"> ~
+      <input type="number" name="day_to" value="{{ today }}" min="1" max="{{ today }}">
+    </span>
+  </label>
   <label>문제 수
     <input type="number" name="count" value="{{ defaults.count }}" min="1" max="{{ max_questions }}" required>
   </label>

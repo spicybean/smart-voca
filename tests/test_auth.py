@@ -73,6 +73,8 @@ def _user_id(app, username):
 
 def test_exam_session_belongs_to_its_owner(app, seeded):
     alice = sign_up(app.test_client(), "alice")
+    from tests.conftest import memorize_all
+    memorize_all(app, "alice")
     bob = sign_up(app.test_client(), "bobby")
     response = alice.post("/exam/start", data={"count": "2", "direction": "en_ko", "formats": ["short"]})
     session_url = response.headers["Location"]

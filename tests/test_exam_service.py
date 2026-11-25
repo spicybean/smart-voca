@@ -11,6 +11,7 @@ import pytest
 
 from app import exam_service
 from app.exam_service import ExamError
+from app.study_service import record_card
 from app.models import ExamItem, Word, db
 
 
@@ -37,7 +38,7 @@ def test_english_short_answer_ignores_case_and_period():
     assert not exam_service.is_short_answer_correct("en_ko", "apple", "apples")
 
 
-def test_create_session_validates_inputs(seeded):
+def test_create_session_validates_inputs(memorized):
     with pytest.raises(ExamError):
         exam_service.create_session(0, "en_ko", ["mc"])
     with pytest.raises(ExamError):
@@ -51,7 +52,7 @@ def test_create_session_needs_enough_words(ctx):
         exam_service.create_session(3, "en_ko", ["short"])
 
 
-def test_mc_items_have_four_choices_including_answer(seeded):
+def test_mc_items_have_four_choices_including_answer(memorized):
     session = exam_service.create_session(6, "en_ko", ["mc"])
 
     for item in session.items:
@@ -60,13 +61,13 @@ def test_mc_items_have_four_choices_including_answer(seeded):
         assert item.expected in choices
 
 
-def test_ox_items_expect_o_or_x(seeded):
+def test_ox_items_expect_o_or_x(memorized):
     session = exam_service.create_session(6, "ko_en", ["ox"])
 
     assert {item.expected for item in session.items} <= {"O", "X"}
 
 
-def test_answering_moves_forward_and_finishes(seeded):
+def test_answering_moves_forward_and_finishes(memorized):
     session = exam_service.create_session(3, "en_ko", ["short"])
 
     for _ in range(3):
@@ -79,7 +80,7 @@ def test_answering_moves_forward_and_finishes(seeded):
     assert exam_service.wrong_items(session) == []
 
 
-def test_wrong_answers_are_listed(seeded):
+def test_wrong_answers_are_listed(memorized):
     session = exam_service.create_session(2, "en_ko", ["short"])
     exam_service.answer_item(session, "틀린답")
     exam_service.answer_item(session, exam_service.current_item(session).expected)
@@ -90,7 +91,7 @@ def test_wrong_answers_are_listed(seeded):
     assert wrong[0].given == "틀린답"
 
 
-def test_answer_after_finish_is_rejected(seeded):
+def test_answer_after_finish_is_rejected(memorized):
     session = exam_service.create_session(1, "en_ko", ["short"])
     exam_service.answer_item(session, "x")
 
@@ -134,7 +135,7 @@ def test_frequently_wrong_words_get_more_weight(seeded):
     assert wins > 200 / len(words)
 
 
-def test_deleting_an_unanswered_word_skips_its_question(seeded):
+def test_deleting_an_unanswered_word_skips_its_question(memorized):
     """이슈 #9: 시험 중 단어를 지우면 그 문항은 빠지고, 남은 문항이 이어서 나온다."""
     session = exam_service.create_session(4, "en_ko", ["short"])
     exam_service.answer_item(session, "x")
@@ -150,7 +151,7 @@ def test_deleting_an_unanswered_word_skips_its_question(seeded):
     assert (answered, total) == (1, 3)
 
 
-def test_deleting_the_current_word_moves_to_next(seeded):
+def test_deleting_the_current_word_moves_to_next(memorized):
     session = exam_service.create_session(3, "en_ko", ["short"])
     current_word_id = exam_service.current_item(session).word_id
     db.session.delete(db.session.get(Word, current_word_id))
@@ -163,7 +164,7 @@ def test_deleting_the_current_word_moves_to_next(seeded):
     assert exam_service.progress(session) == (0, 2)
 
 
-def test_session_finishes_when_remaining_words_are_deleted(seeded):
+def test_session_finishes_when_remaining_words_are_deleted(memorized):
     session = exam_service.create_session(2, "en_ko", ["short"])
     exam_service.answer_item(session, "x")
     other = [item.word_id for item in session.items if item.answered_at is None]
@@ -174,3 +175,39 @@ def test_session_finishes_when_remaining_words_are_deleted(seeded):
 
     assert exam_service.current_item(session) is None
     assert session.status == "done"
+
+
+def test_exam_uses_only_memorized_words(seeded):
+    """외우지 않은 단어는 시험에 나오지 않는다."""
+    from app.models import User
+    for word_id in [w.id for w in db.session.scalars(db.select(Word)).all()][:4]:
+        record_card(word_id, 1, "known", user_id=1)
+    memorized_ids = {w.id for w in exam_service.memorized_words(1)}
+
+    session = exam_service.create_session(10, "en_ko", ["short"], user_id=1)
+
+    assert {item.word_id for item in session.items} <= memorized_ids
+    assert len(memorized_ids) == 4
+
+
+def test_last_again_answer_removes_word_from_pool(seeded):
+    ids = [w.id for w in db.session.scalars(db.select(Word)).all()]
+    for word_id in ids[:4]:
+        record_card(word_id, 1, "known", user_id=1)
+    record_card(ids[0], 1, "again", user_id=1)  # 마지막 응답이 아직이에요 -> 제외
+
+    with pytest.raises(ExamError, match="4개 이상"):
+        exam_service.create_session(3, "en_ko", ["short"], user_id=1)
+
+
+def test_day_range_limits_the_pool(seeded):
+    from app import study_service
+    study_service.set_daily_amount(5)  # 1일차 5개, 2일차 1개
+    ids = [w.id for w in db.session.scalars(db.select(Word).order_by(Word.id)).all()]
+    for word_id in ids:
+        record_card(word_id, 1 if word_id in ids[:5] else 2, "known", user_id=1)
+
+    with pytest.raises(ExamError):
+        exam_service.create_session(4, "en_ko", ["short"], user_id=1, day_from=2, day_to=2)
+    session = exam_service.create_session(4, "en_ko", ["short"], user_id=1, day_from=1, day_to=1)
+    assert {item.word_id for item in session.items} <= set(ids[:5])

@@ -23,6 +23,7 @@ from datetime import datetime
 from sqlalchemy import func
 
 from app.models import DEFAULT_USER_ID, ExamItem, ExamSession, Word, db
+from app.study_service import memorized_words
 
 FORMAT_LABELS = {"mc": "4지선다", "short": "단답형", "ox": "OX"}
 DIRECTION_LABELS = {"en_ko": "영→한", "ko_en": "한→영", "mix": "섞기"}
@@ -147,7 +148,8 @@ def _build_item(word: Word, position: int, direction: str, fmt: str, all_words: 
     )
 
 
-def create_session(count: int, direction_mode: str, formats: list[str], user_id: int = DEFAULT_USER_ID) -> ExamSession:
+def create_session(count: int, direction_mode: str, formats: list[str], user_id: int = DEFAULT_USER_ID,
+                   day_from: int | None = None, day_to: int | None = None) -> ExamSession:
     if not 1 <= count <= MAX_QUESTIONS:
         raise ExamError(f"문제 수는 1~{MAX_QUESTIONS}개 사이로 정해 주세요.")
     if direction_mode not in DIRECTION_LABELS:
@@ -156,9 +158,13 @@ def create_session(count: int, direction_mode: str, formats: list[str], user_id:
     if not formats:
         raise ExamError("출제 형식을 하나 이상 골라 주세요.")
 
-    words = list(db.session.scalars(db.select(Word).order_by(Word.id)))
+    # 시험은 외웠어요로 표시한 단어에서만 낸다 (선택한 일차 범위 안에서)
+    words = memorized_words(user_id, day_from, day_to)
     if len(words) < MIN_WORDS_FOR_EXAM:
-        raise ExamError(f"단어가 {MIN_WORDS_FOR_EXAM}개 이상 있어야 시험을 볼 수 있습니다.")
+        raise ExamError(
+            f"외운 단어가 {MIN_WORDS_FOR_EXAM}개 이상 있어야 시험을 볼 수 있습니다. "
+            "암기 카드에서 '외웠어요'를 눌러 주세요."
+        )
 
     now = datetime.now()
     rng = random.Random(f"exam-{now.isoformat()}")

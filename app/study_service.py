@@ -109,6 +109,29 @@ def record_card(word_id: int, day_no: int, action: str, user_id: int = DEFAULT_U
     return log
 
 
+def memorized_words(user_id: int = DEFAULT_USER_ID, day_from: int | None = None,
+                    day_to: int | None = None) -> list[Word]:
+    """이 계정이 '외웠어요'로 표시한 단어 (마지막 응답이 외웠어요인 단어). 일차 범위를 줄 수 있다.
+
+    시험은 이 목록에서만 낸다 (이슈: 외우지 않은 단어가 시험에 나오는 문제).
+    """
+    latest_ids = (
+        db.select(func.max(StudyLog.id))
+        .where(StudyLog.user_id == user_id)
+        .group_by(StudyLog.word_id)
+    )
+    stmt = (
+        db.select(Word)
+        .join(StudyLog, StudyLog.word_id == Word.id)
+        .where(StudyLog.id.in_(latest_ids), StudyLog.action == "known")
+    )
+    if day_from is not None:
+        stmt = stmt.where(StudyLog.day_no >= day_from)
+    if day_to is not None:
+        stmt = stmt.where(StudyLog.day_no <= day_to)
+    return list(db.session.scalars(stmt.order_by(Word.id)))
+
+
 def memorized_word_count(user_id: int = DEFAULT_USER_ID) -> int:
     stmt = (
         db.select(func.count(func.distinct(StudyLog.word_id)))

@@ -95,7 +95,7 @@ def test_bundled_sample_csv_imports_without_errors(ctx):
     assert report.added == 1999
 
 
-def test_deleting_word_removes_its_study_and_exam_records(seeded):
+def test_deleting_word_removes_its_study_and_exam_records(memorized):
     """이슈 #8: 단어를 지우면 암기 기록과 시험 문항이 함께 지워져야 한다."""
     from app import exam_service, study_service
     from app.models import ExamItem, StudyLog

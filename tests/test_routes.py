@@ -68,7 +68,7 @@ def test_memorize_day_out_of_range_is_404(client, seeded):
     assert client.get("/memorize?day=99").status_code == 404
 
 
-def test_exam_flow_from_start_to_result(client, seeded):
+def test_exam_flow_from_start_to_result(client, memorized):
     response = client.post("/exam/start", data={"count": "2", "direction": "en_ko", "formats": ["short"]})
     assert response.status_code == 302
     session_url = response.headers["Location"]
@@ -106,7 +106,7 @@ def test_templates_use_root_relative_quoted_links():
         assert not re.search(r"(href|src|action)=\"https?://", text), path.name
 
 
-def test_exam_keeps_working_after_word_deleted_mid_exam(client, seeded):
+def test_exam_keeps_working_after_word_deleted_mid_exam(client, memorized):
     """이슈 #9: 시험 중 단어를 지워도 문항 화면과 답 제출이 계속 동작한다."""
     response = client.post("/exam/start", data={"count": "3", "direction": "en_ko", "formats": ["short"]})
     session_url = response.headers["Location"]

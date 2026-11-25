@@ -65,7 +65,7 @@ def test_settings_page_saves_all_values(client, ctx):
     assert settings_service.get_exam_defaults() == {"count": 8, "direction": "mix", "formats": ["mc", "ox"]}
 
 
-def test_exam_page_uses_saved_defaults(client, seeded):
+def test_exam_page_uses_saved_defaults(client, memorized):
     client.post("/settings", data={
         "daily_amount": "20", "review_percent": "20", "exam_count": "4",
         "exam_direction": "ko_en", "exam_formats": ["short"],

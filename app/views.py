@@ -173,7 +173,8 @@ def exam_setup():
         formats=exam_service.FORMAT_LABELS,
         directions=exam_service.DIRECTION_LABELS,
         max_questions=exam_service.MAX_QUESTIONS,
-        word_total=word_service.count_words(),
+        learned=len(study_service.memorized_words(current_user_id())),
+        today=study_service.current_day(current_user_id()),
         defaults=settings_service.get_exam_defaults(),
     )
 
@@ -187,6 +188,8 @@ def exam_start():
             direction_mode=request.form.get("direction", ""),
             formats=formats,
             user_id=current_user_id(),
+            day_from=request.form.get("day_from", type=int),
+            day_to=request.form.get("day_to", type=int),
         )
     except exam_service.ExamError as error:
         flash(str(error), "error")

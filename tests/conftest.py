@@ -57,3 +57,21 @@ def seeded(ctx):
     for english, meaning in WORDS:
         add_word(english, meaning)
     return [english for english, _ in WORDS]
+
+
+def memorize_all(app, username="tester", day_no=1):
+    """계정이 모든 단어를 '외웠어요'로 표시해 둔다 (시험은 외운 단어에서만 나온다)."""
+    from app.models import User, Word
+    from app.study_service import record_card
+
+    with app.app_context():
+        user_id = db.session.scalar(db.select(User.id).where(User.username == username)) or 1
+        for word_id in db.session.scalars(db.select(Word.id)).all():
+            record_card(word_id, day_no, "known", user_id=user_id)
+
+
+@pytest.fixture
+def memorized(app, seeded):
+    """단어 6개를 모두 외운 상태 (기본 계정 또는 tester 계정)."""
+    memorize_all(app)
+    return seeded
