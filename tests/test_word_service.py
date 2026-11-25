@@ -81,3 +81,15 @@ def test_import_rejects_non_utf8_file(ctx):
 
     with pytest.raises(WordError, match="UTF-8"):
         word_service.import_csv(raw)
+
+
+def test_bundled_sample_csv_imports_without_errors(ctx):
+    """저장소의 단어사전_샘플.csv 는 중복과 형식 오류 없이 모두 등록되어야 한다 (2026-11-25 원본 수정 기준)."""
+    from pathlib import Path
+
+    sample = Path(__file__).resolve().parent.parent / "단어사전_샘플.csv"
+    report = word_service.import_csv(sample.read_bytes())
+
+    assert report.invalid == []
+    assert report.duplicates == []
+    assert report.added == 1999
