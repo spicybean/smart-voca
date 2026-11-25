@@ -180,7 +180,8 @@ def exam_question(session_id: int):
         session=session,
         item=item,
         choices=choices,
-        number=session.position + 1,
+        number=exam_service.progress(session)[0] + 1,
+        total=exam_service.progress(session)[1],
         direction_label=exam_service.DIRECTION_LABELS.get(item.direction, ""),
         format_label=exam_service.FORMAT_LABELS.get(item.fmt, ""),
     )

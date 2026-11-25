@@ -179,10 +179,32 @@ def create_session(count: int, direction_mode: str, formats: list[str]) -> ExamS
     return session
 
 
+def _pending_items(session: ExamSession) -> list[ExamItem]:
+    """아직 답하지 않은 문항 (순서대로). 단어가 지워진 문항은 DB에서 이미 빠져 있다."""
+    return [item for item in session.items if item.answered_at is None]
+
+
+def _finish(session: ExamSession) -> None:
+    session.status = "done"
+    session.finished_at = datetime.now()
+
+
 def current_item(session: ExamSession) -> ExamItem | None:
-    if session.status != "active" or session.position >= session.question_count:
+    """지금 풀 문항 = 아직 답하지 않은 첫 문항. 남은 문항이 없으면 회차를 끝낸다 (이슈 #9)."""
+    if session.status != "active":
         return None
-    return session.items[session.position]
+    pending = _pending_items(session)
+    if not pending:
+        _finish(session)
+        db.session.commit()
+        return None
+    return pending[0]
+
+
+def progress(session: ExamSession) -> tuple[int, int]:
+    """(답한 문항 수, 전체 문항 수). 시험 중 삭제된 단어의 문항은 전체에서도 빠진다."""
+    total = len(session.items)
+    return total - len(_pending_items(session)), total
 
 
 def answer_item(session: ExamSession, given: str) -> ExamItem:
@@ -197,10 +219,9 @@ def answer_item(session: ExamSession, given: str) -> ExamItem:
     item.given = given[:300]
     item.is_correct = is_correct
     item.answered_at = datetime.now()
-    session.position += 1
-    if session.position >= session.question_count:
-        session.status = "done"
-        session.finished_at = datetime.now()
+    session.position = progress(session)[0]
+    if not _pending_items(session):
+        _finish(session)
     db.session.commit()
     return item
 

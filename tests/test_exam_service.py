@@ -132,3 +132,45 @@ def test_frequently_wrong_words_get_more_weight(seeded):
         picked = exam_service.pick_words(words, 1, random.Random(seed), now)
         wins += picked[0].id == words[-1].id
     assert wins > 200 / len(words)
+
+
+def test_deleting_an_unanswered_word_skips_its_question(seeded):
+    """이슈 #9: 시험 중 단어를 지우면 그 문항은 빠지고, 남은 문항이 이어서 나온다."""
+    session = exam_service.create_session(4, "en_ko", ["short"])
+    exam_service.answer_item(session, "x")
+    victim = session.items[2].word_id
+    db.session.delete(db.session.get(Word, victim))
+    db.session.commit()
+    db.session.refresh(session)
+
+    current = exam_service.current_item(session)
+    answered, total = exam_service.progress(session)
+
+    assert current is not None and current.word_id != victim
+    assert (answered, total) == (1, 3)
+
+
+def test_deleting_the_current_word_moves_to_next(seeded):
+    session = exam_service.create_session(3, "en_ko", ["short"])
+    current_word_id = exam_service.current_item(session).word_id
+    db.session.delete(db.session.get(Word, current_word_id))
+    db.session.commit()
+    db.session.refresh(session)
+
+    nxt = exam_service.current_item(session)
+
+    assert nxt is not None and nxt.word_id != current_word_id
+    assert exam_service.progress(session) == (0, 2)
+
+
+def test_session_finishes_when_remaining_words_are_deleted(seeded):
+    session = exam_service.create_session(2, "en_ko", ["short"])
+    exam_service.answer_item(session, "x")
+    other = [item.word_id for item in session.items if item.answered_at is None]
+    for word_id in other:
+        db.session.delete(db.session.get(Word, word_id))
+    db.session.commit()
+    db.session.refresh(session)
+
+    assert exam_service.current_item(session) is None
+    assert session.status == "done"

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>문제 {{ number }} / {{ session.question_count }}</h1>
+<h1>문제 {{ number }} / {{ total }}</h1>
 <p class="hint">{{ direction_label }} · {{ format_label }}</p>
 <div class="card flashcard">
   {% if item.fmt == 'short' %}

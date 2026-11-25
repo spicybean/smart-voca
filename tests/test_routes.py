@@ -104,3 +104,24 @@ def test_templates_use_root_relative_quoted_links():
         assert "localhost" not in text, path.name
         assert not re.search(r"(href|src|action)=[^\"' >]", text), path.name
         assert not re.search(r"(href|src|action)=\"https?://", text), path.name
+
+
+def test_exam_keeps_working_after_word_deleted_mid_exam(client, seeded):
+    """이슈 #9: 시험 중 단어를 지워도 문항 화면과 답 제출이 계속 동작한다."""
+    response = client.post("/exam/start", data={"count": "3", "direction": "en_ko", "formats": ["short"]})
+    session_url = response.headers["Location"]
+    first = client.get(session_url)
+    assert first.status_code == 200
+
+    word = db.session.scalar(db.select(Word).order_by(Word.id))
+    client.post(f"/words/{word.id}/delete")
+
+    for _ in range(3):
+        page = client.get(session_url)
+        assert page.status_code in (200, 302)
+        if page.status_code == 302:
+            break
+        client.post(f"{session_url}/answer", data={"answer": "모름"})
+
+    result = client.get(f"{session_url}/result")
+    assert result.status_code == 200
